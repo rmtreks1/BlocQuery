@@ -13,6 +13,7 @@
 
 + (void)load {
     [self registerSubclass];
+    NSLog(@"questions class loaded");
 }
 
 + (NSString *)parseClassName {
@@ -20,7 +21,7 @@
 }
 
 
-
+@dynamic questionText;
 
 
 

@@ -11,5 +11,6 @@
 @interface Questions : PFObject <PFSubclassing>
 + (NSString *)parseClassName;
 
+@property (nonatomic, strong) NSString *questionText;
 
 @end

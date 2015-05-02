@@ -145,7 +145,10 @@
 - (IBAction)askQuestion:(UIButton *)sender {
     NSLog(@"ask question button pressed");
     
+    Questions *newQuestion = [Questions object];
+    newQuestion.questionText = @"something something";
     
+    [newQuestion saveInBackground];
     
 }
 
