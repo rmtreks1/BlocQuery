@@ -14,6 +14,7 @@
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *login;
 @property (weak, nonatomic) IBOutlet UIButton *logout;
+@property (nonatomic, strong) PFUser *currentUser;
 
 
 
@@ -26,35 +27,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    //check if there's a user
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        self.login.hidden = YES;
-        self.logout.hidden = NO;
-        NSLog(@"current user: %@", currentUser.email);
-    } else if (!currentUser) {
-        self.login.hidden = NO;
-        self.logout.hidden = YES;
-    }
-    
-    
-   
-    
-    
 }
 
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
+    
+    //check if there's a user
+    self.currentUser = [PFUser currentUser];
+    if (self.currentUser) {
         self.login.hidden = YES;
         self.logout.hidden = NO;
-        NSLog(@"current user: %@", currentUser.email);
-    } else if (!currentUser) {
+        NSLog(@"current user: %@", self.currentUser.email);
+    } else if (!self.currentUser) {
         self.login.hidden = NO;
         self.logout.hidden = YES;
     }
@@ -94,13 +80,13 @@
 - (IBAction)logoutUser:(UIButton *)sender {
     
     [PFUser logOut];
-    PFUser *currentUser = [PFUser currentUser];
+    self.currentUser = [PFUser currentUser];
     
-    if (currentUser) {
+    if (self.currentUser) {
         self.login.hidden = YES;
         self.logout.hidden = NO;
-        NSLog(@"current user: %@", currentUser.email);
-    } else if (!currentUser) {
+        NSLog(@"current user: %@", self.currentUser.email);
+    } else if (!self.currentUser) {
         self.login.hidden = NO;
         self.logout.hidden = YES;
     }
@@ -148,29 +134,14 @@
     Questions *newQuestion = [Questions object];
     newQuestion.questionText = @"something something";
     
-    
-    // assign the current user to the question
-//    PFUser *currentUser = [PFUser currentUser];
-//    newQuestion.userID = [PFObject objectWithoutDataWithClassName:@"User" objectId:@"IopUiLwZoW"];
-//    
-//    To add the Post to User on iOS:
-//    
-//    PFObject *post = ...;
-//    
-//    PFUser *user = [PFUser currentUser];
-//    PFRelation *relation = [user relationforKey:@"questions"];
-//    [relation addObject:newQuestion];
-//    [user saveInBackground];
-//    
-    
     [newQuestion setObject:[PFUser currentUser] forKey:@"createdBy"];
     
-    PFUser *createdBy = [newQuestion objectForKey:@"createdBy"];
+    self.currentUser = [newQuestion objectForKey:@"createdBy"];
     
     
     
     // test getting the username
-    NSLog(@"username is: %@", createdBy.username);
+//    NSLog(@"username is: %@", createdBy.username);
     
     
     
