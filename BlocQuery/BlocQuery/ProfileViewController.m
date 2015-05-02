@@ -9,10 +9,15 @@
 #import "ProfileViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "Questions.h"
 
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *login;
 @property (weak, nonatomic) IBOutlet UIButton *logout;
+
+
+
+
 
 @end
 
@@ -133,6 +138,16 @@
 
 
 
+
+
+#pragma mark - Ask Question Button
+
+- (IBAction)askQuestion:(UIButton *)sender {
+    NSLog(@"ask question button pressed");
+    
+    
+    
+}
 
 
 

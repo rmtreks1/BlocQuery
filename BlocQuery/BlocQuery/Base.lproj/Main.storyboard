@@ -78,12 +78,24 @@
                                     <action selector="logoutUser:" destination="9MK-Mf-nvI" eventType="touchUpInside" id="H27-xQ-GAJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObV-4y-tgM">
+                                <rect key="frame" x="91" y="39" width="138" height="30"/>
+                                <state key="normal" title="AskQuestion">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="askQuestion:" destination="9MK-Mf-nvI" eventType="touchUpInside" id="10a-rA-VMP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="XnS-WU-P7V" secondAttribute="centerX" id="8V3-fu-at3"/>
+                            <constraint firstItem="ObV-4y-tgM" firstAttribute="top" secondItem="0Hw-Is-7Eh" secondAttribute="bottom" constant="19" id="BSG-O2-v4f"/>
                             <constraint firstAttribute="centerX" secondItem="VpM-1d-65w" secondAttribute="centerX" id="BqK-Ew-Xzx"/>
+                            <constraint firstAttribute="centerX" secondItem="ObV-4y-tgM" secondAttribute="centerX" id="GPY-Rz-Edu"/>
                             <constraint firstAttribute="centerY" secondItem="XnS-WU-P7V" secondAttribute="centerY" id="S2k-aE-E5E"/>
+                            <constraint firstItem="ObV-4y-tgM" firstAttribute="top" secondItem="0Hw-Is-7Eh" secondAttribute="bottom" constant="19" id="hxJ-uQ-Vxk"/>
                             <constraint firstAttribute="centerY" secondItem="VpM-1d-65w" secondAttribute="centerY" id="srd-nD-Mgp"/>
                         </constraints>
                     </view>
@@ -95,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbf-iY-DDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="973.17333333333329"/>
+            <point key="canvasLocation" x="400" y="973"/>
         </scene>
         <!--My Questions-->
         <scene sceneID="wg7-f3-ORb">
