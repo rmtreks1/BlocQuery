@@ -11,6 +11,8 @@
 #import "SignUpViewController.h"
 
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *login;
+@property (weak, nonatomic) IBOutlet UIButton *logout;
 
 @end
 
@@ -21,6 +23,53 @@
     // Do any additional setup after loading the view.
     
     
+    //check if there's a user
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        self.login.hidden = YES;
+        self.logout.hidden = NO;
+        NSLog(@"current user: %@", currentUser.email);
+    } else if (!currentUser) {
+        self.login.hidden = NO;
+        self.logout.hidden = YES;
+    }
+    
+    
+   
+    
+    
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        self.login.hidden = YES;
+        self.logout.hidden = NO;
+        NSLog(@"current user: %@", currentUser.email);
+    } else if (!currentUser) {
+        self.login.hidden = NO;
+        self.logout.hidden = YES;
+    }
+}
+
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
+
+#pragma mark - Login
+
+- (IBAction)loginAction:(UIButton *)sender {
     
     // testing the login controller
     LoginViewController *loginController = [[LoginViewController alloc] init];
@@ -33,12 +82,31 @@
     [self presentViewController:loginController animated:YES completion:nil];
     
     
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)logoutUser:(UIButton *)sender {
+    
+    [PFUser logOut];
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if (currentUser) {
+        self.login.hidden = YES;
+        self.logout.hidden = NO;
+        NSLog(@"current user: %@", currentUser.email);
+    } else if (!currentUser) {
+        self.login.hidden = NO;
+        self.logout.hidden = YES;
+    }
+
+    
 }
+
+
+
+
+
 
 
 
