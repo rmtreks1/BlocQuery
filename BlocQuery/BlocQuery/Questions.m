@@ -28,24 +28,6 @@
 }
 
 
-
-
-+ (Questions *)makeNewQuestion:(NSString *)question fromUser:(PFUser *)user {
-    Questions *newQuestion = [Questions object];
-    newQuestion.questionText = question;
-
-    // testing
-//    NSLog(@"current user is %@", user.username); // no need to pass in user
-    [newQuestion setObject:[PFUser currentUser] forKey:@"createdBy"];
-
-    
-    [newQuestion saveInBackground];
-    return newQuestion;
-}
-
-
-
-
 + (Questions *)makeNewQuestion:(NSString *)question withImage:(UIImage *)image{
     Questions *newQuestion = [Questions object];
     newQuestion.questionText = question;
