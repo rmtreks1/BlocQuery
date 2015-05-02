@@ -138,29 +138,6 @@
     Questions *imageQuestion = [Questions makeNewQuestion:question withImage:image];
     NSLog(@"the question was: %@", imageQuestion.questionText);
     
-   
-    
-//    // SDCAlert Code - removed as will need to use full view controller to capture image
-//    SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"
-//                                                                     message:@"This is a message"
-//                                                              preferredStyle:SDCAlertControllerStyleAlert];
-//    [alert addAction:[SDCAlertAction actionWithTitle:@"OK" style:SDCAlertActionStyleDefault handler:nil]];
-//    
-//    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] init];
-//    spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-//    [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    [spinner startAnimating];
-//    
-//    [alert.contentView addSubview:spinner];
-////    [spinner sdc_horizontallyCenterInSuperview];
-//    [alert.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[spinner]-|"
-//                                                                              options:0
-//                                                                              metrics:nil
-//                                                                                views:NSDictionaryOfVariableBindings(spinner)]];
-//    
-//    [alert presentWithCompletion:nil];
-    
-    
     
     
 }
