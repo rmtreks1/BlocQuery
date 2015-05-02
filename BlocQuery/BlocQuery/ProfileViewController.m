@@ -130,15 +130,34 @@
 
 - (IBAction)askQuestion:(UIButton *)sender {
     NSLog(@"ask question button pressed");
+
+    //
+////    [Questions makeNew];
+//    Questions *newQuestion = [Questions makeNewQuestion:@"what's MVC?" fromUser:self.currentUser];
+//    NSLog(@"the question was: %@", newQuestion.questionText);
+//    
+//    
     
-    Questions *newQuestion = [Questions object];
-    newQuestion.questionText = @"something something";
     
-    [newQuestion setObject:[PFUser currentUser] forKey:@"createdBy"];
+    NSString *question = @"is this working?";
+    UIImage *image = [UIImage imageNamed:@"Bloc-logo-rectangle-grey.jpg"];
     
-    self.currentUser = [newQuestion objectForKey:@"createdBy"];
+    Questions *imageQuestion = [Questions makeNewQuestion:question withImage:image];
+    NSLog(@"the question was: %@", imageQuestion.questionText);
     
-    [newQuestion saveInBackground];
+    
+    
+    
+//    NSLog(@"checking question created from profile view controller. Question is %@", newQuestion.questionText);
+    
+//    Questions *newQuestion = [Questions object];
+//    newQuestion.questionText = @"something something";
+//    
+//    [newQuestion setObject:[PFUser currentUser] forKey:@"createdBy"];
+//    
+//    self.currentUser = [newQuestion objectForKey:@"createdBy"];
+//    
+//    [newQuestion saveInBackground];
     
     
     SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"

@@ -12,6 +12,13 @@
 + (NSString *)parseClassName;
 
 @property (nonatomic, strong) NSString *questionText;
-@property (nonatomic, strong) PFUser *userID;
+@property (nonatomic, strong) PFUser *createdBy;
+@property (nonatomic, strong) PFFile *questionImage;
+
++ (void)makeNew;
++ (Questions *)makeNewQuestion:(NSString *)question fromUser:(PFUser *)user;
++ (Questions *)makeNewQuestion:(NSString *)question withImage:(UIImage *)image;
+
+
 
 @end
