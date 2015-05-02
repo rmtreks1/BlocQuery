@@ -138,18 +138,29 @@
     
     self.currentUser = [newQuestion objectForKey:@"createdBy"];
     
-    
-    
-    // test getting the username
-//    NSLog(@"username is: %@", createdBy.username);
-    
-    
-    
     [newQuestion saveInBackground];
     
-//    
-//    // Add a relation between the Post with objectId "1zEcyElZ80" and the comment
-//    myComment[@"parent"] = [PFObject objectWithoutDataWithClassName:@"Post" objectId:@"1zEcyElZ80"];
+    
+    SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"
+                                                                     message:@"This is a message"
+                                                              preferredStyle:SDCAlertControllerStyleAlert];
+    [alert addAction:[SDCAlertAction actionWithTitle:@"OK" style:SDCAlertActionStyleDefault handler:nil]];
+    
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] init];
+    spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [spinner startAnimating];
+    
+    [alert.contentView addSubview:spinner];
+//    [spinner sdc_horizontallyCenterInSuperview];
+    [alert.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[spinner]-|"
+                                                                              options:0
+                                                                              metrics:nil
+                                                                                views:NSDictionaryOfVariableBindings(spinner)]];
+    
+    [alert presentWithCompletion:nil];
+    
+    
     
     
 }
