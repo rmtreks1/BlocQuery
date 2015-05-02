@@ -131,13 +131,6 @@
 - (IBAction)askQuestion:(UIButton *)sender {
     NSLog(@"ask question button pressed");
 
-    //
-////    [Questions makeNew];
-//    Questions *newQuestion = [Questions makeNewQuestion:@"what's MVC?" fromUser:self.currentUser];
-//    NSLog(@"the question was: %@", newQuestion.questionText);
-//    
-//    
-    
     
     NSString *question = @"is this working?";
     UIImage *image = [UIImage imageNamed:@"Bloc-logo-rectangle-grey.jpg"];
@@ -145,39 +138,27 @@
     Questions *imageQuestion = [Questions makeNewQuestion:question withImage:image];
     NSLog(@"the question was: %@", imageQuestion.questionText);
     
+   
     
-    
-    
-//    NSLog(@"checking question created from profile view controller. Question is %@", newQuestion.questionText);
-    
-//    Questions *newQuestion = [Questions object];
-//    newQuestion.questionText = @"something something";
+//    // SDCAlert Code - removed as will need to use full view controller to capture image
+//    SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"
+//                                                                     message:@"This is a message"
+//                                                              preferredStyle:SDCAlertControllerStyleAlert];
+//    [alert addAction:[SDCAlertAction actionWithTitle:@"OK" style:SDCAlertActionStyleDefault handler:nil]];
 //    
-//    [newQuestion setObject:[PFUser currentUser] forKey:@"createdBy"];
+//    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] init];
+//    spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+//    [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [spinner startAnimating];
 //    
-//    self.currentUser = [newQuestion objectForKey:@"createdBy"];
+//    [alert.contentView addSubview:spinner];
+////    [spinner sdc_horizontallyCenterInSuperview];
+//    [alert.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[spinner]-|"
+//                                                                              options:0
+//                                                                              metrics:nil
+//                                                                                views:NSDictionaryOfVariableBindings(spinner)]];
 //    
-//    [newQuestion saveInBackground];
-    
-    
-    SDCAlertController *alert = [SDCAlertController alertControllerWithTitle:@"Title"
-                                                                     message:@"This is a message"
-                                                              preferredStyle:SDCAlertControllerStyleAlert];
-    [alert addAction:[SDCAlertAction actionWithTitle:@"OK" style:SDCAlertActionStyleDefault handler:nil]];
-    
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] init];
-    spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [spinner startAnimating];
-    
-    [alert.contentView addSubview:spinner];
-//    [spinner sdc_horizontallyCenterInSuperview];
-    [alert.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[spinner]-|"
-                                                                              options:0
-                                                                              metrics:nil
-                                                                                views:NSDictionaryOfVariableBindings(spinner)]];
-    
-    [alert presentWithCompletion:nil];
+//    [alert presentWithCompletion:nil];
     
     
     

@@ -29,13 +29,6 @@
 
 
 
-+ (void)makeNew{
-    Questions *newQuestion = [Questions object];
-    newQuestion.questionText = @"some test question";
-    [newQuestion saveInBackground];
-//    return newQuestion;
-}
-
 
 + (Questions *)makeNewQuestion:(NSString *)question fromUser:(PFUser *)user {
     Questions *newQuestion = [Questions object];
@@ -59,9 +52,10 @@
     
     
     // image
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
-    newQuestion.questionImage = [PFFile fileWithName:@"image.jpg" data:imageData];
-    
+    if (image) {
+        NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+        newQuestion.questionImage = [PFFile fileWithName:@"image.jpg" data:imageData];
+    }
     
     [newQuestion setObject:[PFUser currentUser] forKey:@"createdBy"];
     

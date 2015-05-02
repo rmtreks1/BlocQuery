@@ -16,7 +16,6 @@
 @property (nonatomic, strong) PFFile *questionImage;
 
 + (void)makeNew;
-+ (Questions *)makeNewQuestion:(NSString *)question fromUser:(PFUser *)user;
 + (Questions *)makeNewQuestion:(NSString *)question withImage:(UIImage *)image;
 
 
