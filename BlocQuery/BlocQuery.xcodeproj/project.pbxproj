@@ -17,6 +17,8 @@
 		01640D3D1AF32E5B005567FE /* BlocQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D3C1AF32E5B005567FE /* BlocQueryTests.m */; };
 		01640D481AF32F34005567FE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D471AF32F34005567FE /* ProfileViewController.m */; };
 		01640D4B1AF33126005567FE /* CreateQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D4A1AF33126005567FE /* CreateQuestionViewController.m */; };
+		01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AED9D61AF45A7600050797 /* LoginViewController.m */; };
+		01AED9D91AF45AE800050797 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AED9D81AF45AE800050797 /* ParseUI.framework */; };
 		01C19A831AF3571900857658 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A811AF3571900857658 /* Bolts.framework */; };
 		01C19A841AF3571900857658 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A821AF3571900857658 /* Parse.framework */; };
 		01C19A861AF3578F00857658 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A851AF3578F00857658 /* AudioToolbox.framework */; };
@@ -64,6 +66,9 @@
 		01640D471AF32F34005567FE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		01640D491AF33126005567FE /* CreateQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateQuestionViewController.h; sourceTree = "<group>"; };
 		01640D4A1AF33126005567FE /* CreateQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQuestionViewController.m; sourceTree = "<group>"; };
+		01AED9D51AF45A7600050797 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		01AED9D61AF45A7600050797 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		01AED9D81AF45AE800050797 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		01C19A811AF3571900857658 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		01C19A821AF3571900857658 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		01C19A851AF3578F00857658 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -92,6 +97,7 @@
 				01C19A981AF357FA00857658 /* libz.dylib in Frameworks */,
 				01C19A961AF357F000857658 /* SystemConfiguration.framework in Frameworks */,
 				01C19A941AF357E500857658 /* StoreKit.framework in Frameworks */,
+				01AED9D91AF45AE800050797 /* ParseUI.framework in Frameworks */,
 				01C19A921AF357DC00857658 /* Security.framework in Frameworks */,
 				01C19A901AF357D100857658 /* QuartzCore.framework in Frameworks */,
 				01C19A8E1AF357C700857658 /* MobileCoreServices.framework in Frameworks */,
@@ -117,21 +123,7 @@
 		01640D111AF32E5B005567FE = {
 			isa = PBXGroup;
 			children = (
-				01C19A9D1AF3581E00857658 /* Social.framework */,
-				01C19A9B1AF3581300857658 /* Accounts.framework */,
-				01C19A991AF3580800857658 /* libsqlite3.dylib */,
-				01C19A971AF357FA00857658 /* libz.dylib */,
-				01C19A951AF357F000857658 /* SystemConfiguration.framework */,
-				01C19A931AF357E500857658 /* StoreKit.framework */,
-				01C19A911AF357DC00857658 /* Security.framework */,
-				01C19A8F1AF357D100857658 /* QuartzCore.framework */,
-				01C19A8D1AF357C700857658 /* MobileCoreServices.framework */,
-				01C19A8B1AF357B000857658 /* CoreLocation.framework */,
-				01C19A891AF357A400857658 /* CoreGraphics.framework */,
-				01C19A871AF3579A00857658 /* CFNetwork.framework */,
-				01C19A851AF3578F00857658 /* AudioToolbox.framework */,
-				01C19A811AF3571900857658 /* Bolts.framework */,
-				01C19A821AF3571900857658 /* Parse.framework */,
+				01AED9D41AF45A1500050797 /* Frameworks */,
 				01640D1C1AF32E5B005567FE /* BlocQuery */,
 				01640D391AF32E5B005567FE /* BlocQueryTests */,
 				01640D1B1AF32E5B005567FE /* Products */,
@@ -164,6 +156,8 @@
 				01640D471AF32F34005567FE /* ProfileViewController.m */,
 				01640D491AF33126005567FE /* CreateQuestionViewController.h */,
 				01640D4A1AF33126005567FE /* CreateQuestionViewController.m */,
+				01AED9D51AF45A7600050797 /* LoginViewController.h */,
+				01AED9D61AF45A7600050797 /* LoginViewController.m */,
 			);
 			path = BlocQuery;
 			sourceTree = "<group>";
@@ -192,6 +186,29 @@
 				01640D3B1AF32E5B005567FE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01AED9D41AF45A1500050797 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01AED9D81AF45AE800050797 /* ParseUI.framework */,
+				01C19A9D1AF3581E00857658 /* Social.framework */,
+				01C19A9B1AF3581300857658 /* Accounts.framework */,
+				01C19A991AF3580800857658 /* libsqlite3.dylib */,
+				01C19A971AF357FA00857658 /* libz.dylib */,
+				01C19A951AF357F000857658 /* SystemConfiguration.framework */,
+				01C19A931AF357E500857658 /* StoreKit.framework */,
+				01C19A911AF357DC00857658 /* Security.framework */,
+				01C19A8F1AF357D100857658 /* QuartzCore.framework */,
+				01C19A8D1AF357C700857658 /* MobileCoreServices.framework */,
+				01C19A8B1AF357B000857658 /* CoreLocation.framework */,
+				01C19A891AF357A400857658 /* CoreGraphics.framework */,
+				01C19A871AF3579A00857658 /* CFNetwork.framework */,
+				01C19A851AF3578F00857658 /* AudioToolbox.framework */,
+				01C19A811AF3571900857658 /* Bolts.framework */,
+				01C19A821AF3571900857658 /* Parse.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +315,7 @@
 				01640D231AF32E5B005567FE /* AppDelegate.m in Sources */,
 				01640D261AF32E5B005567FE /* QuestionsViewController.m in Sources */,
 				01640D201AF32E5B005567FE /* main.m in Sources */,
+				01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */,
 				01640D4B1AF33126005567FE /* CreateQuestionViewController.m in Sources */,
 				01640D481AF32F34005567FE /* ProfileViewController.m in Sources */,
 			);
