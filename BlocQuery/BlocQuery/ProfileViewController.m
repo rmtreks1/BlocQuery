@@ -148,7 +148,38 @@
     Questions *newQuestion = [Questions object];
     newQuestion.questionText = @"something something";
     
+    
+    // assign the current user to the question
+//    PFUser *currentUser = [PFUser currentUser];
+//    newQuestion.userID = [PFObject objectWithoutDataWithClassName:@"User" objectId:@"IopUiLwZoW"];
+//    
+//    To add the Post to User on iOS:
+//    
+//    PFObject *post = ...;
+//    
+//    PFUser *user = [PFUser currentUser];
+//    PFRelation *relation = [user relationforKey:@"questions"];
+//    [relation addObject:newQuestion];
+//    [user saveInBackground];
+//    
+    
+    [newQuestion setObject:[PFUser currentUser] forKey:@"createdBy"];
+    
+    PFUser *createdBy = [newQuestion objectForKey:@"createdBy"];
+    
+    
+    
+    // test getting the username
+    NSLog(@"username is: %@", createdBy.username);
+    
+    
+    
     [newQuestion saveInBackground];
+    
+//    
+//    // Add a relation between the Post with objectId "1zEcyElZ80" and the comment
+//    myComment[@"parent"] = [PFObject objectWithoutDataWithClassName:@"Post" objectId:@"1zEcyElZ80"];
+    
     
 }
 

@@ -12,5 +12,6 @@
 + (NSString *)parseClassName;
 
 @property (nonatomic, strong) NSString *questionText;
+@property (nonatomic, strong) PFUser *userID;
 
 @end

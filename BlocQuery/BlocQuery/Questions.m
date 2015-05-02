@@ -22,6 +22,8 @@
 
 
 @dynamic questionText;
+@dynamic userID;
+
 
 
 
