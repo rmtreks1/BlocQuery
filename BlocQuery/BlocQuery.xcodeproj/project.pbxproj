@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0135CBCB1AF484A500B73677 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0135CBCA1AF484A500B73677 /* Questions.m */; };
 		01640D201AF32E5B005567FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D1F1AF32E5B005567FE /* main.m */; };
 		01640D231AF32E5B005567FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D221AF32E5B005567FE /* AppDelegate.m */; };
 		01640D261AF32E5B005567FE /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D251AF32E5B005567FE /* QuestionsViewController.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0135CBC91AF484A500B73677 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
+		0135CBCA1AF484A500B73677 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		01640D1A1AF32E5B005567FE /* BlocQuery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocQuery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01640D1E1AF32E5B005567FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01640D1F1AF32E5B005567FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				01AED9D61AF45A7600050797 /* LoginViewController.m */,
 				01AED9DA1AF45EC400050797 /* SignUpViewController.h */,
 				01AED9DB1AF45EC400050797 /* SignUpViewController.m */,
+				0135CBC91AF484A500B73677 /* Questions.h */,
+				0135CBCA1AF484A500B73677 /* Questions.m */,
 			);
 			path = BlocQuery;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01640D291AF32E5B005567FE /* MyQuestionsViewController.m in Sources */,
+				0135CBCB1AF484A500B73677 /* Questions.m in Sources */,
 				01640D231AF32E5B005567FE /* AppDelegate.m in Sources */,
 				01640D261AF32E5B005567FE /* QuestionsViewController.m in Sources */,
 				01640D201AF32E5B005567FE /* main.m in Sources */,
