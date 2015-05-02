@@ -8,15 +8,25 @@
 
 #import "LoginViewController.h"
 
+@interface LoginViewController () <PFSignUpViewControllerDelegate>
+
+@end
+
+
+
 @implementation LoginViewController
 
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blueColor];
-    
+    // custom logo
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Bloc-logo-rectangle-grey.jpg"]];
+    logoView.contentMode = UIViewContentModeScaleAspectFit;
+    self.logInView.logo = logoView;
     
 }
+
+
 
 @end

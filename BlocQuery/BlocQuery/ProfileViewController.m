@@ -8,8 +8,9 @@
 
 #import "ProfileViewController.h"
 #import "LoginViewController.h"
+#import "SignUpViewController.h"
 
-@interface ProfileViewController () <PFLogInViewControllerDelegate>
+@interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @end
 
@@ -24,6 +25,11 @@
     // testing the login controller
     LoginViewController *loginController = [[LoginViewController alloc] init];
     loginController.delegate = self;
+    
+    // custom signup controller
+    loginController.signUpController = [[SignUpViewController alloc] init];
+    loginController.signUpController.delegate = self;
+    
     [self presentViewController:loginController animated:YES completion:nil];
     
     
@@ -37,6 +43,7 @@
 
 
 #pragma mark - Testing Parse
+// move this code to button or screen that triggers the login
 
 - (void)logInViewController:(PFLogInViewController *)controller
                didLogInUser:(PFUser *)user {
@@ -46,6 +53,21 @@
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
+
+
+
 
 
 @end

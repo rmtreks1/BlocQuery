@@ -19,6 +19,7 @@
 		01640D4B1AF33126005567FE /* CreateQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D4A1AF33126005567FE /* CreateQuestionViewController.m */; };
 		01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AED9D61AF45A7600050797 /* LoginViewController.m */; };
 		01AED9D91AF45AE800050797 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AED9D81AF45AE800050797 /* ParseUI.framework */; };
+		01AED9DC1AF45EC400050797 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AED9DB1AF45EC400050797 /* SignUpViewController.m */; };
 		01C19A831AF3571900857658 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A811AF3571900857658 /* Bolts.framework */; };
 		01C19A841AF3571900857658 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A821AF3571900857658 /* Parse.framework */; };
 		01C19A861AF3578F00857658 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A851AF3578F00857658 /* AudioToolbox.framework */; };
@@ -69,6 +70,8 @@
 		01AED9D51AF45A7600050797 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		01AED9D61AF45A7600050797 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		01AED9D81AF45AE800050797 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		01AED9DA1AF45EC400050797 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		01AED9DB1AF45EC400050797 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		01C19A811AF3571900857658 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		01C19A821AF3571900857658 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		01C19A851AF3578F00857658 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -158,6 +161,8 @@
 				01640D4A1AF33126005567FE /* CreateQuestionViewController.m */,
 				01AED9D51AF45A7600050797 /* LoginViewController.h */,
 				01AED9D61AF45A7600050797 /* LoginViewController.m */,
+				01AED9DA1AF45EC400050797 /* SignUpViewController.h */,
+				01AED9DB1AF45EC400050797 /* SignUpViewController.m */,
 			);
 			path = BlocQuery;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				01640D201AF32E5B005567FE /* main.m in Sources */,
 				01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */,
 				01640D4B1AF33126005567FE /* CreateQuestionViewController.m in Sources */,
+				01AED9DC1AF45EC400050797 /* SignUpViewController.m in Sources */,
 				01640D481AF32F34005567FE /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
