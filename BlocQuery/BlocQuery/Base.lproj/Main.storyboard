@@ -182,7 +182,7 @@
                             <constraint firstAttribute="centerY" secondItem="VpM-1d-65w" secondAttribute="centerY" id="srd-nD-Mgp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="V1X-O0-83w"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="V1X-O0-83w"/>
                     <connections>
                         <outlet property="Login" destination="VpM-1d-65w" id="hUN-A5-L6S"/>
                         <outlet property="logout" destination="XnS-WU-P7V" id="UH6-Ih-8mH"/>
@@ -226,7 +226,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Questions" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="My Questions" image="myQuestions" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,7 +256,7 @@
         <scene sceneID="FgG-zC-hCz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4lN-Mb-dT9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Questions" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Questions" image="questions" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="edZ-8U-jh7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -273,8 +273,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="myQuestions" width="16" height="16"/>
+        <image name="profile" width="16" height="16"/>
+        <image name="questions" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
