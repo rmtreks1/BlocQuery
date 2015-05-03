@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012D465D1AF6E5B200DCE8F6 /* AllQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */; };
 		0135CBCB1AF484A500B73677 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0135CBCA1AF484A500B73677 /* Questions.m */; };
 		01640D201AF32E5B005567FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D1F1AF32E5B005567FE /* main.m */; };
 		01640D231AF32E5B005567FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D221AF32E5B005567FE /* AppDelegate.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllQuestionsViewController.h; path = BlocQuery/AllQuestionsViewController.h; sourceTree = "<group>"; };
+		012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllQuestionsViewController.m; path = BlocQuery/AllQuestionsViewController.m; sourceTree = "<group>"; };
 		0135CBC91AF484A500B73677 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
 		0135CBCA1AF484A500B73677 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		01640D1A1AF32E5B005567FE /* BlocQuery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocQuery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +137,8 @@
 		01640D111AF32E5B005567FE = {
 			isa = PBXGroup;
 			children = (
+				012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */,
+				012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */,
 				01AED9D41AF45A1500050797 /* Frameworks */,
 				01640D1C1AF32E5B005567FE /* BlocQuery */,
 				01640D391AF32E5B005567FE /* BlocQueryTests */,
@@ -376,6 +381,7 @@
 				0135CBCB1AF484A500B73677 /* Questions.m in Sources */,
 				01640D231AF32E5B005567FE /* AppDelegate.m in Sources */,
 				01640D261AF32E5B005567FE /* QuestionsViewController.m in Sources */,
+				012D465D1AF6E5B200DCE8F6 /* AllQuestionsViewController.m in Sources */,
 				01640D201AF32E5B005567FE /* main.m in Sources */,
 				01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */,
 				01640D4B1AF33126005567FE /* CreateQuestionViewController.m in Sources */,
