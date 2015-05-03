@@ -41,11 +41,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what does green baby poo mean?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtt-hb-xwn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtt-hb-xwn">
                                 <rect key="frame" x="16" y="124" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enteringQuestion:" destination="Shv-S4-15Q" eventType="editingChanged" id="YGj-eS-6vr"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xly-M9-qcv">
+                                <rect key="frame" x="16" y="273" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -59,6 +68,7 @@
                     <connections>
                         <outlet property="doneButton" destination="GSm-TF-meP" id="Cy5-Ti-Miz"/>
                         <outlet property="question" destination="dtt-hb-xwn" id="QB0-Cr-EAB"/>
+                        <outlet property="questionAsked" destination="xly-M9-qcv" id="YYn-ef-C6Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb9-mJ-gyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
