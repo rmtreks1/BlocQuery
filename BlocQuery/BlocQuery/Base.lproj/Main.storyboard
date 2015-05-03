@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--BlocQuery-->
@@ -50,26 +49,39 @@
                                     <action selector="enteringQuestion:" destination="Shv-S4-15Q" eventType="editingChanged" id="YGj-eS-6vr"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xly-M9-qcv">
-                                <rect key="frame" x="16" y="273" width="288" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-M4-YVi">
-                                <rect key="frame" x="267" y="28" width="37" height="30"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doneAndDismiss:" destination="Shv-S4-15Q" eventType="touchUpInside" id="5It-qd-asC"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-53-r8N">
+                                <rect key="frame" x="0.0" y="28" width="320" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-M4-YVi">
+                                        <rect key="frame" x="264" y="5" width="37" height="30"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneAndDismiss:" destination="Shv-S4-15Q" eventType="touchUpInside" id="5It-qd-asC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xly-M9-qcv">
+                                        <rect key="frame" x="16" y="10" width="240" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MSP-kP-51n"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z4h-M4-YVi" secondAttribute="trailing" constant="19" id="TTb-va-2fT"/>
+                                    <constraint firstAttribute="centerY" secondItem="xly-M9-qcv" secondAttribute="centerY" constant="-0.5" id="hsA-2N-UML"/>
+                                    <constraint firstAttribute="centerX" secondItem="xly-M9-qcv" secondAttribute="centerX" id="jpD-9a-Wwt"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Z4h-M4-YVi" firstAttribute="trailing" secondItem="Lue-Y3-vab" secondAttribute="trailingMargin" id="f6y-ls-7yl"/>
-                            <constraint firstItem="Z4h-M4-YVi" firstAttribute="top" secondItem="f2G-Jc-8E9" secondAttribute="bottom" constant="8" id="sqw-Pm-5ew"/>
+                            <constraint firstAttribute="centerX" secondItem="C1I-53-r8N" secondAttribute="centerX" id="7EE-iu-GFB"/>
+                            <constraint firstAttribute="width" secondItem="C1I-53-r8N" secondAttribute="width" id="N1I-Qz-OxW"/>
+                            <constraint firstItem="C1I-53-r8N" firstAttribute="top" secondItem="f2G-Jc-8E9" secondAttribute="bottom" constant="8" id="UGh-RR-Aby"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Question" id="5bL-KS-JZb">
@@ -83,7 +95,7 @@
                         <outlet property="doneButton" destination="GSm-TF-meP" id="Cy5-Ti-Miz"/>
                         <outlet property="doneButton2" destination="Z4h-M4-YVi" id="hbJ-eY-637"/>
                         <outlet property="question" destination="dtt-hb-xwn" id="QB0-Cr-EAB"/>
-                        <outlet property="questionAsked" destination="xly-M9-qcv" id="YYn-ef-C6Z"/>
+                        <outlet property="questionLabel" destination="xly-M9-qcv" id="dBk-ej-WqN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb9-mJ-gyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,13 +179,13 @@
                                 <rect key="frame" x="55" y="263" width="210" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
                                 <rect key="frame" x="52" y="313" width="216" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

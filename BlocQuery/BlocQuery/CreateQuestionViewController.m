@@ -12,7 +12,7 @@
 @interface CreateQuestionViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *question;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property (weak, nonatomic) IBOutlet UILabel *questionAsked;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton2;
 
 @end
@@ -25,8 +25,8 @@
 
     self.question.placeholder = NSLocalizedString(@"what does black baby poo mean?", @"placeholder question");
     
-    
-    self.questionAsked.hidden = true;
+    self.questionLabel.text = NSLocalizedString(@"What's your question", @"question prompt");
+
     self.doneButton.enabled = false;
     [self.question becomeFirstResponder];
     
@@ -61,30 +61,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
-
-
-- (IBAction)submitQuestion:(UIBarButtonItem *)sender {
-    [self.question resignFirstResponder];
-    NSLog(self.question.text);
-    
-    
-    if (![self.question.text  isEqual: @""]) {
-        Questions *newQuestion = [Questions makeNewQuestion:self.question.text withImage:nil];
-        NSLog(newQuestion.questionText);
-        
-        if (newQuestion) {
-            self.question.hidden = true;
-            self.doneButton.enabled = false;
-            self.questionAsked.text = newQuestion.questionText;
-            self.questionAsked.hidden = false;
-            
-        }
-
-    }
-    
-   }
-
-
 
 
 
