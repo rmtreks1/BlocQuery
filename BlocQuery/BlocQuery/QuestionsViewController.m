@@ -24,6 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.currentUser = [PFUser currentUser];
+    
     if (!self.currentUser) {
         NSLog(@"Not logged in");
         
@@ -36,6 +38,8 @@
         loginController.signUpController.delegate = self;
         
         [self presentViewController:loginController animated:YES completion:nil];
+    } else if (self.currentUser) {
+        NSLog(@"current user is: %@", self.currentUser.email);
     }
     
     
