@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z4h-M4-YVi" firstAttribute="trailing" secondItem="Lue-Y3-vab" secondAttribute="trailingMargin" id="f6y-ls-7yl"/>
                             <constraint firstItem="Z4h-M4-YVi" firstAttribute="top" secondItem="f2G-Jc-8E9" secondAttribute="bottom" constant="8" id="sqw-Pm-5ew"/>
