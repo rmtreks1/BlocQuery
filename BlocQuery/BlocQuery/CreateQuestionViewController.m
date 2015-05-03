@@ -7,8 +7,11 @@
 //
 
 #import "CreateQuestionViewController.h"
+#import "Questions.h"
 
 @interface CreateQuestionViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *question;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.question becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +28,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+#pragma mark - submitting a question
+
+- (IBAction)submitQuestion:(UIBarButtonItem *)sender {
+    [self.question resignFirstResponder];
+    NSLog(self.question.text);
+    
+    Questions *newQuestion = [Questions makeNewQuestion:self.question.text withImage:nil];
+    NSLog(newQuestion.questionText);
 }
-*/
+
+
+
+
+
+
+
 
 @end

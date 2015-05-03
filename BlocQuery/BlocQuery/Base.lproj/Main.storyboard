@@ -40,13 +40,30 @@
                     <view key="view" contentMode="scaleToFill" id="Lue-Y3-vab">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what does green baby poo mean?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtt-hb-xwn">
+                                <rect key="frame" x="16" y="124" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Question" id="5bL-KS-JZb"/>
+                    <navigationItem key="navigationItem" title="Create Question" id="5bL-KS-JZb">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="GSm-TF-meP">
+                            <connections>
+                                <action selector="submitQuestion:" destination="Shv-S4-15Q" id="Ic9-Vl-COw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="GSm-TF-meP" id="Cy5-Ti-Miz"/>
+                        <outlet property="question" destination="dtt-hb-xwn" id="QB0-Cr-EAB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb9-mJ-gyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170.1333333333332" y="-299.14666666666665"/>
+            <point key="canvasLocation" x="1170" y="-300"/>
         </scene>
         <!--Profile-->
         <scene sceneID="rvq-Vy-LF4">
