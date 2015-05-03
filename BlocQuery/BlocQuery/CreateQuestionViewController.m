@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *question;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UILabel *questionAsked;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton2;
 
 @end
 
@@ -46,6 +47,20 @@
     }
 }
 
+- (IBAction)doneAndDismiss:(UIButton *)sender {
+    [self.question resignFirstResponder];
+    NSLog(self.question.text);
+    
+    
+    // create parse object
+    if (![self.question.text  isEqual: @""]) {
+        Questions *newQuestion = [Questions makeNewQuestion:self.question.text withImage:nil];
+    }
+    
+    // dismiss the view
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
 
 
 - (IBAction)submitQuestion:(UIBarButtonItem *)sender {

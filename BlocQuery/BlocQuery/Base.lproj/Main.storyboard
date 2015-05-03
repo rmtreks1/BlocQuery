@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--BlocQuery-->
@@ -20,7 +21,7 @@
                     <navigationItem key="navigationItem" title="BlocQuery" id="Wb4-40-QyV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qfi-xT-veL">
                             <connections>
-                                <segue destination="Shv-S4-15Q" kind="push" id="P5V-UK-lO8"/>
+                                <segue destination="Shv-S4-15Q" kind="modal" id="P5V-UK-lO8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,8 +56,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-M4-YVi">
+                                <rect key="frame" x="267" y="28" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneAndDismiss:" destination="Shv-S4-15Q" eventType="touchUpInside" id="5It-qd-asC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z4h-M4-YVi" firstAttribute="trailing" secondItem="Lue-Y3-vab" secondAttribute="trailingMargin" id="f6y-ls-7yl"/>
+                            <constraint firstItem="Z4h-M4-YVi" firstAttribute="top" secondItem="f2G-Jc-8E9" secondAttribute="bottom" constant="8" id="sqw-Pm-5ew"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Question" id="5bL-KS-JZb">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="GSm-TF-meP">
@@ -67,6 +81,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneButton" destination="GSm-TF-meP" id="Cy5-Ti-Miz"/>
+                        <outlet property="doneButton2" destination="Z4h-M4-YVi" id="hbJ-eY-637"/>
                         <outlet property="question" destination="dtt-hb-xwn" id="QB0-Cr-EAB"/>
                         <outlet property="questionAsked" destination="xly-M9-qcv" id="YYn-ef-C6Z"/>
                     </connections>
