@@ -10,10 +10,13 @@
 #import "Questions.h"
 
 @interface CreateQuestionViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *question;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton2;
+@property (weak, nonatomic) IBOutlet UITextView *question;
+@property (weak, nonatomic) IBOutlet UILabel *sampleQuestion;
+
 
 @end
 
@@ -23,9 +26,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.question.placeholder = NSLocalizedString(@"what does black baby poo mean?", @"placeholder question");
+    self.questionLabel.text = NSLocalizedString(@"Ask For Answers", @"question prompt");
     
-    self.questionLabel.text = NSLocalizedString(@"What's your question", @"question prompt");
+    self.sampleQuestion.text = NSLocalizedString(@"ask anything, e.g. : Is it bad if my baby's poo is green?", @"sample question");
 
     self.doneButton.enabled = false;
     [self.question becomeFirstResponder];

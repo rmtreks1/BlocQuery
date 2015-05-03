@@ -41,15 +41,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtt-hb-xwn">
-                                <rect key="frame" x="16" y="124" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="enteringQuestion:" destination="Shv-S4-15Q" eventType="editingChanged" id="YGj-eS-6vr"/>
-                                </connections>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-53-r8N">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-53-r8N" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="28" width="320" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-M4-YVi">
@@ -63,7 +55,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xly-M9-qcv">
                                         <rect key="frame" x="16" y="10" width="240" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -76,12 +68,48 @@
                                     <constraint firstAttribute="centerX" secondItem="xly-M9-qcv" secondAttribute="centerX" id="jpD-9a-Wwt"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ti-mC-HQT" userLabel="QuestionView">
+                                <rect key="frame" x="0.0" y="69" width="320" height="150"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCf-fQ-Qfb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="p9b-O5-XVL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chP-I4-eW5" userLabel="SampleQuestionView">
+                                <rect key="frame" x="0.0" y="220" width="320" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NnX-bd-ycl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="sampleQuestion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiQ-VQ-fKT">
+                                <rect key="frame" x="10" y="224" width="320" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="chP-I4-eW5" secondAttribute="centerX" id="2UO-FU-iKH"/>
                             <constraint firstAttribute="centerX" secondItem="C1I-53-r8N" secondAttribute="centerX" id="7EE-iu-GFB"/>
+                            <constraint firstItem="5Ti-mC-HQT" firstAttribute="top" secondItem="C1I-53-r8N" secondAttribute="bottom" constant="1" id="BfP-dH-mEr"/>
+                            <constraint firstItem="chP-I4-eW5" firstAttribute="centerY" secondItem="RiQ-VQ-fKT" secondAttribute="centerY" constant="0.5" id="JfZ-47-v0B"/>
+                            <constraint firstItem="chP-I4-eW5" firstAttribute="width" secondItem="RiQ-VQ-fKT" secondAttribute="width" id="LOm-4z-2vM"/>
                             <constraint firstAttribute="width" secondItem="C1I-53-r8N" secondAttribute="width" id="N1I-Qz-OxW"/>
                             <constraint firstItem="C1I-53-r8N" firstAttribute="top" secondItem="f2G-Jc-8E9" secondAttribute="bottom" constant="8" id="UGh-RR-Aby"/>
+                            <constraint firstItem="chP-I4-eW5" firstAttribute="width" secondItem="Lue-Y3-vab" secondAttribute="width" id="VEa-k4-QPJ"/>
+                            <constraint firstItem="5Ti-mC-HQT" firstAttribute="width" secondItem="Lue-Y3-vab" secondAttribute="width" id="hbG-Cz-J5i"/>
+                            <constraint firstAttribute="centerX" secondItem="5Ti-mC-HQT" secondAttribute="centerX" id="hwB-6u-fQM"/>
+                            <constraint firstItem="chP-I4-eW5" firstAttribute="top" secondItem="5Ti-mC-HQT" secondAttribute="bottom" constant="1" id="sGK-y5-p17"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Question" id="5bL-KS-JZb">
@@ -94,8 +122,9 @@
                     <connections>
                         <outlet property="doneButton" destination="GSm-TF-meP" id="Cy5-Ti-Miz"/>
                         <outlet property="doneButton2" destination="Z4h-M4-YVi" id="hbJ-eY-637"/>
-                        <outlet property="question" destination="dtt-hb-xwn" id="QB0-Cr-EAB"/>
+                        <outlet property="question" destination="nCf-fQ-Qfb" id="Ric-KF-BIK"/>
                         <outlet property="questionLabel" destination="xly-M9-qcv" id="dBk-ej-WqN"/>
+                        <outlet property="sampleQuestion" destination="RiQ-VQ-fKT" id="BcC-hU-xeD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb9-mJ-gyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
