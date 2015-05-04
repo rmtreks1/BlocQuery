@@ -10,5 +10,6 @@
 #import <UIKit/UIKit.h>
 
 @interface QuestionTableViewCell : PFTableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 
 @end

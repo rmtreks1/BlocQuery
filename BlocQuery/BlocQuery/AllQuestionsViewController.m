@@ -179,9 +179,9 @@ Instead set the values in 'user defined runtime attributes'
     
     self.imageKey = @"questionImage";
     
-    
-    cell.textLabel.text = [object objectForKey:self.textKey];
-    cell.imageView.file = [object objectForKey:self.imageKey];
+    cell.questionLabel.text = [object objectForKey:self.textKey];
+//    cell.textLabel.text = [object objectForKey:self.textKey];
+//    cell.imageView.file = [object objectForKey:self.imageKey];
     
     return cell;
 }

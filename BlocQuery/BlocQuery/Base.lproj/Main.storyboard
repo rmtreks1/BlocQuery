@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Create Question-->
@@ -196,16 +197,33 @@
         <scene sceneID="6a9-ku-Ly6">
             <objects>
                 <tableViewController id="5k3-mh-EEP" customClass="AllQuestionsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" id="C0b-xw-ZZP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="165" sectionHeaderHeight="22" sectionFooterHeight="22" id="C0b-xw-ZZP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="iIX-iQ-J1K" customClass="QuestionTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="165" id="iIX-iQ-J1K" customClass="QuestionTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIX-iQ-J1K" id="hJq-ba-yP2">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHF-sC-bXz">
+                                            <rect key="frame" x="8" y="0.0" width="304" height="80"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rHF-sC-bXz" firstAttribute="centerX" secondItem="hJq-ba-yP2" secondAttribute="centerX" id="5y7-JZ-0oe"/>
+                                        <constraint firstItem="rHF-sC-bXz" firstAttribute="top" secondItem="hJq-ba-yP2" secondAttribute="top" id="ZrK-kP-AZc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rHF-sC-bXz" secondAttribute="bottom" constant="76" id="b5f-ng-2Z1"/>
+                                        <constraint firstItem="rHF-sC-bXz" firstAttribute="leading" secondItem="hJq-ba-yP2" secondAttribute="leadingMargin" id="lFj-72-AUL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="questionLabel" destination="rHF-sC-bXz" id="iEZ-Vk-0SG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
