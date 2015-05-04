@@ -7,8 +7,12 @@
 //
 
 #import "AllQuestionsViewController.h"
+#import "LoginViewController.h"
+#import "SignUpViewController.h"
 
-@interface AllQuestionsViewController ()
+@interface AllQuestionsViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+
+@property (nonatomic, strong) PFUser *currentUser;
 
 @end
 
@@ -69,12 +73,29 @@ Instead set the values in 'user defined runtime attributes'
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+    self.currentUser = [PFUser currentUser];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    if (!self.currentUser) {
+        NSLog(@"Not logged in");
+        
+        // testing the login controller
+        LoginViewController *loginController = [[LoginViewController alloc] init];
+        loginController.delegate = self;
+        
+        // custom signup controller
+        loginController.signUpController = [[SignUpViewController alloc] init];
+        loginController.signUpController.delegate = self;
+        
+        [self presentViewController:loginController animated:YES completion:nil];
+    } else if (self.currentUser) {
+        NSLog(@"current user in allQuestions is: %@", self.currentUser.email);
+    }
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+    
 }
 
 - (void)viewDidUnload {
@@ -232,5 +253,33 @@ Instead set the values in 'user defined runtime attributes'
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
+
+
+
+
+
+#pragma mark - Logging in to Parse
+// move this code to button or screen that triggers the login
+
+- (void)logInViewController:(PFLogInViewController *)controller
+               didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
 
 @end

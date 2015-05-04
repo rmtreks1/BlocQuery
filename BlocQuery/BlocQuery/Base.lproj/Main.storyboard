@@ -4,31 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--BlocQuery-->
-        <scene sceneID="hNz-n2-bh7">
-            <objects>
-                <viewController id="9pv-A4-QxB" customClass="QuestionsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="BlocQuery" id="Wb4-40-QyV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qfi-xT-veL">
-                            <connections>
-                                <segue destination="Shv-S4-15Q" kind="modal" id="P5V-UK-lO8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="833.06666666666661" y="-302.93333333333334"/>
-        </scene>
         <!--Create Question-->
         <scene sceneID="W7G-Wh-zIx">
             <objects>
@@ -129,7 +104,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb9-mJ-gyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="-300"/>
+            <point key="canvasLocation" x="1234" y="-303"/>
+        </scene>
+        <!--All Questions-->
+        <scene sceneID="vif-aD-YME">
+            <objects>
+                <navigationController id="NDZ-gn-VoB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="All Questions" image="questions" id="J94-gS-f0d"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z03-JB-lrs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5k3-mh-EEP" kind="relationship" relationship="rootViewController" id="nmU-gl-Iq0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqg-iV-JvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="-303"/>
         </scene>
         <!--Profile-->
         <scene sceneID="rvq-Vy-LF4">
@@ -175,9 +167,6 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="5k3-mh-EEP" kind="modal" id="6bq-sW-XiC"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbf-iY-DDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="973"/>
+            <point key="canvasLocation" x="400" y="999"/>
         </scene>
         <!--All Questions View Controller-->
         <scene sceneID="6a9-ku-Ly6">
@@ -224,7 +213,13 @@
                             <outlet property="delegate" destination="5k3-mh-EEP" id="TcD-oK-JgK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xiF-8K-JjH"/>
+                    <navigationItem key="navigationItem" id="xiF-8K-JjH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cnb-DZ-qs2">
+                            <connections>
+                                <segue destination="Shv-S4-15Q" kind="modal" id="RBr-iP-G6h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="parseClassName" value="Questions"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="textKey" value="questionText"/>
@@ -237,7 +232,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuU-Ad-Mi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781" y="973"/>
+            <point key="canvasLocation" x="823" y="-303"/>
         </scene>
         <!--My Questions-->
         <scene sceneID="wg7-f3-ORb">
@@ -290,7 +285,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="4lN-Mb-dT9" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="NDZ-gn-VoB" kind="relationship" relationship="viewControllers" id="5vN-ah-dEi"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="9MK-Mf-nvI" kind="relationship" relationship="viewControllers" id="KNI-NV-bM5"/>
                     </connections>
@@ -298,25 +293,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
-        <!--Questions-->
-        <scene sceneID="FgG-zC-hCz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4lN-Mb-dT9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Questions" image="questions" id="acW-dT-cKf"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="edZ-8U-jh7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Cwr-pC-fnW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F3Y-hp-Ug6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="400" y="-302.93333333333334"/>
         </scene>
     </scenes>
     <resources>

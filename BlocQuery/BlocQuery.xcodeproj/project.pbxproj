@@ -11,7 +11,6 @@
 		0135CBCB1AF484A500B73677 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0135CBCA1AF484A500B73677 /* Questions.m */; };
 		01640D201AF32E5B005567FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D1F1AF32E5B005567FE /* main.m */; };
 		01640D231AF32E5B005567FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D221AF32E5B005567FE /* AppDelegate.m */; };
-		01640D261AF32E5B005567FE /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D251AF32E5B005567FE /* QuestionsViewController.m */; };
 		01640D291AF32E5B005567FE /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D281AF32E5B005567FE /* MyQuestionsViewController.m */; };
 		01640D2C1AF32E5B005567FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01640D2A1AF32E5B005567FE /* Main.storyboard */; };
 		01640D2E1AF32E5B005567FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01640D2D1AF32E5B005567FE /* Images.xcassets */; };
@@ -61,8 +60,6 @@
 		01640D1F1AF32E5B005567FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01640D211AF32E5B005567FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01640D221AF32E5B005567FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01640D241AF32E5B005567FE /* QuestionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
-		01640D251AF32E5B005567FE /* QuestionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
 		01640D271AF32E5B005567FE /* MyQuestionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
 		01640D281AF32E5B005567FE /* MyQuestionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
 		01640D2B1AF32E5B005567FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,8 +163,6 @@
 				012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */,
 				01640D211AF32E5B005567FE /* AppDelegate.h */,
 				01640D221AF32E5B005567FE /* AppDelegate.m */,
-				01640D241AF32E5B005567FE /* QuestionsViewController.h */,
-				01640D251AF32E5B005567FE /* QuestionsViewController.m */,
 				01640D271AF32E5B005567FE /* MyQuestionsViewController.h */,
 				01640D281AF32E5B005567FE /* MyQuestionsViewController.m */,
 				01640D2A1AF32E5B005567FE /* Main.storyboard */,
@@ -386,7 +381,6 @@
 				0135CBCB1AF484A500B73677 /* Questions.m in Sources */,
 				01640D231AF32E5B005567FE /* AppDelegate.m in Sources */,
 				01BD4D541AF7030D00D72B33 /* QuestionTableViewCell.m in Sources */,
-				01640D261AF32E5B005567FE /* QuestionsViewController.m in Sources */,
 				012D465D1AF6E5B200DCE8F6 /* AllQuestionsViewController.m in Sources */,
 				01640D201AF32E5B005567FE /* main.m in Sources */,
 				01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */,
