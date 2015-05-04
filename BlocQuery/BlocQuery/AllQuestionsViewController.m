@@ -9,6 +9,7 @@
 #import "AllQuestionsViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "DetailedQuestionViewController.h"
 
 @interface AllQuestionsViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
@@ -256,6 +257,14 @@ Instead set the values in 'user defined runtime attributes'
 
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDetailedQuestion"]) {
+        DetailedQuestionViewController *detailViewController = [segue destinationViewController];
+        NSInteger row = [[self tableView].indexPathForSelectedRow row];
+        detailViewController.question = [self.objects objectAtIndex:row];
+    }
+}
+
 
 
 #pragma mark - Logging in to Parse
@@ -278,6 +287,9 @@ Instead set the values in 'user defined runtime attributes'
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
 
 
 

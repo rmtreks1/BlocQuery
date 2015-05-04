@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1234" y="-303"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed Question View Controller-->
         <scene sceneID="21P-1F-SRQ">
             <objects>
-                <viewController id="4cN-4H-064" sceneMemberID="viewController">
+                <viewController id="4cN-4H-064" customClass="DetailedQuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OsX-di-rtZ"/>
                         <viewControllerLayoutGuide type="bottom" id="vK5-PN-uGN"/>
@@ -119,20 +119,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Awesome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TC-D0-m8g">
-                                <rect key="frame" x="122" y="273" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TC-D0-m8g">
+                                <rect key="frame" x="31" y="72" width="158" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6TC-D0-m8g" firstAttribute="centerX" secondItem="3pZ-tT-g3e" secondAttribute="centerX" id="ECX-5i-SsD"/>
-                            <constraint firstItem="6TC-D0-m8g" firstAttribute="top" secondItem="OsX-di-rtZ" secondAttribute="bottom" constant="253" id="bLb-pn-Kn5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6TC-D0-m8g" secondAttribute="trailing" constant="10" id="1Px-5T-gkQ"/>
+                            <constraint firstItem="6TC-D0-m8g" firstAttribute="leading" secondItem="3pZ-tT-g3e" secondAttribute="leadingMargin" constant="104" id="1je-pn-0as"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6TC-D0-m8g" secondAttribute="trailing" constant="115" id="4lM-XC-77h"/>
+                            <constraint firstItem="6TC-D0-m8g" firstAttribute="centerX" secondItem="3pZ-tT-g3e" secondAttribute="centerX" constant="-6" id="ECX-5i-SsD"/>
+                            <constraint firstItem="6TC-D0-m8g" firstAttribute="top" secondItem="OsX-di-rtZ" secondAttribute="bottom" constant="8" id="bLb-pn-Kn5"/>
+                            <constraint firstItem="6TC-D0-m8g" firstAttribute="top" secondItem="OsX-di-rtZ" secondAttribute="bottom" constant="20" id="lWr-6P-wTX"/>
+                            <constraint firstItem="6TC-D0-m8g" firstAttribute="top" secondItem="OsX-di-rtZ" secondAttribute="bottom" constant="8" id="ove-2N-sdD"/>
+                            <constraint firstItem="6TC-D0-m8g" firstAttribute="leading" secondItem="3pZ-tT-g3e" secondAttribute="leadingMargin" constant="15" id="ubW-yd-GWh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KiM-wM-5D8"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="6TC-D0-m8g" id="Jy8-ah-hTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlv-xj-m5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +247,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIX-iQ-J1K" id="hJq-ba-yP2">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHF-sC-bXz">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHF-sC-bXz">
                                             <rect key="frame" x="18" y="21" width="252" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="ruZ-rH-fsW"/>
@@ -258,7 +267,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="questionLabel" destination="rHF-sC-bXz" id="iEZ-Vk-0SG"/>
-                                    <segue destination="4cN-4H-064" kind="push" id="MO7-SL-gwF"/>
+                                    <segue destination="4cN-4H-064" kind="push" identifier="showDetailedQuestion" id="MO7-SL-gwF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
