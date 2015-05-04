@@ -1,0 +1,965 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		037E6B81E92C0629138B64BC /* UIView+Parallax.h in Headers */ = {isa = PBXBuildFile; fileRef = DE3F49526CB9DCB2FB2FD86C /* UIView+Parallax.h */; };
+		053C44774AA362DA929887AE /* SDCAlertViewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B63162EE74CBBBF94A0EF08 /* SDCAlertViewContentView.m */; };
+		0BB225E40E2DADEE87AA5D9F /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1790417F53F308AAE9BF6879 /* RBBSpringAnimation.m */; };
+		0C6EF12AF01A883C4375BDCA /* SDCAlertControllerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 975457C68EE773D77189241B /* SDCAlertControllerView.h */; };
+		0D8AF6191C615ABC876A52EF /* SDCAlertCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB21FFCB96D7F22949A2EF4 /* SDCAlertCollectionViewCell.m */; };
+		0F05868ADA4A5EB8135BECDE /* RBBBlockBasedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D0B1753732287A015F0F111F /* RBBBlockBasedArray.h */; };
+		12B2826290CD0F4CD701C1CC /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCDE2E68FEFCFA459D18D0 /* RBBCustomAnimation.m */; };
+		17DDA342E01AA6C4E96A4381 /* SDCAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A77C9419BDED9E71B60801 /* SDCAlertAction.m */; };
+		1AA9C50E9C9B5DDE2F0E39BA /* SDCAlertControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C13545F3D3D14EC1C0B9A11 /* SDCAlertControllerTransition.m */; };
+		26643A144BD6606F3F819E7A /* SDCAlertControllerTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = F050A24EC6EF44486361E344 /* SDCAlertControllerTransition.h */; };
+		2B07FBBE754034C11A5A7776 /* SDCAlertLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = FA09DE788BD8B41E7F0B906E /* SDCAlertLabel.h */; };
+		2F13F27D181A0846EC3C5905 /* SDCAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC166F7CBADCEA580DE28FD0 /* SDCAlertController.h */; };
+		35CBB8E2EC3FB4A2402F0324 /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3D0165F7F9AD160E1DD74 /* RBBCubicBezier.m */; };
+		377D04C4264EC2FC8F8AC7E3 /* RBBCubicBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 93336C715ED34B6128EF501F /* RBBCubicBezier.h */; };
+		3A4FD078D93C88DF4487D6B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878C8E83353765F32C00E052 /* Foundation.framework */; };
+		3CC8C5E466533226AB873A0C /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E3911C2B7B0CA1DC79576CE8 /* RBBAnimation.m */; };
+		3CFE2670D8ABA33DDD368D92 /* SDCAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72894EA15D07E152E5A9E4 /* SDCAlertViewController.m */; };
+		3F23261EB29E5BA9D146B104 /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD729FCBA40BC2AA381946D /* RBBEasingFunction.m */; };
+		412629EF3A5D90497C2C09FE /* RBBEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A5ABD3FDD28BA6F4A78BD55 /* RBBEasingFunction.h */; };
+		41F8B89D2AE600A48ADFF6D3 /* SDCAlertControllerCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 981BDE2AC7D2734CFB0BC7F7 /* SDCAlertControllerCollectionViewFlowLayout.m */; };
+		4203BB8D50FA0455E11131C1 /* SDCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC932496188D03FFC5D8C35 /* SDCDemoViewController.m */; };
+		44AF675D2B957F8C11D0DACC /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12859EB6E252069A879B49 /* NSValue+PlatformIndependence.m */; };
+		46F2177C52C66C28EBABD98A /* SDCAlertViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = BB30128CD25396328EF8D9BB /* SDCAlertViewCoordinator.m */; };
+		47F9F95ADACD4A74E4AD12E5 /* UIColor+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DF2FA862CB2E33C465D814 /* UIColor+PlatformIndependence.h */; };
+		57538C324EE6E09EEDA397E4 /* UIViewController+Current.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B7ECD305B55C7C3A8EFA5F /* UIViewController+Current.h */; };
+		5762C112E732870AF2EDA6AA /* UIView+Parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3C57AB82017E7A8EACBEE /* UIView+Parallax.m */; };
+		5844CE2F3CEC8B719A30DECF /* UIView+SDCAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C633C6AE7CBA8E77639AF4 /* UIView+SDCAutoLayout.m */; };
+		5BE18CE669B186C6ECD2519C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878C8E83353765F32C00E052 /* Foundation.framework */; };
+		5CECE4CB8BBF7E7958A62F6C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 476408AFB28570EECD437B2A /* Pods-dummy.m */; };
+		5FFA2C0F27FA76B02742CE93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878C8E83353765F32C00E052 /* Foundation.framework */; };
+		626D7797732090D2395990F7 /* Pods-SDCAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE1FC3C23C48EEB8C203080 /* Pods-SDCAutoLayout-dummy.m */; };
+		653B168E60D2F172DFE95C5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878C8E83353765F32C00E052 /* Foundation.framework */; };
+		6B2E61CC9CF3FB743BA4E93D /* SDCAlertCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F3A975076363B0AFA2B96D /* SDCAlertCollectionViewCell.h */; };
+		6BB1480238DA06503F5F1731 /* SDCAlertViewBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = B677E0B468139A50975622A8 /* SDCAlertViewBackgroundView.m */; };
+		6BFCA0C99CB9696FA03BCCFE /* SDCAlertViewCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = B30B9C5C94973EC9D31E1AEA /* SDCAlertViewCoordinator.h */; };
+		6D6D690177283E0983E7ECCB /* SDCAlertTextFieldTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B6FA3862CDF8B28CC52D66 /* SDCAlertTextFieldTableViewCell.h */; };
+		6E3F932EC0220EB6D12D8DC4 /* SDCAlertControllerTextFieldViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CBE34F24861A4BA55B907D /* SDCAlertControllerTextFieldViewController.h */; };
+		6F9BE23A91598521F28ED73A /* SDCAlertControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056CCFAD1054185619BC66CF /* SDCAlertControllerView.m */; };
+		7101D43E7046AA5A87E1B194 /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E16DB1448390AF4918963C /* RBBTweenAnimation.m */; };
+		7764B0D91A0034108BA9DFB0 /* SDCAlertViewBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 311E2D25073382C382F58B7C /* SDCAlertViewBackgroundView.h */; };
+		81E4EC832F78EBC6DF44AF8A /* SDCAlertControllerCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B27036D7088B0CBCDDD49D /* SDCAlertControllerCollectionViewFlowLayout.h */; };
+		8369393CDD30505C5B6F5B15 /* SDCAlertControllerVisualStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = BFAF6D31A373BF1B65F5E731 /* SDCAlertControllerVisualStyle.h */; };
+		90877B3055D623734349EEBE /* SDCDemoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E737A620ABBF0656F4F9EB1 /* SDCDemoViewController.h */; };
+		95D05D6B7B359E95FC466B42 /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E2BE9E8F30BAFE70A37FC /* RBBBlockBasedArray.m */; };
+		95DC6ADD091831E447C12447 /* SDCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1B2683B732F20E1DC367CE /* SDCAlertView.m */; };
+		95FEDF91667F34DD44962B4A /* RBBLinearInterpolation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC7D4027ABAAD741130F9F7 /* RBBLinearInterpolation.h */; };
+		9D482E56FB6E2D9C6AA07931 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809D1530EFA357195684DB03 /* QuartzCore.framework */; };
+		9EB30E31379C60A66A1F16CD /* UIColor+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 754FBEDFBEDE483BA09AB15A /* UIColor+PlatformIndependence.m */; };
+		A013C360F818CFBD863820E6 /* SDCAlertControllerTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A1D5DA65A4B3E757BCAF33 /* SDCAlertControllerTextFieldViewController.m */; };
+		A36F6483FADA0C7A8D8B88C1 /* SDCIntrinsicallySizedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F6CA4579C4E075B990CDA60 /* SDCIntrinsicallySizedView.h */; };
+		A3A2E7396B259E0C82ACD770 /* Pods-RBBAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD755783D6C022BEB1F578DF /* Pods-RBBAnimation-dummy.m */; };
+		A53212A654F72260922082C9 /* SDCIntrinsicallySizedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C5AB2436B1A09E5FE21FB7 /* SDCIntrinsicallySizedView.m */; };
+		A5CDD733BAFD61EB4FE0CFB1 /* SDCAlertTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD58D802FB7DC9CA4DCF02 /* SDCAlertTextFieldTableViewCell.m */; };
+		A63D689B450282192D2CEF69 /* SDCAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = FFE5D3DC49F3072D5BF1B496 /* SDCAlertView.h */; };
+		A84F628E34ADF5316C527ED0 /* SDCAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F244E9B57065E8ED12DC811 /* SDCAlertViewController.h */; };
+		B71BA74A371A08FD43A9EAE2 /* UIView+SDCAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5171C3C2AF8E013FA6B1B0BC /* UIView+SDCAutoLayout.h */; };
+		B74FBC5FC9D293B24CD0DE69 /* SDCAlertControllerDefaultVisualStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB15DE08C203C0AA6A2E612 /* SDCAlertControllerDefaultVisualStyle.m */; };
+		B9862CE03FFB26FCF9A114EC /* RBBTweenAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EFA465B6FB1EBEDA8E321EB /* RBBTweenAnimation.h */; };
+		BA92330A06D0CFB8AB535ED9 /* RBBCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1845AFB8B432FEADD8164303 /* RBBCustomAnimation.h */; };
+		C0DF24BB9BAD14AFC5BB9D31 /* UIViewController+Current.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDFBE85674E44ACA27783B /* UIViewController+Current.m */; };
+		C641DAA3F0F11E70B1D2E068 /* SDCAlertControllerDefaultVisualStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0D04EE0945CB5202DED143 /* SDCAlertControllerDefaultVisualStyle.h */; };
+		C6AC475234C23382580B238A /* RBBAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = CC713E913293780D9C6603F4 /* RBBAnimation.h */; };
+		CB321C595A614CFC5D1717BA /* SDCAlertViewContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 126591B0FF7ED0B174A20CB9 /* SDCAlertViewContentView.h */; };
+		CD3CF486DCD424D36A730D3C /* Pods-SDCAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D23FA35F27C4065141996 /* Pods-SDCAlertView-dummy.m */; };
+		CF9C3FD6FDE31A4A1E1F3CCB /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 2526A8C338732C189FDDCE0F /* NSValue+PlatformIndependence.h */; };
+		D2E024CDAC3D84F153142407 /* SDCAlertViewTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 3630C940591C14137ECE56F6 /* SDCAlertViewTransitioning.h */; };
+		D58D27BFBC39B2B6DF41036A /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A33E470AFC910952236BE /* RBBLinearInterpolation.m */; };
+		DAC96DD977CD816B455BF533 /* SDCAlertLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F5948B4DBD29F07DEE6ED9 /* SDCAlertLabel.m */; };
+		DB99118080105CD06F983F9F /* SDCAlertPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 69A650E393DCA59CFBBFC33D /* SDCAlertPresentationController.h */; };
+		DE9E0649B0E8A5D772FA298D /* SDCAlertControllerScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 733D444812FC191BFE651635 /* SDCAlertControllerScrollView.h */; };
+		DFF2054DEE412E5B43D5F9FA /* SDCAlertControllerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CB47A7C8A2FD0DD8807F09 /* SDCAlertControllerScrollView.m */; };
+		E158A4074E8D31BA2651DE0E /* SDCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF51B5E74DBCDF7B1FB5FD16 /* SDCAlertController.m */; };
+		E9001E09173C86A6EE819FE4 /* RBBSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = D444484E673BB42927F58DC5 /* RBBSpringAnimation.h */; };
+		F2882A3D114B0847E676B7B9 /* SDCAlertPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E93798EDB6DCA4C72B6CCE8 /* SDCAlertPresentationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92B8360C19D93FE51798F4D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F26606B2F5BAFD3AF8BB3154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6805577182FC63D80BEC7C7A;
+			remoteInfo = "Pods-RBBAnimation";
+		};
+		C04B7D25D892BC7952AAF752 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F26606B2F5BAFD3AF8BB3154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87C717AD0C9E116AB48994B2;
+			remoteInfo = "Pods-SDCAutoLayout";
+		};
+		C7A43EB23D56C78937282EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F26606B2F5BAFD3AF8BB3154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87C717AD0C9E116AB48994B2;
+			remoteInfo = "Pods-SDCAutoLayout";
+		};
+		DA278F85D31B18E483DC00BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F26606B2F5BAFD3AF8BB3154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01D7E75653890BAB35E7CB47;
+			remoteInfo = "Pods-SDCAlertView";
+		};
+		F4765F07639DF6B039D36881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F26606B2F5BAFD3AF8BB3154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6805577182FC63D80BEC7C7A;
+			remoteInfo = "Pods-RBBAnimation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03B27036D7088B0CBCDDD49D /* SDCAlertControllerCollectionViewFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertControllerCollectionViewFlowLayout.h; path = SDCAlertView/Source/SDCAlertControllerCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		03CB47A7C8A2FD0DD8807F09 /* SDCAlertControllerScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertControllerScrollView.m; path = SDCAlertView/Source/SDCAlertControllerScrollView.m; sourceTree = "<group>"; };
+		056CCFAD1054185619BC66CF /* SDCAlertControllerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertControllerView.m; path = SDCAlertView/Source/SDCAlertControllerView.m; sourceTree = "<group>"; };
+		07A1D5DA65A4B3E757BCAF33 /* SDCAlertControllerTextFieldViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertControllerTextFieldViewController.m; path = SDCAlertView/Source/SDCAlertControllerTextFieldViewController.m; sourceTree = "<group>"; };
+		07DCDE2E68FEFCFA459D18D0 /* RBBCustomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBCustomAnimation.m; path = RBBAnimation/RBBCustomAnimation.m; sourceTree = "<group>"; };
+		0C47837F8FB4B5CF7F9C6392 /* Pods-SDCAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDCAlertView.xcconfig"; sourceTree = "<group>"; };
+		0C5F204B5103C2B58D7FA184 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		0CB15DE08C203C0AA6A2E612 /* SDCAlertControllerDefaultVisualStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertControllerDefaultVisualStyle.m; path = SDCAlertView/Source/SDCAlertControllerDefaultVisualStyle.m; sourceTree = "<group>"; };
+		11E1EB2DF32FA6272CA48FC7 /* libPods-RBBAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RBBAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		126591B0FF7ED0B174A20CB9 /* SDCAlertViewContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertViewContentView.h; path = SDCAlertView/Source/SDCAlertViewContentView.h; sourceTree = "<group>"; };
+		131D23FA35F27C4065141996 /* Pods-SDCAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SDCAlertView-dummy.m"; sourceTree = "<group>"; };
+		1790417F53F308AAE9BF6879 /* RBBSpringAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBSpringAnimation.m; path = RBBAnimation/RBBSpringAnimation.m; sourceTree = "<group>"; };
+		1845AFB8B432FEADD8164303 /* RBBCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBCustomAnimation.h; path = RBBAnimation/RBBCustomAnimation.h; sourceTree = "<group>"; };
+		1B63162EE74CBBBF94A0EF08 /* SDCAlertViewContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertViewContentView.m; path = SDCAlertView/Source/SDCAlertViewContentView.m; sourceTree = "<group>"; };
+		1BB3C57AB82017E7A8EACBEE /* UIView+Parallax.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Parallax.m"; path = "SDCAlertView/Source/UIView+Parallax.m"; sourceTree = "<group>"; };
+		2526A8C338732C189FDDCE0F /* NSValue+PlatformIndependence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+PlatformIndependence.h"; path = "RBBAnimation/NSValue+PlatformIndependence.h"; sourceTree = "<group>"; };
+		27C5AB2436B1A09E5FE21FB7 /* SDCIntrinsicallySizedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCIntrinsicallySizedView.m; path = SDCAlertView/Source/SDCIntrinsicallySizedView.m; sourceTree = "<group>"; };
+		27F5948B4DBD29F07DEE6ED9 /* SDCAlertLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertLabel.m; path = SDCAlertView/Source/SDCAlertLabel.m; sourceTree = "<group>"; };
+		2964C556A247D4DDAEF8FD0B /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A5ABD3FDD28BA6F4A78BD55 /* RBBEasingFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBEasingFunction.h; path = RBBAnimation/RBBEasingFunction.h; sourceTree = "<group>"; };
+		2F244E9B57065E8ED12DC811 /* SDCAlertViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertViewController.h; path = SDCAlertView/Source/SDCAlertViewController.h; sourceTree = "<group>"; };
+		311E2D25073382C382F58B7C /* SDCAlertViewBackgroundView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertViewBackgroundView.h; path = SDCAlertView/Source/SDCAlertViewBackgroundView.h; sourceTree = "<group>"; };
+		3630C940591C14137ECE56F6 /* SDCAlertViewTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertViewTransitioning.h; path = SDCAlertView/Source/SDCAlertViewTransitioning.h; sourceTree = "<group>"; };
+		41CBE34F24861A4BA55B907D /* SDCAlertControllerTextFieldViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertControllerTextFieldViewController.h; path = SDCAlertView/Source/SDCAlertControllerTextFieldViewController.h; sourceTree = "<group>"; };
+		44DD58D802FB7DC9CA4DCF02 /* SDCAlertTextFieldTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertTextFieldTableViewCell.m; path = SDCAlertView/Source/SDCAlertTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		476408AFB28570EECD437B2A /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		49FD75FEEB74457198FE4C0F /* Pods-SDCAutoLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDCAutoLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		4AD3D0165F7F9AD160E1DD74 /* RBBCubicBezier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBCubicBezier.m; path = RBBAnimation/RBBCubicBezier.m; sourceTree = "<group>"; };
+		4BEC1272EC81D99ADE99FAD6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		5171C3C2AF8E013FA6B1B0BC /* UIView+SDCAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SDCAutoLayout.h"; path = "AutoLayout/UIView+SDCAutoLayout.h"; sourceTree = "<group>"; };
+		51EF038A1F6B05ACF22F6CA6 /* Pods-RBBAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RBBAnimation-prefix.pch"; sourceTree = "<group>"; };
+		570C84A5505E34B3E858F483 /* Pods-RBBAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBBAnimation.xcconfig"; sourceTree = "<group>"; };
+		5E737A620ABBF0656F4F9EB1 /* SDCDemoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCDemoViewController.h; path = SDCAlertView/Source/SDCDemoViewController.h; sourceTree = "<group>"; };
+		5FC7D4027ABAAD741130F9F7 /* RBBLinearInterpolation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBLinearInterpolation.h; path = RBBAnimation/RBBLinearInterpolation.h; sourceTree = "<group>"; };
+		62E16DB1448390AF4918963C /* RBBTweenAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBTweenAnimation.m; path = RBBAnimation/RBBTweenAnimation.m; sourceTree = "<group>"; };
+		66C633C6AE7CBA8E77639AF4 /* UIView+SDCAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDCAutoLayout.m"; path = "AutoLayout/UIView+SDCAutoLayout.m"; sourceTree = "<group>"; };
+		69A650E393DCA59CFBBFC33D /* SDCAlertPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertPresentationController.h; path = SDCAlertView/Source/SDCAlertPresentationController.h; sourceTree = "<group>"; };
+		6B65FB92E93B97A182B4C296 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		733D444812FC191BFE651635 /* SDCAlertControllerScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertControllerScrollView.h; path = SDCAlertView/Source/SDCAlertControllerScrollView.h; sourceTree = "<group>"; };
+		754FBEDFBEDE483BA09AB15A /* UIColor+PlatformIndependence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PlatformIndependence.m"; path = "RBBAnimation/UIColor+PlatformIndependence.m"; sourceTree = "<group>"; };
+		7D0E31ABD389410F5216B15E /* libPods-SDCAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDCAutoLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D12859EB6E252069A879B49 /* NSValue+PlatformIndependence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValue+PlatformIndependence.m"; path = "RBBAnimation/NSValue+PlatformIndependence.m"; sourceTree = "<group>"; };
+		7E93798EDB6DCA4C72B6CCE8 /* SDCAlertPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertPresentationController.m; path = SDCAlertView/Source/SDCAlertPresentationController.m; sourceTree = "<group>"; };
+		809D1530EFA357195684DB03 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		84DF2FA862CB2E33C465D814 /* UIColor+PlatformIndependence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PlatformIndependence.h"; path = "RBBAnimation/UIColor+PlatformIndependence.h"; sourceTree = "<group>"; };
+		878C8E83353765F32C00E052 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		88B7ECD305B55C7C3A8EFA5F /* UIViewController+Current.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Current.h"; path = "SDCAlertView/Source/UIViewController+Current.h"; sourceTree = "<group>"; };
+		8EFA465B6FB1EBEDA8E321EB /* RBBTweenAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBTweenAnimation.h; path = RBBAnimation/RBBTweenAnimation.h; sourceTree = "<group>"; };
+		8F020F503CA91A2DC362D3AD /* Pods-SDCAlertView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDCAlertView-Private.xcconfig"; sourceTree = "<group>"; };
+		91668CBBCDD480F9A75DCC9D /* Pods-SDCAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SDCAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		93336C715ED34B6128EF501F /* RBBCubicBezier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBCubicBezier.h; path = RBBAnimation/RBBCubicBezier.h; sourceTree = "<group>"; };
+		975457C68EE773D77189241B /* SDCAlertControllerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertControllerView.h; path = SDCAlertView/Source/SDCAlertControllerView.h; sourceTree = "<group>"; };
+		981BDE2AC7D2734CFB0BC7F7 /* SDCAlertControllerCollectionViewFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertControllerCollectionViewFlowLayout.m; path = SDCAlertView/Source/SDCAlertControllerCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		9AD729FCBA40BC2AA381946D /* RBBEasingFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBEasingFunction.m; path = RBBAnimation/RBBEasingFunction.m; sourceTree = "<group>"; };
+		9C13545F3D3D14EC1C0B9A11 /* SDCAlertControllerTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertControllerTransition.m; path = SDCAlertView/Source/SDCAlertControllerTransition.m; sourceTree = "<group>"; };
+		9F6CA4579C4E075B990CDA60 /* SDCIntrinsicallySizedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCIntrinsicallySizedView.h; path = SDCAlertView/Source/SDCIntrinsicallySizedView.h; sourceTree = "<group>"; };
+		A8B6FA3862CDF8B28CC52D66 /* SDCAlertTextFieldTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertTextFieldTableViewCell.h; path = SDCAlertView/Source/SDCAlertTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		AD503A159535BC043EAFCA42 /* libPods-SDCAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDCAlertView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB21FFCB96D7F22949A2EF4 /* SDCAlertCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertCollectionViewCell.m; path = SDCAlertView/Source/SDCAlertCollectionViewCell.m; sourceTree = "<group>"; };
+		AF51B5E74DBCDF7B1FB5FD16 /* SDCAlertController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertController.m; path = SDCAlertView/Source/SDCAlertController.m; sourceTree = "<group>"; };
+		B241D4319A23F18E7EE9FC9C /* Pods-RBBAnimation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBBAnimation-Private.xcconfig"; sourceTree = "<group>"; };
+		B30B9C5C94973EC9D31E1AEA /* SDCAlertViewCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertViewCoordinator.h; path = SDCAlertView/Source/SDCAlertViewCoordinator.h; sourceTree = "<group>"; };
+		B4B24E98F3B325C357CC8690 /* Pods-SDCAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SDCAlertView-prefix.pch"; sourceTree = "<group>"; };
+		B677E0B468139A50975622A8 /* SDCAlertViewBackgroundView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertViewBackgroundView.m; path = SDCAlertView/Source/SDCAlertViewBackgroundView.m; sourceTree = "<group>"; };
+		B8D2B158E09E3A0576B95E56 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		BB30128CD25396328EF8D9BB /* SDCAlertViewCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertViewCoordinator.m; path = SDCAlertView/Source/SDCAlertViewCoordinator.m; sourceTree = "<group>"; };
+		BD5A33E470AFC910952236BE /* RBBLinearInterpolation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBLinearInterpolation.m; path = RBBAnimation/RBBLinearInterpolation.m; sourceTree = "<group>"; };
+		BFAF6D31A373BF1B65F5E731 /* SDCAlertControllerVisualStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertControllerVisualStyle.h; path = SDCAlertView/Source/SDCAlertControllerVisualStyle.h; sourceTree = "<group>"; };
+		C0E43DF4DEBA6724BFA94CA8 /* Pods-SDCAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDCAutoLayout.xcconfig"; sourceTree = "<group>"; };
+		C0F3A975076363B0AFA2B96D /* SDCAlertCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertCollectionViewCell.h; path = SDCAlertView/Source/SDCAlertCollectionViewCell.h; sourceTree = "<group>"; };
+		CC713E913293780D9C6603F4 /* RBBAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBAnimation.h; path = RBBAnimation/RBBAnimation.h; sourceTree = "<group>"; };
+		CD755783D6C022BEB1F578DF /* Pods-RBBAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RBBAnimation-dummy.m"; sourceTree = "<group>"; };
+		D0B1753732287A015F0F111F /* RBBBlockBasedArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBBlockBasedArray.h; path = RBBAnimation/RBBBlockBasedArray.h; sourceTree = "<group>"; };
+		D2A77C9419BDED9E71B60801 /* SDCAlertAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertAction.m; path = SDCAlertView/Source/SDCAlertAction.m; sourceTree = "<group>"; };
+		D444484E673BB42927F58DC5 /* RBBSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBSpringAnimation.h; path = RBBAnimation/RBBSpringAnimation.h; sourceTree = "<group>"; };
+		D52CD752572082F060E43475 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64E2BE9E8F30BAFE70A37FC /* RBBBlockBasedArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBBlockBasedArray.m; path = RBBAnimation/RBBBlockBasedArray.m; sourceTree = "<group>"; };
+		D754717EB4A88E44A4ABEF55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		DB0D04EE0945CB5202DED143 /* SDCAlertControllerDefaultVisualStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertControllerDefaultVisualStyle.h; path = SDCAlertView/Source/SDCAlertControllerDefaultVisualStyle.h; sourceTree = "<group>"; };
+		DBE1FC3C23C48EEB8C203080 /* Pods-SDCAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SDCAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		DE3F49526CB9DCB2FB2FD86C /* UIView+Parallax.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Parallax.h"; path = "SDCAlertView/Source/UIView+Parallax.h"; sourceTree = "<group>"; };
+		DEC932496188D03FFC5D8C35 /* SDCDemoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCDemoViewController.m; path = SDCAlertView/Source/SDCDemoViewController.m; sourceTree = "<group>"; };
+		DEDDFBE85674E44ACA27783B /* UIViewController+Current.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Current.m"; path = "SDCAlertView/Source/UIViewController+Current.m"; sourceTree = "<group>"; };
+		E3911C2B7B0CA1DC79576CE8 /* RBBAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBAnimation.m; path = RBBAnimation/RBBAnimation.m; sourceTree = "<group>"; };
+		E8F6BA4A56ACF38438CF4E31 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		ED1B2683B732F20E1DC367CE /* SDCAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertView.m; path = SDCAlertView/Source/SDCAlertView.m; sourceTree = "<group>"; };
+		ED72894EA15D07E152E5A9E4 /* SDCAlertViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCAlertViewController.m; path = SDCAlertView/Source/SDCAlertViewController.m; sourceTree = "<group>"; };
+		F050A24EC6EF44486361E344 /* SDCAlertControllerTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertControllerTransition.h; path = SDCAlertView/Source/SDCAlertControllerTransition.h; sourceTree = "<group>"; };
+		FA09DE788BD8B41E7F0B906E /* SDCAlertLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertLabel.h; path = SDCAlertView/Source/SDCAlertLabel.h; sourceTree = "<group>"; };
+		FC166F7CBADCEA580DE28FD0 /* SDCAlertController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertController.h; path = SDCAlertView/Source/SDCAlertController.h; sourceTree = "<group>"; };
+		FFE5D3DC49F3072D5BF1B496 /* SDCAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDCAlertView.h; path = SDCAlertView/Source/SDCAlertView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EA42D26B94F393CE44F7E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE18CE669B186C6ECD2519C /* Foundation.framework in Frameworks */,
+				9D482E56FB6E2D9C6AA07931 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78ACE765C93A0F6EBDC109B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4FD078D93C88DF4487D6B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1AE8F067618E3258F18674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FFA2C0F27FA76B02742CE93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F695EA73E2D6762AB90647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653B168E60D2F172DFE95C5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15347EEFEDEB7CDA44B4A2D6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4B6D8DD3F6D8F86363FC715 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		25BB46C05C1A5747EEBCFB51 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				878C8E83353765F32C00E052 /* Foundation.framework */,
+				809D1530EFA357195684DB03 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		40FE96204E6097F625565EA8 = {
+			isa = PBXGroup;
+			children = (
+				6B65FB92E93B97A182B4C296 /* Podfile */,
+				82B60F5F87F4C7653ACD01F9 /* Frameworks */,
+				6D83C1FDAD6185DD78437A75 /* Pods */,
+				674C58F274A21A9B7E650434 /* Products */,
+				15347EEFEDEB7CDA44B4A2D6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		674C58F274A21A9B7E650434 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D52CD752572082F060E43475 /* libPods.a */,
+				11E1EB2DF32FA6272CA48FC7 /* libPods-RBBAnimation.a */,
+				AD503A159535BC043EAFCA42 /* libPods-SDCAlertView.a */,
+				7D0E31ABD389410F5216B15E /* libPods-SDCAutoLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D83C1FDAD6185DD78437A75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E546358EA72BF8D02B218C6D /* RBBAnimation */,
+				D0030E272BB6941FA8562ED4 /* SDCAlertView */,
+				C5F8F66AC711872E975B0B61 /* SDCAutoLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82B60F5F87F4C7653ACD01F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25BB46C05C1A5747EEBCFB51 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94671A3B3586EEA7BB5CA918 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0E43DF4DEBA6724BFA94CA8 /* Pods-SDCAutoLayout.xcconfig */,
+				49FD75FEEB74457198FE4C0F /* Pods-SDCAutoLayout-Private.xcconfig */,
+				DBE1FC3C23C48EEB8C203080 /* Pods-SDCAutoLayout-dummy.m */,
+				91668CBBCDD480F9A75DCC9D /* Pods-SDCAutoLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SDCAutoLayout";
+			sourceTree = "<group>";
+		};
+		9CE95972248BCBBC084E5213 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				570C84A5505E34B3E858F483 /* Pods-RBBAnimation.xcconfig */,
+				B241D4319A23F18E7EE9FC9C /* Pods-RBBAnimation-Private.xcconfig */,
+				CD755783D6C022BEB1F578DF /* Pods-RBBAnimation-dummy.m */,
+				51EF038A1F6B05ACF22F6CA6 /* Pods-RBBAnimation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-RBBAnimation";
+			sourceTree = "<group>";
+		};
+		C5F8F66AC711872E975B0B61 /* SDCAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				5171C3C2AF8E013FA6B1B0BC /* UIView+SDCAutoLayout.h */,
+				66C633C6AE7CBA8E77639AF4 /* UIView+SDCAutoLayout.m */,
+				94671A3B3586EEA7BB5CA918 /* Support Files */,
+			);
+			path = SDCAutoLayout;
+			sourceTree = "<group>";
+		};
+		D0030E272BB6941FA8562ED4 /* SDCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D2A77C9419BDED9E71B60801 /* SDCAlertAction.m */,
+				C0F3A975076363B0AFA2B96D /* SDCAlertCollectionViewCell.h */,
+				AEB21FFCB96D7F22949A2EF4 /* SDCAlertCollectionViewCell.m */,
+				FC166F7CBADCEA580DE28FD0 /* SDCAlertController.h */,
+				AF51B5E74DBCDF7B1FB5FD16 /* SDCAlertController.m */,
+				03B27036D7088B0CBCDDD49D /* SDCAlertControllerCollectionViewFlowLayout.h */,
+				981BDE2AC7D2734CFB0BC7F7 /* SDCAlertControllerCollectionViewFlowLayout.m */,
+				DB0D04EE0945CB5202DED143 /* SDCAlertControllerDefaultVisualStyle.h */,
+				0CB15DE08C203C0AA6A2E612 /* SDCAlertControllerDefaultVisualStyle.m */,
+				733D444812FC191BFE651635 /* SDCAlertControllerScrollView.h */,
+				03CB47A7C8A2FD0DD8807F09 /* SDCAlertControllerScrollView.m */,
+				41CBE34F24861A4BA55B907D /* SDCAlertControllerTextFieldViewController.h */,
+				07A1D5DA65A4B3E757BCAF33 /* SDCAlertControllerTextFieldViewController.m */,
+				F050A24EC6EF44486361E344 /* SDCAlertControllerTransition.h */,
+				9C13545F3D3D14EC1C0B9A11 /* SDCAlertControllerTransition.m */,
+				975457C68EE773D77189241B /* SDCAlertControllerView.h */,
+				056CCFAD1054185619BC66CF /* SDCAlertControllerView.m */,
+				BFAF6D31A373BF1B65F5E731 /* SDCAlertControllerVisualStyle.h */,
+				FA09DE788BD8B41E7F0B906E /* SDCAlertLabel.h */,
+				27F5948B4DBD29F07DEE6ED9 /* SDCAlertLabel.m */,
+				69A650E393DCA59CFBBFC33D /* SDCAlertPresentationController.h */,
+				7E93798EDB6DCA4C72B6CCE8 /* SDCAlertPresentationController.m */,
+				A8B6FA3862CDF8B28CC52D66 /* SDCAlertTextFieldTableViewCell.h */,
+				44DD58D802FB7DC9CA4DCF02 /* SDCAlertTextFieldTableViewCell.m */,
+				FFE5D3DC49F3072D5BF1B496 /* SDCAlertView.h */,
+				ED1B2683B732F20E1DC367CE /* SDCAlertView.m */,
+				311E2D25073382C382F58B7C /* SDCAlertViewBackgroundView.h */,
+				B677E0B468139A50975622A8 /* SDCAlertViewBackgroundView.m */,
+				126591B0FF7ED0B174A20CB9 /* SDCAlertViewContentView.h */,
+				1B63162EE74CBBBF94A0EF08 /* SDCAlertViewContentView.m */,
+				2F244E9B57065E8ED12DC811 /* SDCAlertViewController.h */,
+				ED72894EA15D07E152E5A9E4 /* SDCAlertViewController.m */,
+				B30B9C5C94973EC9D31E1AEA /* SDCAlertViewCoordinator.h */,
+				BB30128CD25396328EF8D9BB /* SDCAlertViewCoordinator.m */,
+				3630C940591C14137ECE56F6 /* SDCAlertViewTransitioning.h */,
+				5E737A620ABBF0656F4F9EB1 /* SDCDemoViewController.h */,
+				DEC932496188D03FFC5D8C35 /* SDCDemoViewController.m */,
+				9F6CA4579C4E075B990CDA60 /* SDCIntrinsicallySizedView.h */,
+				27C5AB2436B1A09E5FE21FB7 /* SDCIntrinsicallySizedView.m */,
+				DE3F49526CB9DCB2FB2FD86C /* UIView+Parallax.h */,
+				1BB3C57AB82017E7A8EACBEE /* UIView+Parallax.m */,
+				88B7ECD305B55C7C3A8EFA5F /* UIViewController+Current.h */,
+				DEDDFBE85674E44ACA27783B /* UIViewController+Current.m */,
+				FCEEB6D09B90F22FEF8E1E70 /* Support Files */,
+			);
+			path = SDCAlertView;
+			sourceTree = "<group>";
+		};
+		E4B6D8DD3F6D8F86363FC715 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2964C556A247D4DDAEF8FD0B /* Pods-acknowledgements.markdown */,
+				B8D2B158E09E3A0576B95E56 /* Pods-acknowledgements.plist */,
+				476408AFB28570EECD437B2A /* Pods-dummy.m */,
+				E8F6BA4A56ACF38438CF4E31 /* Pods-environment.h */,
+				0C5F204B5103C2B58D7FA184 /* Pods-resources.sh */,
+				D754717EB4A88E44A4ABEF55 /* Pods.debug.xcconfig */,
+				4BEC1272EC81D99ADE99FAD6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		E546358EA72BF8D02B218C6D /* RBBAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2526A8C338732C189FDDCE0F /* NSValue+PlatformIndependence.h */,
+				7D12859EB6E252069A879B49 /* NSValue+PlatformIndependence.m */,
+				CC713E913293780D9C6603F4 /* RBBAnimation.h */,
+				E3911C2B7B0CA1DC79576CE8 /* RBBAnimation.m */,
+				D0B1753732287A015F0F111F /* RBBBlockBasedArray.h */,
+				D64E2BE9E8F30BAFE70A37FC /* RBBBlockBasedArray.m */,
+				93336C715ED34B6128EF501F /* RBBCubicBezier.h */,
+				4AD3D0165F7F9AD160E1DD74 /* RBBCubicBezier.m */,
+				1845AFB8B432FEADD8164303 /* RBBCustomAnimation.h */,
+				07DCDE2E68FEFCFA459D18D0 /* RBBCustomAnimation.m */,
+				2A5ABD3FDD28BA6F4A78BD55 /* RBBEasingFunction.h */,
+				9AD729FCBA40BC2AA381946D /* RBBEasingFunction.m */,
+				5FC7D4027ABAAD741130F9F7 /* RBBLinearInterpolation.h */,
+				BD5A33E470AFC910952236BE /* RBBLinearInterpolation.m */,
+				D444484E673BB42927F58DC5 /* RBBSpringAnimation.h */,
+				1790417F53F308AAE9BF6879 /* RBBSpringAnimation.m */,
+				8EFA465B6FB1EBEDA8E321EB /* RBBTweenAnimation.h */,
+				62E16DB1448390AF4918963C /* RBBTweenAnimation.m */,
+				84DF2FA862CB2E33C465D814 /* UIColor+PlatformIndependence.h */,
+				754FBEDFBEDE483BA09AB15A /* UIColor+PlatformIndependence.m */,
+				9CE95972248BCBBC084E5213 /* Support Files */,
+			);
+			path = RBBAnimation;
+			sourceTree = "<group>";
+		};
+		FCEEB6D09B90F22FEF8E1E70 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C47837F8FB4B5CF7F9C6392 /* Pods-SDCAlertView.xcconfig */,
+				8F020F503CA91A2DC362D3AD /* Pods-SDCAlertView-Private.xcconfig */,
+				131D23FA35F27C4065141996 /* Pods-SDCAlertView-dummy.m */,
+				B4B24E98F3B325C357CC8690 /* Pods-SDCAlertView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SDCAlertView";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		86BBDD35D3F34B46B3F804CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF9C3FD6FDE31A4A1E1F3CCB /* NSValue+PlatformIndependence.h in Headers */,
+				C6AC475234C23382580B238A /* RBBAnimation.h in Headers */,
+				0F05868ADA4A5EB8135BECDE /* RBBBlockBasedArray.h in Headers */,
+				377D04C4264EC2FC8F8AC7E3 /* RBBCubicBezier.h in Headers */,
+				BA92330A06D0CFB8AB535ED9 /* RBBCustomAnimation.h in Headers */,
+				412629EF3A5D90497C2C09FE /* RBBEasingFunction.h in Headers */,
+				95FEDF91667F34DD44962B4A /* RBBLinearInterpolation.h in Headers */,
+				E9001E09173C86A6EE819FE4 /* RBBSpringAnimation.h in Headers */,
+				B9862CE03FFB26FCF9A114EC /* RBBTweenAnimation.h in Headers */,
+				47F9F95ADACD4A74E4AD12E5 /* UIColor+PlatformIndependence.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9D669F921B5456D1E79D9C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71BA74A371A08FD43A9EAE2 /* UIView+SDCAutoLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B69A17668BB89F26D308CA84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2E61CC9CF3FB743BA4E93D /* SDCAlertCollectionViewCell.h in Headers */,
+				2F13F27D181A0846EC3C5905 /* SDCAlertController.h in Headers */,
+				81E4EC832F78EBC6DF44AF8A /* SDCAlertControllerCollectionViewFlowLayout.h in Headers */,
+				C641DAA3F0F11E70B1D2E068 /* SDCAlertControllerDefaultVisualStyle.h in Headers */,
+				DE9E0649B0E8A5D772FA298D /* SDCAlertControllerScrollView.h in Headers */,
+				6E3F932EC0220EB6D12D8DC4 /* SDCAlertControllerTextFieldViewController.h in Headers */,
+				26643A144BD6606F3F819E7A /* SDCAlertControllerTransition.h in Headers */,
+				0C6EF12AF01A883C4375BDCA /* SDCAlertControllerView.h in Headers */,
+				8369393CDD30505C5B6F5B15 /* SDCAlertControllerVisualStyle.h in Headers */,
+				2B07FBBE754034C11A5A7776 /* SDCAlertLabel.h in Headers */,
+				DB99118080105CD06F983F9F /* SDCAlertPresentationController.h in Headers */,
+				6D6D690177283E0983E7ECCB /* SDCAlertTextFieldTableViewCell.h in Headers */,
+				A63D689B450282192D2CEF69 /* SDCAlertView.h in Headers */,
+				7764B0D91A0034108BA9DFB0 /* SDCAlertViewBackgroundView.h in Headers */,
+				CB321C595A614CFC5D1717BA /* SDCAlertViewContentView.h in Headers */,
+				A84F628E34ADF5316C527ED0 /* SDCAlertViewController.h in Headers */,
+				6BFCA0C99CB9696FA03BCCFE /* SDCAlertViewCoordinator.h in Headers */,
+				D2E024CDAC3D84F153142407 /* SDCAlertViewTransitioning.h in Headers */,
+				90877B3055D623734349EEBE /* SDCDemoViewController.h in Headers */,
+				A36F6483FADA0C7A8D8B88C1 /* SDCIntrinsicallySizedView.h in Headers */,
+				037E6B81E92C0629138B64BC /* UIView+Parallax.h in Headers */,
+				57538C324EE6E09EEDA397E4 /* UIViewController+Current.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01D7E75653890BAB35E7CB47 /* Pods-SDCAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B723D9E839489052106FCA8 /* Build configuration list for PBXNativeTarget "Pods-SDCAlertView" */;
+			buildPhases = (
+				9F2E2F2B4FD031DDD05C9702 /* Sources */,
+				D2F695EA73E2D6762AB90647 /* Frameworks */,
+				B69A17668BB89F26D308CA84 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3D69495DACC3F55BE0CCC53 /* PBXTargetDependency */,
+				4A7F2D6D5970820D41B0CCED /* PBXTargetDependency */,
+			);
+			name = "Pods-SDCAlertView";
+			productName = "Pods-SDCAlertView";
+			productReference = AD503A159535BC043EAFCA42 /* libPods-SDCAlertView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		35C98DA07E520AE61E20BA88 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF945688DC467036DA84E54 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				29AEF85271868695F8EB22D0 /* Sources */,
+				AA1AE8F067618E3258F18674 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25EA872A75EF1211C596790D /* PBXTargetDependency */,
+				E232BD20DB7E8BF1846D0C7A /* PBXTargetDependency */,
+				4D81855579701C2C7E8E010F /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = D52CD752572082F060E43475 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6805577182FC63D80BEC7C7A /* Pods-RBBAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D436819A1B4A874AAE4DEB /* Build configuration list for PBXNativeTarget "Pods-RBBAnimation" */;
+			buildPhases = (
+				1E741283A8E57695B008750D /* Sources */,
+				3EA42D26B94F393CE44F7E64 /* Frameworks */,
+				86BBDD35D3F34B46B3F804CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-RBBAnimation";
+			productName = "Pods-RBBAnimation";
+			productReference = 11E1EB2DF32FA6272CA48FC7 /* libPods-RBBAnimation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		87C717AD0C9E116AB48994B2 /* Pods-SDCAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC805D9EBABC36F37CB8D305 /* Build configuration list for PBXNativeTarget "Pods-SDCAutoLayout" */;
+			buildPhases = (
+				25D68BED5CBE2AF58A2A3E10 /* Sources */,
+				78ACE765C93A0F6EBDC109B8 /* Frameworks */,
+				8C9D669F921B5456D1E79D9C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SDCAutoLayout";
+			productName = "Pods-SDCAutoLayout";
+			productReference = 7D0E31ABD389410F5216B15E /* libPods-SDCAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F26606B2F5BAFD3AF8BB3154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 64214587947981B9248EFC63 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 40FE96204E6097F625565EA8;
+			productRefGroup = 674C58F274A21A9B7E650434 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35C98DA07E520AE61E20BA88 /* Pods */,
+				6805577182FC63D80BEC7C7A /* Pods-RBBAnimation */,
+				01D7E75653890BAB35E7CB47 /* Pods-SDCAlertView */,
+				87C717AD0C9E116AB48994B2 /* Pods-SDCAutoLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E741283A8E57695B008750D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AF675D2B957F8C11D0DACC /* NSValue+PlatformIndependence.m in Sources */,
+				A3A2E7396B259E0C82ACD770 /* Pods-RBBAnimation-dummy.m in Sources */,
+				3CC8C5E466533226AB873A0C /* RBBAnimation.m in Sources */,
+				95D05D6B7B359E95FC466B42 /* RBBBlockBasedArray.m in Sources */,
+				35CBB8E2EC3FB4A2402F0324 /* RBBCubicBezier.m in Sources */,
+				12B2826290CD0F4CD701C1CC /* RBBCustomAnimation.m in Sources */,
+				3F23261EB29E5BA9D146B104 /* RBBEasingFunction.m in Sources */,
+				D58D27BFBC39B2B6DF41036A /* RBBLinearInterpolation.m in Sources */,
+				0BB225E40E2DADEE87AA5D9F /* RBBSpringAnimation.m in Sources */,
+				7101D43E7046AA5A87E1B194 /* RBBTweenAnimation.m in Sources */,
+				9EB30E31379C60A66A1F16CD /* UIColor+PlatformIndependence.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25D68BED5CBE2AF58A2A3E10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626D7797732090D2395990F7 /* Pods-SDCAutoLayout-dummy.m in Sources */,
+				5844CE2F3CEC8B719A30DECF /* UIView+SDCAutoLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29AEF85271868695F8EB22D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CECE4CB8BBF7E7958A62F6C /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F2E2F2B4FD031DDD05C9702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3CF486DCD424D36A730D3C /* Pods-SDCAlertView-dummy.m in Sources */,
+				17DDA342E01AA6C4E96A4381 /* SDCAlertAction.m in Sources */,
+				0D8AF6191C615ABC876A52EF /* SDCAlertCollectionViewCell.m in Sources */,
+				E158A4074E8D31BA2651DE0E /* SDCAlertController.m in Sources */,
+				41F8B89D2AE600A48ADFF6D3 /* SDCAlertControllerCollectionViewFlowLayout.m in Sources */,
+				B74FBC5FC9D293B24CD0DE69 /* SDCAlertControllerDefaultVisualStyle.m in Sources */,
+				DFF2054DEE412E5B43D5F9FA /* SDCAlertControllerScrollView.m in Sources */,
+				A013C360F818CFBD863820E6 /* SDCAlertControllerTextFieldViewController.m in Sources */,
+				1AA9C50E9C9B5DDE2F0E39BA /* SDCAlertControllerTransition.m in Sources */,
+				6F9BE23A91598521F28ED73A /* SDCAlertControllerView.m in Sources */,
+				DAC96DD977CD816B455BF533 /* SDCAlertLabel.m in Sources */,
+				F2882A3D114B0847E676B7B9 /* SDCAlertPresentationController.m in Sources */,
+				A5CDD733BAFD61EB4FE0CFB1 /* SDCAlertTextFieldTableViewCell.m in Sources */,
+				95DC6ADD091831E447C12447 /* SDCAlertView.m in Sources */,
+				6BB1480238DA06503F5F1731 /* SDCAlertViewBackgroundView.m in Sources */,
+				053C44774AA362DA929887AE /* SDCAlertViewContentView.m in Sources */,
+				3CFE2670D8ABA33DDD368D92 /* SDCAlertViewController.m in Sources */,
+				46F2177C52C66C28EBABD98A /* SDCAlertViewCoordinator.m in Sources */,
+				4203BB8D50FA0455E11131C1 /* SDCDemoViewController.m in Sources */,
+				A53212A654F72260922082C9 /* SDCIntrinsicallySizedView.m in Sources */,
+				5762C112E732870AF2EDA6AA /* UIView+Parallax.m in Sources */,
+				C0DF24BB9BAD14AFC5BB9D31 /* UIViewController+Current.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25EA872A75EF1211C596790D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RBBAnimation";
+			target = 6805577182FC63D80BEC7C7A /* Pods-RBBAnimation */;
+			targetProxy = F4765F07639DF6B039D36881 /* PBXContainerItemProxy */;
+		};
+		4A7F2D6D5970820D41B0CCED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SDCAutoLayout";
+			target = 87C717AD0C9E116AB48994B2 /* Pods-SDCAutoLayout */;
+			targetProxy = C7A43EB23D56C78937282EC8 /* PBXContainerItemProxy */;
+		};
+		4D81855579701C2C7E8E010F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SDCAutoLayout";
+			target = 87C717AD0C9E116AB48994B2 /* Pods-SDCAutoLayout */;
+			targetProxy = C04B7D25D892BC7952AAF752 /* PBXContainerItemProxy */;
+		};
+		D3D69495DACC3F55BE0CCC53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RBBAnimation";
+			target = 6805577182FC63D80BEC7C7A /* Pods-RBBAnimation */;
+			targetProxy = 92B8360C19D93FE51798F4D3 /* PBXContainerItemProxy */;
+		};
+		E232BD20DB7E8BF1846D0C7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SDCAlertView";
+			target = 01D7E75653890BAB35E7CB47 /* Pods-SDCAlertView */;
+			targetProxy = DA278F85D31B18E483DC00BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0861144A850170EC5E7BB006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F020F503CA91A2DC362D3AD /* Pods-SDCAlertView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SDCAlertView/Pods-SDCAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		123C7DFB47309AEC891EF1CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D754717EB4A88E44A4ABEF55 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2D2E56A9043EE4A87536B9B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BEC1272EC81D99ADE99FAD6 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		70C90D298A5EF0558E207E32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B241D4319A23F18E7EE9FC9C /* Pods-RBBAnimation-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RBBAnimation/Pods-RBBAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		75C88BBCCC2C32439F935390 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FD75FEEB74457198FE4C0F /* Pods-SDCAutoLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SDCAutoLayout/Pods-SDCAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		843B74CE9263224E25A9EA75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B241D4319A23F18E7EE9FC9C /* Pods-RBBAnimation-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RBBAnimation/Pods-RBBAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		90DFE80404C85489842E60C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0FE6D31FA94A1A507ECF778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D51C32537C27426999D2BFF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F020F503CA91A2DC362D3AD /* Pods-SDCAlertView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SDCAlertView/Pods-SDCAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F027C66580D63E80008FF413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FD75FEEB74457198FE4C0F /* Pods-SDCAutoLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SDCAutoLayout/Pods-SDCAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DF945688DC467036DA84E54 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				123C7DFB47309AEC891EF1CD /* Debug */,
+				2D2E56A9043EE4A87536B9B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D436819A1B4A874AAE4DEB /* Build configuration list for PBXNativeTarget "Pods-RBBAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843B74CE9263224E25A9EA75 /* Debug */,
+				70C90D298A5EF0558E207E32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64214587947981B9248EFC63 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0FE6D31FA94A1A507ECF778 /* Debug */,
+				90DFE80404C85489842E60C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B723D9E839489052106FCA8 /* Build configuration list for PBXNativeTarget "Pods-SDCAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D51C32537C27426999D2BFF0 /* Debug */,
+				0861144A850170EC5E7BB006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC805D9EBABC36F37CB8D305 /* Build configuration list for PBXNativeTarget "Pods-SDCAutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C88BBCCC2C32439F935390 /* Debug */,
+				F027C66580D63E80008FF413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F26606B2F5BAFD3AF8BB3154 /* Project object */;
+}

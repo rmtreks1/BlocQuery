@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <SDCAlertView.h>
+#import <SDCAlertViewController.h>
+#import <SDCAlertController.h>
+#import <SDCAlertPresentationController.h>
+#import <SDCAlertViewBackgroundView.h>
+#import <SDCAlertViewContentView.h>
+
+
 
 @interface ProfileViewController : UIViewController
 

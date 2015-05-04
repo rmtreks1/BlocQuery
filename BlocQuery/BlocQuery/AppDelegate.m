@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Questions.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,8 @@
     [Parse enableLocalDatastore];
     
     // Initialize Parse.
+    
+    [Questions registerSubclass];
     [Parse setApplicationId:@"RSoSaxFv0fKf5Y95C7w4pqcnQuAKeAcVmV6GpZHj"
                   clientKey:@"KqkabbS40MLGbMzVY4JzlFyKBgAxyRTlu6GJc1A3"];
     

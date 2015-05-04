@@ -9,10 +9,16 @@
 #import "ProfileViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "Questions.h"
 
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *login;
 @property (weak, nonatomic) IBOutlet UIButton *logout;
+@property (nonatomic, strong) PFUser *currentUser;
+
+
+
+
 
 @end
 
@@ -21,35 +27,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    //check if there's a user
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        self.login.hidden = YES;
-        self.logout.hidden = NO;
-        NSLog(@"current user: %@", currentUser.email);
-    } else if (!currentUser) {
-        self.login.hidden = NO;
-        self.logout.hidden = YES;
-    }
-    
-    
-   
-    
-    
 }
 
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
+    
+    //check if there's a user
+    self.currentUser = [PFUser currentUser];
+    if (self.currentUser) {
         self.login.hidden = YES;
         self.logout.hidden = NO;
-        NSLog(@"current user: %@", currentUser.email);
-    } else if (!currentUser) {
+        NSLog(@"current user: %@", self.currentUser.email);
+    } else if (!self.currentUser) {
         self.login.hidden = NO;
         self.logout.hidden = YES;
     }
@@ -89,13 +80,13 @@
 - (IBAction)logoutUser:(UIButton *)sender {
     
     [PFUser logOut];
-    PFUser *currentUser = [PFUser currentUser];
+    self.currentUser = [PFUser currentUser];
     
-    if (currentUser) {
+    if (self.currentUser) {
         self.login.hidden = YES;
         self.logout.hidden = NO;
-        NSLog(@"current user: %@", currentUser.email);
-    } else if (!currentUser) {
+        NSLog(@"current user: %@", self.currentUser.email);
+    } else if (!self.currentUser) {
         self.login.hidden = NO;
         self.logout.hidden = YES;
     }
@@ -133,6 +124,23 @@
 
 
 
+
+
+#pragma mark - Ask Question Button
+
+- (IBAction)askQuestion:(UIButton *)sender {
+    NSLog(@"ask question button pressed");
+
+    
+    NSString *question = @"is this working?";
+    UIImage *image = [UIImage imageNamed:@"Bloc-logo-rectangle-grey.jpg"];
+    
+    Questions *imageQuestion = [Questions makeNewQuestion:question withImage:image];
+    NSLog(@"the question was: %@", imageQuestion.questionText);
+    
+    
+    
+}
 
 
 
