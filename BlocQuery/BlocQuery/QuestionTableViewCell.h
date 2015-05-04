@@ -1,5 +1,5 @@
 //
-//  AllQuestionsViewController.h
+//  QuestionTableViewCell.h
 //  BlocQuery
 //
 //  Created by Roshan Mahanama on 4/05/2015.
@@ -8,9 +8,7 @@
 
 #import <ParseUI/ParseUI.h>
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
-#import "QuestionTableViewCell.h"
 
-@interface AllQuestionsViewController : PFQueryTableViewController
+@interface QuestionTableViewCell : PFTableViewCell
 
 @end

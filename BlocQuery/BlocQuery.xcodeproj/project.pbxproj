@@ -22,6 +22,7 @@
 		01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AED9D61AF45A7600050797 /* LoginViewController.m */; };
 		01AED9D91AF45AE800050797 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AED9D81AF45AE800050797 /* ParseUI.framework */; };
 		01AED9DC1AF45EC400050797 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AED9DB1AF45EC400050797 /* SignUpViewController.m */; };
+		01BD4D541AF7030D00D72B33 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BD4D531AF7030D00D72B33 /* QuestionTableViewCell.m */; };
 		01C19A831AF3571900857658 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A811AF3571900857658 /* Bolts.framework */; };
 		01C19A841AF3571900857658 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A821AF3571900857658 /* Parse.framework */; };
 		01C19A861AF3578F00857658 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A851AF3578F00857658 /* AudioToolbox.framework */; };
@@ -51,8 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllQuestionsViewController.h; path = BlocQuery/AllQuestionsViewController.h; sourceTree = "<group>"; };
-		012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllQuestionsViewController.m; path = BlocQuery/AllQuestionsViewController.m; sourceTree = "<group>"; };
+		012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllQuestionsViewController.h; sourceTree = "<group>"; };
+		012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllQuestionsViewController.m; sourceTree = "<group>"; };
 		0135CBC91AF484A500B73677 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
 		0135CBCA1AF484A500B73677 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		01640D1A1AF32E5B005567FE /* BlocQuery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocQuery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +80,8 @@
 		01AED9D81AF45AE800050797 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		01AED9DA1AF45EC400050797 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		01AED9DB1AF45EC400050797 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		01BD4D521AF7030D00D72B33 /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionTableViewCell.h; path = BlocQuery/QuestionTableViewCell.h; sourceTree = "<group>"; };
+		01BD4D531AF7030D00D72B33 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionTableViewCell.m; path = BlocQuery/QuestionTableViewCell.m; sourceTree = "<group>"; };
 		01C19A811AF3571900857658 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		01C19A821AF3571900857658 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		01C19A851AF3578F00857658 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -137,8 +140,8 @@
 		01640D111AF32E5B005567FE = {
 			isa = PBXGroup;
 			children = (
-				012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */,
-				012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */,
+				01BD4D521AF7030D00D72B33 /* QuestionTableViewCell.h */,
+				01BD4D531AF7030D00D72B33 /* QuestionTableViewCell.m */,
 				01AED9D41AF45A1500050797 /* Frameworks */,
 				01640D1C1AF32E5B005567FE /* BlocQuery */,
 				01640D391AF32E5B005567FE /* BlocQueryTests */,
@@ -159,6 +162,8 @@
 		01640D1C1AF32E5B005567FE /* BlocQuery */ = {
 			isa = PBXGroup;
 			children = (
+				012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */,
+				012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */,
 				01640D211AF32E5B005567FE /* AppDelegate.h */,
 				01640D221AF32E5B005567FE /* AppDelegate.m */,
 				01640D241AF32E5B005567FE /* QuestionsViewController.h */,
@@ -380,6 +385,7 @@
 				01640D291AF32E5B005567FE /* MyQuestionsViewController.m in Sources */,
 				0135CBCB1AF484A500B73677 /* Questions.m in Sources */,
 				01640D231AF32E5B005567FE /* AppDelegate.m in Sources */,
+				01BD4D541AF7030D00D72B33 /* QuestionTableViewCell.m in Sources */,
 				01640D261AF32E5B005567FE /* QuestionsViewController.m in Sources */,
 				012D465D1AF6E5B200DCE8F6 /* AllQuestionsViewController.m in Sources */,
 				01640D201AF32E5B005567FE /* main.m in Sources */,
