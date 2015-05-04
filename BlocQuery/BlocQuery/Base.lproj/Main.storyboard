@@ -122,7 +122,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TC-D0-m8g">
                                 <rect key="frame" x="31" y="72" width="158" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -138,7 +138,13 @@
                             <constraint firstItem="6TC-D0-m8g" firstAttribute="leading" secondItem="3pZ-tT-g3e" secondAttribute="leadingMargin" constant="15" id="ubW-yd-GWh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KiM-wM-5D8"/>
+                    <navigationItem key="navigationItem" id="KiM-wM-5D8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="wuY-ms-xC7">
+                            <connections>
+                                <segue destination="qVu-1Z-uXz" kind="modal" id="dS5-hQ-cfO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="questionLabel" destination="6TC-D0-m8g" id="Jy8-ah-hTK"/>
                     </connections>
@@ -146,6 +152,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlv-xj-m5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1235" y="325"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6OC-8r-lZ0">
+            <objects>
+                <viewController id="qVu-1Z-uXz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ndj-b4-x71"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cbs-af-blW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7cN-nF-DK5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mon-sf-9cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="325"/>
         </scene>
         <!--All Questions-->
         <scene sceneID="vif-aD-YME">
@@ -253,7 +277,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="ruZ-rH-fsW"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
