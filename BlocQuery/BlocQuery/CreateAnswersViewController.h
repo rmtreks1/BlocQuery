@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Questions.h"
 
 @interface CreateAnswersViewController : UIViewController
+
+@property (nonatomic, strong) Questions *question;
 
 @end

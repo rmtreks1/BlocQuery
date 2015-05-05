@@ -50,7 +50,8 @@
     // create the parse object
     if (![self.answer.text isEqualToString:@""]) {
         NSLog(@"make parse object");
-        [Answers makeNewAnswer:self.answer.text];
+
+        [Answers makeNewAnswer:self.answer.text forQuestion:self.question];
     }
     
     

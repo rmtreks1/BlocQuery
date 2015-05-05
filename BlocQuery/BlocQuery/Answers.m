@@ -23,11 +23,20 @@
     return @"Answers";
 }
 
-+ (Answers *)makeNewAnswer:(NSString *)answer{
++ (Answers *)makeNewAnswer:(NSString *)answer forQuestion: (Questions *)question {
     Answers *newAnswer = [Answers object];
     newAnswer.answerText = answer;
     
+    
+    // link to the question
+    [newAnswer setObject:question forKey:@"Question"];
+    
+    // link to the user
+    [newAnswer setObject:[PFUser currentUser] forKey:@"createdBy"];
+    
+    
     [newAnswer saveInBackground];
+    
     return newAnswer;
 }
 

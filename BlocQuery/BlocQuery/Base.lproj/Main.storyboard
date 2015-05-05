@@ -142,7 +142,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" id="gad-3n-Byh"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="reply" id="wuY-ms-xC7">
                             <connections>
-                                <segue destination="Ibd-CE-WQe" kind="modal" id="ULI-hA-bEl"/>
+                                <segue destination="Ibd-CE-WQe" kind="modal" identifier="replyWithAnswer" id="ULI-hA-bEl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

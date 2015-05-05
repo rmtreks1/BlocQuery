@@ -7,13 +7,15 @@
 //
 
 #import <Parse/Parse.h>
+#import "Questions.h"
 
 @interface Answers : PFObject <PFSubclassing>
 
 + (NSString *)parseClassName;
 
 @property (nonatomic, strong) NSString *answerText;
+@property (nonatomic, strong) Questions *question;
 
-+ (Answers *)makeNewAnswer:(NSString *)answer;
++ (Answers *)makeNewAnswer:(NSString *)answer forQuestion:(Questions *)question;
 
 @end
