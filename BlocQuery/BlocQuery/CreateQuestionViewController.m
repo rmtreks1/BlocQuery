@@ -52,12 +52,12 @@
 
 - (IBAction)doneAndDismiss:(UIButton *)sender {
     [self.question resignFirstResponder];
-    NSLog(self.question.text);
+    NSLog(@"%@",self.question.text);
     
     
     // create parse object
     if (![self.question.text  isEqual: @""]) {
-        Questions *newQuestion = [Questions makeNewQuestion:self.question.text withImage:nil];
+        [Questions makeNewQuestion:self.question.text withImage:nil];
     }
     
     // dismiss the view
