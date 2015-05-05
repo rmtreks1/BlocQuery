@@ -38,6 +38,8 @@
 		01C19A9A1AF3580800857658 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A991AF3580800857658 /* libsqlite3.dylib */; };
 		01C19A9C1AF3581300857658 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A9B1AF3581300857658 /* Accounts.framework */; };
 		01C19A9E1AF3581E00857658 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C19A9D1AF3581E00857658 /* Social.framework */; };
+		01E307011AF83A610066A678 /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E307001AF83A610066A678 /* Answers.m */; };
+		01E307041AF83E6B0066A678 /* CreateAnswersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E307031AF83E6B0066A678 /* CreateAnswersViewController.m */; };
 		3EEA5527DA82CF6B8EC53A29 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B4326D805278AC4550168F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +58,8 @@
 		012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllQuestionsViewController.m; sourceTree = "<group>"; };
 		0135CBC91AF484A500B73677 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
 		0135CBCA1AF484A500B73677 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
-		014966D91AF7A99300B7C854 /* DetailedQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailedQuestionViewController.h; path = BlocQuery/DetailedQuestionViewController.h; sourceTree = "<group>"; };
-		014966DA1AF7A99300B7C854 /* DetailedQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailedQuestionViewController.m; path = BlocQuery/DetailedQuestionViewController.m; sourceTree = "<group>"; };
+		014966D91AF7A99300B7C854 /* DetailedQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedQuestionViewController.h; sourceTree = "<group>"; };
+		014966DA1AF7A99300B7C854 /* DetailedQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedQuestionViewController.m; sourceTree = "<group>"; };
 		01640D1A1AF32E5B005567FE /* BlocQuery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocQuery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01640D1E1AF32E5B005567FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01640D1F1AF32E5B005567FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +99,10 @@
 		01C19A991AF3580800857658 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		01C19A9B1AF3581300857658 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		01C19A9D1AF3581E00857658 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		01E306FF1AF83A610066A678 /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = BlocQuery/Answers.h; sourceTree = "<group>"; };
+		01E307001AF83A610066A678 /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answers.m; path = BlocQuery/Answers.m; sourceTree = "<group>"; };
+		01E307021AF83E6B0066A678 /* CreateAnswersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAnswersViewController.h; path = BlocQuery/CreateAnswersViewController.h; sourceTree = "<group>"; };
+		01E307031AF83E6B0066A678 /* CreateAnswersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAnswersViewController.m; path = BlocQuery/CreateAnswersViewController.m; sourceTree = "<group>"; };
 		43B4326D805278AC4550168F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4990E72A3A4E99CB0C6A6B87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CDCAED5A15241B7C83FAA496 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,11 +146,13 @@
 		01640D111AF32E5B005567FE = {
 			isa = PBXGroup;
 			children = (
-				014966D91AF7A99300B7C854 /* DetailedQuestionViewController.h */,
-				014966DA1AF7A99300B7C854 /* DetailedQuestionViewController.m */,
-				01AED9D41AF45A1500050797 /* Frameworks */,
+				01E307021AF83E6B0066A678 /* CreateAnswersViewController.h */,
+				01E307031AF83E6B0066A678 /* CreateAnswersViewController.m */,
+				01E306FF1AF83A610066A678 /* Answers.h */,
+				01E307001AF83A610066A678 /* Answers.m */,
 				01640D1C1AF32E5B005567FE /* BlocQuery */,
 				01640D391AF32E5B005567FE /* BlocQueryTests */,
+				01AED9D41AF45A1500050797 /* Frameworks */,
 				01640D1B1AF32E5B005567FE /* Products */,
 				8F36E74C2CDBEA196F385858 /* Pods */,
 			);
@@ -166,6 +174,8 @@
 				012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */,
 				01640D211AF32E5B005567FE /* AppDelegate.h */,
 				01640D221AF32E5B005567FE /* AppDelegate.m */,
+				014966D91AF7A99300B7C854 /* DetailedQuestionViewController.h */,
+				014966DA1AF7A99300B7C854 /* DetailedQuestionViewController.m */,
 				01640D271AF32E5B005567FE /* MyQuestionsViewController.h */,
 				01640D281AF32E5B005567FE /* MyQuestionsViewController.m */,
 				01640D2A1AF32E5B005567FE /* Main.storyboard */,
@@ -382,7 +392,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E307011AF83A610066A678 /* Answers.m in Sources */,
 				01640D291AF32E5B005567FE /* MyQuestionsViewController.m in Sources */,
+				01E307041AF83E6B0066A678 /* CreateAnswersViewController.m in Sources */,
 				0135CBCB1AF484A500B73677 /* Questions.m in Sources */,
 				01640D231AF32E5B005567FE /* AppDelegate.m in Sources */,
 				01BD4D541AF7030D00D72B33 /* QuestionTableViewCell.m in Sources */,
