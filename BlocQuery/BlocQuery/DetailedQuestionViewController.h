@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
+
+@class Questions;
 
 @interface DetailedQuestionViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
-@property (strong, nonatomic) PFObject *question;
+@property (strong, nonatomic) Questions *question;
 
 @end
