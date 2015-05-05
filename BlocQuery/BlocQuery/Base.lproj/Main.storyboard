@@ -139,7 +139,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KiM-wM-5D8">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="gad-3n-Byh"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="reply" id="wuY-ms-xC7">
                             <connections>
                                 <segue destination="Ibd-CE-WQe" kind="modal" identifier="replyWithAnswer" id="ULI-hA-bEl"/>
@@ -443,7 +442,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tiu-uh-7KD" secondAttribute="width" id="5K2-hh-nKW"/>
                             <constraint firstAttribute="centerX" secondItem="aMA-jM-sF8" secondAttribute="centerX" id="5Yc-8z-vit"/>
