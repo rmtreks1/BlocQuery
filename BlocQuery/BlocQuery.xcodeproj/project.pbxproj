@@ -58,8 +58,8 @@
 		012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllQuestionsViewController.m; sourceTree = "<group>"; };
 		0135CBC91AF484A500B73677 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
 		0135CBCA1AF484A500B73677 /* Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
-		015ADED51AF983A8001A796E /* AllAnswersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllAnswersViewController.h; path = BlocQuery/AllAnswersViewController.h; sourceTree = "<group>"; };
-		015ADED61AF983A8001A796E /* AllAnswersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllAnswersViewController.m; path = BlocQuery/AllAnswersViewController.m; sourceTree = "<group>"; };
+		015ADED51AF983A8001A796E /* AllAnswersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllAnswersViewController.h; sourceTree = "<group>"; };
+		015ADED61AF983A8001A796E /* AllAnswersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllAnswersViewController.m; sourceTree = "<group>"; };
 		01640D1A1AF32E5B005567FE /* BlocQuery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocQuery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01640D1E1AF32E5B005567FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01640D1F1AF32E5B005567FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,8 +146,6 @@
 		01640D111AF32E5B005567FE = {
 			isa = PBXGroup;
 			children = (
-				015ADED51AF983A8001A796E /* AllAnswersViewController.h */,
-				015ADED61AF983A8001A796E /* AllAnswersViewController.m */,
 				01640D1C1AF32E5B005567FE /* BlocQuery */,
 				01640D391AF32E5B005567FE /* BlocQueryTests */,
 				01AED9D41AF45A1500050797 /* Frameworks */,
@@ -168,6 +166,8 @@
 		01640D1C1AF32E5B005567FE /* BlocQuery */ = {
 			isa = PBXGroup;
 			children = (
+				015ADED51AF983A8001A796E /* AllAnswersViewController.h */,
+				015ADED61AF983A8001A796E /* AllAnswersViewController.m */,
 				01E306FF1AF83A610066A678 /* Answers.h */,
 				01E307001AF83A610066A678 /* Answers.m */,
 				012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */,
