@@ -152,47 +152,6 @@
             </objects>
             <point key="canvasLocation" x="809" y="395"/>
         </scene>
-        <!--Detailed Question View Controller-->
-        <scene sceneID="21P-1F-SRQ">
-            <objects>
-                <viewController id="4cN-4H-064" customClass="DetailedQuestionViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OsX-di-rtZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="vK5-PN-uGN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3pZ-tT-g3e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TC-D0-m8g">
-                                <rect key="frame" x="31" y="72" width="263" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6TC-D0-m8g" firstAttribute="top" secondItem="OsX-di-rtZ" secondAttribute="bottom" constant="8" id="VhB-Db-7eB"/>
-                            <constraint firstItem="6TC-D0-m8g" firstAttribute="leading" secondItem="3pZ-tT-g3e" secondAttribute="leadingMargin" constant="15" id="YiA-Dp-Hgh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6TC-D0-m8g" secondAttribute="trailing" constant="10" id="liF-eD-F18"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="KiM-wM-5D8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="wuY-ms-xC7">
-                            <connections>
-                                <segue destination="Ibd-CE-WQe" kind="modal" identifier="replyWithAnswer" id="ULI-hA-bEl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="questionLabel" destination="6TC-D0-m8g" id="Jy8-ah-hTK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlv-xj-m5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1768" y="-340"/>
-        </scene>
         <!--All Questions-->
         <scene sceneID="vif-aD-YME">
             <objects>
@@ -529,6 +488,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ljo-RF-zl9"/>
-        <segue reference="y4H-6d-eXe"/>
     </inferredMetricsTieBreakers>
 </document>

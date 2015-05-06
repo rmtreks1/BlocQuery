@@ -9,7 +9,6 @@
 #import "AllQuestionsViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
-#import "DetailedQuestionViewController.h"
 #import "AllAnswersViewController.h"
 
 @interface AllQuestionsViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>

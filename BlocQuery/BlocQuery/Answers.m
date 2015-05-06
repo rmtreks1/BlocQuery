@@ -12,6 +12,7 @@
 @implementation Answers
 
 @dynamic answerText;
+@dynamic question;
 
 
 + (void)load {
