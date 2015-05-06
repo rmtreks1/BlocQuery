@@ -8,6 +8,7 @@
 
 #import "AllAnswersViewController.h"
 #import "CreateAnswersViewController.h"
+#import "QuestionHeaderTableViewCell.h"
 
 //#import "Questions.h"
 
@@ -241,7 +242,9 @@
 
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"QuestionHeaderCell"];
+    QuestionHeaderTableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"QuestionHeaderCell"];
+    headerView.questionLabel.text = self.question.questionText;
+    NSLog(@"question is: %@", self.question.questionText);
     return headerView;
 }
 
