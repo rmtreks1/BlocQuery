@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
 #import "DetailedQuestionViewController.h"
+#import "AllAnswersViewController.h"
 
 @interface AllQuestionsViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
@@ -259,7 +260,11 @@ Instead set the values in 'user defined runtime attributes'
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showDetailedQuestion"]) {
-        DetailedQuestionViewController *detailViewController = [segue destinationViewController];
+//        DetailedQuestionViewController *detailViewController = [segue destinationViewController];
+//        NSInteger row = [[self tableView].indexPathForSelectedRow row];
+//        detailViewController.question = [self.objects objectAtIndex:row];
+        
+        AllAnswersViewController *detailViewController = [segue destinationViewController];
         NSInteger row = [[self tableView].indexPathForSelectedRow row];
         detailViewController.question = [self.objects objectAtIndex:row];
     }

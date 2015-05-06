@@ -135,6 +135,13 @@
                             <outlet property="delegate" destination="ndw-Bv-lWI" id="ThE-xz-r4N"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="H7L-h2-vsq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="aMx-0o-PnI">
+                            <connections>
+                                <segue destination="Ibd-CE-WQe" kind="modal" identifier="replyWithAnswer" id="y4H-6d-eXe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="parseClassName" value="Answers"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="textKey" value="answerText"/>
@@ -184,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlv-xj-m5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="325"/>
+            <point key="canvasLocation" x="1768" y="-340"/>
         </scene>
         <!--All Questions-->
         <scene sceneID="vif-aD-YME">
@@ -304,7 +311,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="questionLabel" destination="rHF-sC-bXz" id="iEZ-Vk-0SG"/>
-                                    <segue destination="4cN-4H-064" kind="push" identifier="showDetailedQuestion" id="MO7-SL-gwF"/>
+                                    <segue destination="ndw-Bv-lWI" kind="push" identifier="showDetailedQuestion" id="ljo-RF-zl9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -520,4 +527,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ljo-RF-zl9"/>
+        <segue reference="y4H-6d-eXe"/>
+    </inferredMetricsTieBreakers>
 </document>

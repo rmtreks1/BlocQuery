@@ -7,7 +7,9 @@
 //
 
 #import "AllAnswersViewController.h"
-#import "Questions.h"
+#import "CreateAnswersViewController.h"
+
+//#import "Questions.h"
 
 @interface AllAnswersViewController ()
 
@@ -111,7 +113,8 @@
  // all objects ordered by createdAt descending.
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    [query whereKey:@"Question" equalTo:[PFObject objectWithoutDataWithClassName:@"Questions" objectId:@"96BFaS9u8u"]];
+    [query whereKey:@"Question" equalTo:self.question];
+//    [query whereKey:@"Question" equalTo:[PFObject objectWithoutDataWithClassName:@"Questions" objectId:@"96BFaS9u8u"]];
     
     
     
@@ -127,6 +130,8 @@
     // if (self.objects.count == 0) {
     // query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     // }
+    
+    
     
     
     [query orderByDescending:@"createdAt"];
@@ -221,5 +226,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
+
+
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"replyWithAnswer"]) {
+        CreateAnswersViewController *createAnswerViewController = [segue destinationViewController];
+        createAnswerViewController.question = self.question;
+    }
+}
+
+
+
 
 @end

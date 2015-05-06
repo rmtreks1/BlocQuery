@@ -9,7 +9,13 @@
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
+#import "Questions.h" // replace is @class
+
 
 @interface AllAnswersViewController : PFQueryTableViewController
+
+
+@property (nonatomic, strong) Questions *question;
+
 
 @end
