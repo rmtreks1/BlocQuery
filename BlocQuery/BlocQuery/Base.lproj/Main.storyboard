@@ -147,11 +147,28 @@
                                     <outlet property="questionLabel" destination="f7w-4v-Cbt" id="5k7-vh-xhi"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="107" id="uyj-uw-mbk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="107" id="uyj-uw-mbk" customClass="QuestionTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uyj-uw-mbk" id="fvD-rM-oNN">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="AE8-Fe-I3b">
+                                            <rect key="frame" x="10" y="10" width="300" height="86"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AE8-Fe-I3b" firstAttribute="leading" secondItem="fvD-rM-oNN" secondAttribute="leading" constant="10" id="Bkb-CS-wSv"/>
+                                        <constraint firstItem="AE8-Fe-I3b" firstAttribute="top" secondItem="fvD-rM-oNN" secondAttribute="top" constant="10" id="crM-76-hK5"/>
+                                        <constraint firstAttribute="bottom" secondItem="AE8-Fe-I3b" secondAttribute="bottom" constant="10" id="qew-iJ-vCP"/>
+                                        <constraint firstAttribute="trailing" secondItem="AE8-Fe-I3b" secondAttribute="trailing" constant="10" id="uHa-vx-rfe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="questionLabel" destination="AE8-Fe-I3b" id="aqH-xw-Xve"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
