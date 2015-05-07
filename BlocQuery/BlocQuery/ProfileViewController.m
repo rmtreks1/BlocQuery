@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *login;
 @property (weak, nonatomic) IBOutlet UIButton *logout;
 @property (nonatomic, strong) PFUser *currentUser;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *loginLogoutButton;
 
 
 
@@ -39,10 +40,12 @@
     if (self.currentUser) {
         self.login.hidden = YES;
         self.logout.hidden = NO;
+        self.loginLogoutButton.title = @"Logout";
         NSLog(@"current user: %@", self.currentUser.email);
     } else if (!self.currentUser) {
         self.login.hidden = NO;
         self.logout.hidden = YES;
+        self.loginLogoutButton.title = @"Login";
     }
 }
 
@@ -60,7 +63,7 @@
 
 #pragma mark - Login
 
-- (IBAction)loginAction:(UIButton *)sender {
+- (void)loginUser {
     
     // testing the login controller
     LoginViewController *loginController = [[LoginViewController alloc] init];
@@ -77,18 +80,15 @@
     
 }
 
-- (IBAction)logoutUser:(UIButton *)sender {
+- (void)logoutUser {
     
     [PFUser logOut];
     self.currentUser = [PFUser currentUser];
     
     if (self.currentUser) {
-        self.login.hidden = YES;
-        self.logout.hidden = NO;
-        NSLog(@"current user: %@", self.currentUser.email);
+        self.loginLogoutButton.title = @"Logout";
     } else if (!self.currentUser) {
-        self.login.hidden = NO;
-        self.logout.hidden = YES;
+        self.loginLogoutButton.title = @"Login";
     }
 
     
@@ -96,6 +96,13 @@
 
 
 
+- (IBAction)loginLogoutUser:(UIBarButtonItem *)sender {
+    if ([PFUser currentUser]) {
+        [self logoutUser];
+    } else {
+        [self loginUser];
+    }
+}
 
 
 
@@ -126,21 +133,7 @@
 
 
 
-#pragma mark - Ask Question Button
 
-- (IBAction)askQuestion:(UIButton *)sender {
-    NSLog(@"ask question button pressed");
-
-    
-    NSString *question = @"is this working?";
-    UIImage *image = [UIImage imageNamed:@"Bloc-logo-rectangle-grey.jpg"];
-    
-    Questions *imageQuestion = [Questions makeNewQuestion:question withImage:image];
-    NSLog(@"the question was: %@", imageQuestion.questionText);
-    
-    
-    
-}
 
 
 

@@ -221,38 +221,17 @@
                     <view key="view" contentMode="scaleToFill" id="bm8-Dv-7DO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpM-1d-65w">
-                                <rect key="frame" x="141" y="269" width="38" height="30"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginAction:" destination="9MK-Mf-nvI" eventType="touchUpInside" id="NZx-qN-tv8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnS-WU-P7V">
-                                <rect key="frame" x="136" y="269" width="49" height="30"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutUser:" destination="9MK-Mf-nvI" eventType="touchUpInside" id="H27-xQ-GAJ"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="XnS-WU-P7V" secondAttribute="centerX" id="8V3-fu-at3"/>
-                            <constraint firstAttribute="centerX" secondItem="VpM-1d-65w" secondAttribute="centerX" id="BqK-Ew-Xzx"/>
-                            <constraint firstAttribute="centerY" secondItem="XnS-WU-P7V" secondAttribute="centerY" id="S2k-aE-E5E"/>
-                            <constraint firstAttribute="centerY" secondItem="VpM-1d-65w" secondAttribute="centerY" id="srd-nD-Mgp"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2qx-Ir-dJM"/>
+                    <navigationItem key="navigationItem" id="2qx-Ir-dJM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="m6M-YV-LlC">
+                            <connections>
+                                <action selector="loginLogoutUser:" destination="9MK-Mf-nvI" id="jeu-W0-TwQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="Login" destination="VpM-1d-65w" id="hUN-A5-L6S"/>
-                        <outlet property="logout" destination="XnS-WU-P7V" id="UH6-Ih-8mH"/>
+                        <outlet property="loginLogoutButton" destination="m6M-YV-LlC" id="fCt-jI-JeG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbf-iY-DDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
