@@ -12,10 +12,10 @@
 
 
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *login;
-@property (weak, nonatomic) IBOutlet UIButton *logout;
 @property (nonatomic, strong) PFUser *currentUser;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginLogoutButton;
+@property (strong, nonatomic) IBOutlet UITextField *username;
+@property (strong, nonatomic) IBOutlet UITextField *email;
 
 
 
@@ -38,13 +38,12 @@
     //check if there's a user
     self.currentUser = [PFUser currentUser];
     if (self.currentUser) {
-        self.login.hidden = YES;
-        self.logout.hidden = NO;
         self.loginLogoutButton.title = @"Logout";
+        self.username.text = self.currentUser.username;
+        self.username.userInteractionEnabled = NO;
+        self.email.text = self.currentUser.email;
         NSLog(@"current user: %@", self.currentUser.email);
     } else if (!self.currentUser) {
-        self.login.hidden = NO;
-        self.logout.hidden = YES;
         self.loginLogoutButton.title = @"Login";
     }
 }

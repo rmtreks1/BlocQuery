@@ -221,22 +221,67 @@
                     <view key="view" contentMode="scaleToFill" id="bm8-Dv-7DO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bloc-logo-rectangle-grey" translatesAutoresizingMaskIntoConstraints="NO" id="YIy-sV-sJB">
+                                <rect key="frame" x="26" y="74" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6er-Oz-tcn"/>
+                                    <constraint firstAttribute="height" constant="100" id="iCO-Rv-U83"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvg-Oe-BxB">
+                                <rect key="frame" x="10" y="184" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-wo-LQ4">
+                                <rect key="frame" x="10" y="224" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M92-cx-by5">
+                                <rect key="frame" x="10" y="264" width="300" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="oev-XA-vDF"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna a</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M92-cx-by5" firstAttribute="leading" secondItem="bm8-Dv-7DO" secondAttribute="leading" constant="10" id="5YI-0I-d1F"/>
+                            <constraint firstAttribute="trailing" secondItem="Uvg-Oe-BxB" secondAttribute="trailing" constant="10" id="6oP-5i-IEE"/>
+                            <constraint firstItem="t5m-wo-LQ4" firstAttribute="top" secondItem="Uvg-Oe-BxB" secondAttribute="bottom" constant="10" id="OAA-x7-JS1"/>
+                            <constraint firstItem="YIy-sV-sJB" firstAttribute="top" secondItem="0Hw-Is-7Eh" secondAttribute="bottom" constant="10" id="ON6-Pq-XMJ"/>
+                            <constraint firstItem="Uvg-Oe-BxB" firstAttribute="leading" secondItem="bm8-Dv-7DO" secondAttribute="leading" constant="10" id="TuY-av-Smf"/>
+                            <constraint firstAttribute="trailing" secondItem="t5m-wo-LQ4" secondAttribute="trailing" constant="10" id="Z9m-DV-LJM"/>
+                            <constraint firstItem="M92-cx-by5" firstAttribute="top" secondItem="t5m-wo-LQ4" secondAttribute="bottom" constant="10" id="gih-0y-zEJ"/>
+                            <constraint firstItem="YIy-sV-sJB" firstAttribute="leading" secondItem="bm8-Dv-7DO" secondAttribute="leadingMargin" constant="10" id="hBK-3e-myi"/>
+                            <constraint firstAttribute="trailing" secondItem="M92-cx-by5" secondAttribute="trailing" constant="10" id="jiE-AC-yKm"/>
+                            <constraint firstItem="t5m-wo-LQ4" firstAttribute="leading" secondItem="bm8-Dv-7DO" secondAttribute="leading" constant="10" id="r5w-GN-dGg"/>
+                            <constraint firstItem="Uvg-Oe-BxB" firstAttribute="top" secondItem="YIy-sV-sJB" secondAttribute="bottom" constant="10" id="t1c-Q5-f2t"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2qx-Ir-dJM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="m6M-YV-LlC">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="m6M-YV-LlC">
                             <connections>
                                 <action selector="loginLogoutUser:" destination="9MK-Mf-nvI" id="jeu-W0-TwQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="email" destination="t5m-wo-LQ4" id="auZ-z4-D06"/>
                         <outlet property="loginLogoutButton" destination="m6M-YV-LlC" id="fCt-jI-JeG"/>
+                        <outlet property="username" destination="Uvg-Oe-BxB" id="jut-jP-H8E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbf-iY-DDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="999"/>
+            <point key="canvasLocation" x="937" y="1010"/>
         </scene>
         <!--All Questions View Controller-->
         <scene sceneID="6a9-ku-Ly6">
@@ -496,6 +541,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Bloc-logo-rectangle-grey" width="700" height="268"/>
         <image name="myQuestions" width="16" height="16"/>
         <image name="profile" width="16" height="16"/>
         <image name="questions" width="16" height="16"/>
