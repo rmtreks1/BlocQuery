@@ -292,6 +292,7 @@
                     <connections>
                         <outlet property="email" destination="t5m-wo-LQ4" id="auZ-z4-D06"/>
                         <outlet property="loginLogoutButton" destination="m6M-YV-LlC" id="fCt-jI-JeG"/>
+                        <outlet property="profilePicture" destination="YIy-sV-sJB" id="vjC-ad-Z0X"/>
                         <outlet property="userDescription" destination="M92-cx-by5" id="ItP-xB-1dy"/>
                         <outlet property="username" destination="Uvg-Oe-BxB" id="jut-jP-H8E"/>
                     </connections>
