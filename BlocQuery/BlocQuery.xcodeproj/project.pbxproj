@@ -19,6 +19,7 @@
 		01640D3D1AF32E5B005567FE /* BlocQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D3C1AF32E5B005567FE /* BlocQueryTests.m */; };
 		01640D481AF32F34005567FE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D471AF32F34005567FE /* ProfileViewController.m */; };
 		01640D4B1AF33126005567FE /* CreateQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01640D4A1AF33126005567FE /* CreateQuestionViewController.m */; };
+		0172F2631AFC252100B56A78 /* Batman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0172F2621AFC252100B56A78 /* Batman.jpg */; };
 		019DE8011AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 019DE8001AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m */; };
 		01AED9D71AF45A7600050797 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AED9D61AF45A7600050797 /* LoginViewController.m */; };
 		01AED9D91AF45AE800050797 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AED9D81AF45AE800050797 /* ParseUI.framework */; };
@@ -78,6 +79,7 @@
 		01640D471AF32F34005567FE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		01640D491AF33126005567FE /* CreateQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateQuestionViewController.h; sourceTree = "<group>"; };
 		01640D4A1AF33126005567FE /* CreateQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQuestionViewController.m; sourceTree = "<group>"; };
+		0172F2621AFC252100B56A78 /* Batman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Batman.jpg; sourceTree = "<group>"; };
 		019DE7FF1AF9B67900D6EC82 /* QuestionHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionHeaderTableViewCell.h; path = BlocQuery/QuestionHeaderTableViewCell.h; sourceTree = "<group>"; };
 		019DE8001AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionHeaderTableViewCell.m; path = BlocQuery/QuestionHeaderTableViewCell.m; sourceTree = "<group>"; };
 		01AED9D51AF45A7600050797 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		01640D1C1AF32E5B005567FE /* BlocQuery */ = {
 			isa = PBXGroup;
 			children = (
+				0172F2621AFC252100B56A78 /* Batman.jpg */,
 				015ADED51AF983A8001A796E /* AllAnswersViewController.h */,
 				015ADED61AF983A8001A796E /* AllAnswersViewController.m */,
 				01E306FF1AF83A610066A678 /* Answers.h */,
@@ -344,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0172F2631AFC252100B56A78 /* Batman.jpg in Resources */,
 				01640D2C1AF32E5B005567FE /* Main.storyboard in Resources */,
 				01640D311AF32E5B005567FE /* LaunchScreen.xib in Resources */,
 				01640D2E1AF32E5B005567FE /* Images.xcassets in Resources */,

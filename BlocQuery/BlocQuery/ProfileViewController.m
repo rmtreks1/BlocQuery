@@ -134,7 +134,29 @@
 
 
 
+#pragma mark - User Profile Picture
 
+- (IBAction)buttonPressed:(UIBarButtonItem *)sender {
+    NSLog(@"button pressed");
+    
+    // save dummy image to parse
+    // image
+    
+    UIImage *image = [UIImage imageNamed:@"Batman.jpg"];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    
+    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+    userPhoto[@"imageName"] = @"My trip to Hawaii!";
+    userPhoto[@"imageFile"] = imageFile;
+    
+    [userPhoto setObject:[PFUser currentUser] forKey:@"createdBy"];
+    
+    [userPhoto saveInBackground];
+    
+    
+    
+   }
 
 
 

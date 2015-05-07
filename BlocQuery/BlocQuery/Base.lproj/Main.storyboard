@@ -283,6 +283,11 @@
                                 <action selector="loginLogoutUser:" destination="9MK-Mf-nvI" id="jeu-W0-TwQ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="beN-f5-t1E">
+                            <connections>
+                                <action selector="buttonPressed:" destination="9MK-Mf-nvI" id="f2N-4N-wuy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="email" destination="t5m-wo-LQ4" id="auZ-z4-D06"/>
