@@ -76,10 +76,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-}
+   }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    if ([PFUser currentUser]) {
+        [self loadObjects];
+    }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
