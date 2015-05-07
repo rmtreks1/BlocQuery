@@ -9,7 +9,7 @@
 #import "ProfileViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
-#import "Questions.h"
+
 
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *login;

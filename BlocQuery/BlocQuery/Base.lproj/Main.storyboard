@@ -191,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCn-3k-6zy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="395"/>
+            <point key="canvasLocation" x="1341" y="395"/>
         </scene>
         <!--All Questions-->
         <scene sceneID="vif-aD-YME">
@@ -210,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="409" y="-303"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="rvq-Vy-LF4">
             <objects>
                 <viewController storyboardIdentifier="Profile" id="9MK-Mf-nvI" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -240,36 +240,16 @@
                                     <action selector="logoutUser:" destination="9MK-Mf-nvI" eventType="touchUpInside" id="H27-xQ-GAJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObV-4y-tgM">
-                                <rect key="frame" x="117" y="39" width="87" height="30"/>
-                                <state key="normal" title="AskQuestion">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="askQuestion:" destination="9MK-Mf-nvI" eventType="touchUpInside" id="10a-rA-VMP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS2-jM-69G">
-                                <rect key="frame" x="137" y="472" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="XnS-WU-P7V" secondAttribute="centerX" id="8V3-fu-at3"/>
-                            <constraint firstItem="ObV-4y-tgM" firstAttribute="top" secondItem="0Hw-Is-7Eh" secondAttribute="bottom" constant="19" id="BSG-O2-v4f"/>
                             <constraint firstAttribute="centerX" secondItem="VpM-1d-65w" secondAttribute="centerX" id="BqK-Ew-Xzx"/>
-                            <constraint firstItem="Hg3-o4-xL4" firstAttribute="top" secondItem="TS2-jM-69G" secondAttribute="bottom" constant="17" id="CEz-YV-gWi"/>
-                            <constraint firstAttribute="centerX" secondItem="TS2-jM-69G" secondAttribute="centerX" id="CLJ-0B-37f"/>
-                            <constraint firstAttribute="centerX" secondItem="ObV-4y-tgM" secondAttribute="centerX" id="GPY-Rz-Edu"/>
                             <constraint firstAttribute="centerY" secondItem="XnS-WU-P7V" secondAttribute="centerY" id="S2k-aE-E5E"/>
-                            <constraint firstItem="ObV-4y-tgM" firstAttribute="top" secondItem="0Hw-Is-7Eh" secondAttribute="bottom" constant="19" id="hxJ-uQ-Vxk"/>
                             <constraint firstAttribute="centerY" secondItem="VpM-1d-65w" secondAttribute="centerY" id="srd-nD-Mgp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="V1X-O0-83w"/>
+                    <navigationItem key="navigationItem" id="2qx-Ir-dJM"/>
                     <connections>
                         <outlet property="Login" destination="VpM-1d-65w" id="hUN-A5-L6S"/>
                         <outlet property="logout" destination="XnS-WU-P7V" id="UH6-Ih-8mH"/>
@@ -277,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbf-iY-DDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="999"/>
+            <point key="canvasLocation" x="932" y="999"/>
         </scene>
         <!--All Questions View Controller-->
         <scene sceneID="6a9-ku-Ly6">
@@ -406,7 +386,7 @@
                     <connections>
                         <segue destination="NDZ-gn-VoB" kind="relationship" relationship="viewControllers" id="5vN-ah-dEi"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="9MK-Mf-nvI" kind="relationship" relationship="viewControllers" id="KNI-NV-bM5"/>
+                        <segue destination="5Bh-C9-gwg" kind="relationship" relationship="viewControllers" id="KNI-NV-bM5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -515,6 +495,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CN-jl-pui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1677" y="325"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="liu-Wz-3og">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Bh-C9-gwg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="V1X-O0-83w"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gfz-J2-Du3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9MK-Mf-nvI" kind="relationship" relationship="rootViewController" id="eeb-Yz-pdg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8h-4K-rHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="999"/>
         </scene>
     </scenes>
     <resources>
