@@ -222,7 +222,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqk-7B-J0e">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vqk-7B-J0e">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bloc-logo-rectangle-grey" translatesAutoresizingMaskIntoConstraints="NO" id="YIy-sV-sJB">
@@ -233,41 +233,39 @@
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvg-Oe-BxB">
-                                        <rect key="frame" x="10" y="147" width="300" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-wo-LQ4">
-                                        <rect key="frame" x="10" y="213" width="300" height="30"/>
+                                        <rect key="frame" x="10" y="220" width="87" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M92-cx-by5">
-                                        <rect key="frame" x="8" y="276" width="300" height="153"/>
+                                        <rect key="frame" x="10" y="120" width="89" height="90"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="153" id="4bL-ye-ie2"/>
+                                            <constraint firstAttribute="height" constant="90" id="ppX-d3-owK"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna a</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-wo-LQ4">
+                                        <rect key="frame" x="10" y="258" width="87" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Uvg-Oe-BxB" firstAttribute="centerX" secondItem="vqk-7B-J0e" secondAttribute="centerX" id="6EX-9f-caD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Uvg-Oe-BxB" secondAttribute="trailing" constant="10" id="7GJ-Ms-nLO"/>
-                                    <constraint firstItem="Uvg-Oe-BxB" firstAttribute="leading" secondItem="YIy-sV-sJB" secondAttribute="leading" id="EYh-HW-jox"/>
-                                    <constraint firstItem="t5m-wo-LQ4" firstAttribute="top" secondItem="Uvg-Oe-BxB" secondAttribute="bottom" constant="36" id="JxY-nk-c1O"/>
+                                    <constraint firstItem="t5m-wo-LQ4" firstAttribute="leading" secondItem="vqk-7B-J0e" secondAttribute="leading" constant="10" id="3rv-t9-NSV"/>
+                                    <constraint firstItem="M92-cx-by5" firstAttribute="leading" secondItem="vqk-7B-J0e" secondAttribute="leading" constant="10" id="5JK-4g-O0a"/>
+                                    <constraint firstItem="Uvg-Oe-BxB" firstAttribute="top" secondItem="M92-cx-by5" secondAttribute="bottom" constant="10" id="CmI-lO-mwp"/>
                                     <constraint firstItem="YIy-sV-sJB" firstAttribute="leading" secondItem="vqk-7B-J0e" secondAttribute="leading" constant="10" id="Kze-Xe-0wT"/>
-                                    <constraint firstItem="M92-cx-by5" firstAttribute="leading" secondItem="vqk-7B-J0e" secondAttribute="leadingMargin" id="Ulm-Mh-Geq"/>
-                                    <constraint firstAttribute="trailing" secondItem="M92-cx-by5" secondAttribute="trailing" constant="12" id="VfE-Nk-5pZ"/>
-                                    <constraint firstItem="t5m-wo-LQ4" firstAttribute="leading" secondItem="Uvg-Oe-BxB" secondAttribute="leading" id="Zad-5A-Wuc"/>
-                                    <constraint firstItem="M92-cx-by5" firstAttribute="top" secondItem="t5m-wo-LQ4" secondAttribute="bottom" constant="33" id="acY-Nq-yeF"/>
+                                    <constraint firstAttribute="trailing" secondItem="M92-cx-by5" secondAttribute="trailing" constant="8" id="Rp6-hW-7O8"/>
+                                    <constraint firstAttribute="trailing" secondItem="t5m-wo-LQ4" secondAttribute="trailing" constant="10" id="Tvx-CT-6cI"/>
+                                    <constraint firstItem="t5m-wo-LQ4" firstAttribute="top" secondItem="Uvg-Oe-BxB" secondAttribute="bottom" constant="8" id="alY-T9-3ac"/>
                                     <constraint firstItem="YIy-sV-sJB" firstAttribute="top" secondItem="vqk-7B-J0e" secondAttribute="top" constant="10" id="c5a-TW-QqK"/>
-                                    <constraint firstItem="Uvg-Oe-BxB" firstAttribute="top" secondItem="YIy-sV-sJB" secondAttribute="bottom" constant="37" id="iws-l3-JWG"/>
-                                    <constraint firstItem="Uvg-Oe-BxB" firstAttribute="trailing" secondItem="t5m-wo-LQ4" secondAttribute="trailing" id="jvJ-C0-4Df"/>
-                                    <constraint firstAttribute="bottom" secondItem="M92-cx-by5" secondAttribute="bottom" constant="26" id="pnk-N9-5ry"/>
+                                    <constraint firstItem="Uvg-Oe-BxB" firstAttribute="leading" secondItem="vqk-7B-J0e" secondAttribute="leading" constant="10" id="fUI-cx-oN4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uvg-Oe-BxB" secondAttribute="trailing" constant="10" id="otG-BN-87p"/>
+                                    <constraint firstItem="M92-cx-by5" firstAttribute="top" secondItem="YIy-sV-sJB" secondAttribute="bottom" constant="10" id="tag-xH-RrW"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -289,6 +287,7 @@
                     <connections>
                         <outlet property="email" destination="t5m-wo-LQ4" id="auZ-z4-D06"/>
                         <outlet property="loginLogoutButton" destination="m6M-YV-LlC" id="fCt-jI-JeG"/>
+                        <outlet property="userDescription" destination="M92-cx-by5" id="ItP-xB-1dy"/>
                         <outlet property="username" destination="Uvg-Oe-BxB" id="jut-jP-H8E"/>
                     </connections>
                 </viewController>

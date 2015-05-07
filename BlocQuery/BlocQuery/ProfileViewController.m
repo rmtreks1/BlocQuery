@@ -16,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginLogoutButton;
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *email;
-
+@property (strong, nonatomic) IBOutlet UITextView *userDescription;
 
 
 
@@ -42,7 +42,9 @@
         self.username.text = self.currentUser.username;
         self.username.userInteractionEnabled = NO;
         self.email.text = self.currentUser.email;
+        self.userDescription.text = self.currentUser[@"description"];
         NSLog(@"current user: %@", self.currentUser.email);
+        NSLog(@"current user description: %@", self.currentUser[@"description"]);
     } else if (!self.currentUser) {
         self.loginLogoutButton.title = @"Login";
     }
