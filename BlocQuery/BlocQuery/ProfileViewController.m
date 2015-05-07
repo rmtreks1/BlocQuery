@@ -46,6 +46,19 @@
         self.userDescription.text = self.currentUser[@"description"];
         NSLog(@"current user: %@", self.currentUser.email);
         NSLog(@"current user description: %@", self.currentUser[@"description"]);
+        
+        
+        PFFile *userImageFile = self.currentUser[@"profilePicture"];
+        [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+            if (!error) {
+                self.profilePicture.image = [UIImage imageWithData:imageData];
+            }
+        }];
+        
+        
+        
+        
+        
     } else if (!self.currentUser) {
         self.loginLogoutButton.title = @"Login";
     }
