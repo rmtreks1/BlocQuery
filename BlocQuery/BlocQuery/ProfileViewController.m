@@ -58,6 +58,11 @@
         }];
         
         
+        if ([self.currentUser[@"description"] isEqualToString:@""]) {
+            self.userDescription.text = @"enter a cool description about yourself";
+        }
+        
+        
         
         
         
