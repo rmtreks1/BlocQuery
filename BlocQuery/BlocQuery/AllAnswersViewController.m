@@ -1,38 +1,25 @@
 //
-//  AllQuestionsViewController.m
+//  AllAnswersViewController.m
 //  BlocQuery
 //
-//  Created by Roshan Mahanama on 4/05/2015.
+//  Created by Roshan Mahanama on 6/05/2015.
 //  Copyright (c) 2015 RMTREKS. All rights reserved.
 //
 
-#import "AllQuestionsViewController.h"
-#import "LoginViewController.h"
-#import "SignUpViewController.h"
 #import "AllAnswersViewController.h"
+#import "CreateAnswersViewController.h"
+#import "QuestionHeaderTableViewCell.h"
+#import "QuestionTableViewCell.h"
 
-@interface AllQuestionsViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+//#import "Questions.h"
 
-@property (nonatomic, strong) PFUser *currentUser;
+@interface AllAnswersViewController ()
+
+@property (nonatomic, strong) PFObject *questionToAnswer;
 
 @end
 
-@implementation AllQuestionsViewController
-
-//- (id)initWithCoder:(NSCoder *)aDecoder{
-//    NSLog(@"initWithCoder called");
-//    self = [super initWithCoder:aDecoder];
-//
-//    return self;
-//    
-//}
-
-
-
-
-/* initWithStyle isn't being called when using storyboard.
-Instead set the values in 'user defined runtime attributes'
-*/
+@implementation AllAnswersViewController
 
 
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -41,8 +28,7 @@ Instead set the values in 'user defined runtime attributes'
         // Custom the table
         
         // The className to query on
-//        self.className = @"Foo";
-        self.parseClassName = @"Questions";
+        self.parseClassName = @"Answers";
         
         // The key of the PFObject to display in the label of the default cell style
         self.textKey = @"text";
@@ -74,29 +60,12 @@ Instead set the values in 'user defined runtime attributes'
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-    self.currentUser = [PFUser currentUser];
     
-    if (!self.currentUser) {
-        NSLog(@"Not logged in");
-        
-        // testing the login controller
-        LoginViewController *loginController = [[LoginViewController alloc] init];
-        loginController.delegate = self;
-        
-        // custom signup controller
-        loginController.signUpController = [[SignUpViewController alloc] init];
-        loginController.signUpController.delegate = self;
-        
-        [self presentViewController:loginController animated:YES completion:nil];
-    } else if (self.currentUser) {
-        NSLog(@"current user in allQuestions is: %@", self.currentUser.email);
-    }
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    
-    
-    
-    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload {
@@ -107,10 +76,14 @@ Instead set the values in 'user defined runtime attributes'
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-}
+   }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    if ([PFUser currentUser]) {
+        [self loadObjects];
+    }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -141,52 +114,57 @@ Instead set the values in 'user defined runtime attributes'
     // This method is called every time objects are loaded from Parse via the PFQuery
 }
 
-/*
+
  // Override to customize what kind of query to perform on the class. The default is to query for
  // all objects ordered by createdAt descending.
- - (PFQuery *)queryForTable {
- PFQuery *query = [PFQuery queryWithClassName:self.className];
- 
- // If Pull To Refresh is enabled, query against the network by default.
- if (self.pullToRefreshEnabled) {
- query.cachePolicy = kPFCachePolicyNetworkOnly;
- }
- 
- // If no objects are loaded in memory, we look to the cache first to fill the table
- // and then subsequently do a query against the network.
- if (self.objects.count == 0) {
- query.cachePolicy = kPFCachePolicyCacheThenNetwork;
- }
- 
- [query orderByDescending:@"createdAt"];
- 
- return query;
- }
- */
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    [query whereKey:@"Question" equalTo:self.question];
+//    [query whereKey:@"Question" equalTo:[PFObject objectWithoutDataWithClassName:@"Questions" objectId:@"96BFaS9u8u"]];
+    
+    
+    
+//    
+//    
+//     // If Pull To Refresh is enabled, query against the network by default.
+//     if (self.pullToRefreshEnabled) {
+//     query.cachePolicy = kPFCachePolicyNetworkOnly;
+//     }
+//    
+//     // If no objects are loaded in memory, we look to the cache first to fill the table
+//     // and then subsequently do a query against the network.
+//     if (self.objects.count == 0) {
+//     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+//     }
+//    
+    
+    
+    
+    [query orderByDescending:@"createdAt"];
+    
+    return query;
+}
+
 
 
  // Override to customize the look of a cell representing an object. The default is to display
  // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
  // and the imageView being the imageKey in the object.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    static NSString *CellIdentifier = @"Cell";
-    
-    QuestionTableViewCell *cell = (QuestionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[QuestionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    // Configure the cell
-    
-    self.imageKey = @"questionImage";
-    
-    cell.questionLabel.text = [object objectForKey:self.textKey];
-//    cell.textLabel.text = [object objectForKey:self.textKey];
-//    cell.imageView.file = [object objectForKey:self.imageKey];
-    
-    return cell;
-}
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+ static NSString *CellIdentifier = @"Cell";
  
+ QuestionTableViewCell *cell = (QuestionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+ if (cell == nil) {
+ cell = [[QuestionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+ }
+ 
+ // Configure the cell
+ cell.questionLabel.text = [object objectForKey:self.textKey];
+// cell.imageView.file = [object objectForKey:self.imageKey];
+ 
+ return cell;
+ }
+
 
 /*
  // Override if you need to change the ordering of objects in the table.
@@ -257,45 +235,43 @@ Instead set the values in 'user defined runtime attributes'
 
 
 
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showDetailedQuestion"]) {
-//        DetailedQuestionViewController *detailViewController = [segue destinationViewController];
-//        NSInteger row = [[self tableView].indexPathForSelectedRow row];
-//        detailViewController.question = [self.objects objectAtIndex:row];
-        
-        AllAnswersViewController *detailViewController = [segue destinationViewController];
-        NSInteger row = [[self tableView].indexPathForSelectedRow row];
-        detailViewController.question = [self.objects objectAtIndex:row];
+    if ([segue.identifier isEqualToString:@"replyWithAnswer"]) {
+        CreateAnswersViewController *createAnswerViewController = [segue destinationViewController];
+        createAnswerViewController.question = self.question;
     }
 }
 
 
 
-#pragma mark - Logging in to Parse
-// move this code to button or screen that triggers the login
-
-- (void)logInViewController:(PFLogInViewController *)controller
-               didLogInUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    QuestionHeaderTableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"QuestionHeaderCell"];
+    headerView.questionLabel.text = self.question.questionText;
+    NSLog(@"question is: %@", self.question.questionText);
+    return headerView;
 }
 
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44.0;
+}
 
 
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section{
+    return 90.0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return UITableViewAutomaticDimension;
+}
 
 
 @end
