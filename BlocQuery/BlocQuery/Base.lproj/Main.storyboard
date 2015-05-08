@@ -232,12 +232,12 @@
                                             <constraint firstAttribute="height" constant="100" id="vaj-Q3-kM2"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvg-Oe-BxB">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvg-Oe-BxB">
                                         <rect key="frame" x="10" y="220" width="87" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M92-cx-by5">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M92-cx-by5">
                                         <rect key="frame" x="10" y="120" width="89" height="90"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -248,7 +248,14 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-wo-LQ4">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bloc-logo-rectangle-grey" translatesAutoresizingMaskIntoConstraints="NO" id="p7e-MG-AKI">
+                                        <rect key="frame" x="193" y="10" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="kzh-nX-n2d"/>
+                                            <constraint firstAttribute="width" constant="100" id="sgA-eu-RF9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-wo-LQ4">
                                         <rect key="frame" x="10" y="258" width="87" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -265,7 +272,10 @@
                                     <constraint firstItem="YIy-sV-sJB" firstAttribute="top" secondItem="vqk-7B-J0e" secondAttribute="top" constant="10" id="c5a-TW-QqK"/>
                                     <constraint firstItem="Uvg-Oe-BxB" firstAttribute="leading" secondItem="vqk-7B-J0e" secondAttribute="leading" constant="10" id="fUI-cx-oN4"/>
                                     <constraint firstAttribute="trailing" secondItem="Uvg-Oe-BxB" secondAttribute="trailing" constant="10" id="otG-BN-87p"/>
+                                    <constraint firstAttribute="trailing" secondItem="p7e-MG-AKI" secondAttribute="trailing" constant="27" id="tHE-GM-EW4"/>
                                     <constraint firstItem="M92-cx-by5" firstAttribute="top" secondItem="YIy-sV-sJB" secondAttribute="bottom" constant="10" id="tag-xH-RrW"/>
+                                    <constraint firstItem="p7e-MG-AKI" firstAttribute="top" secondItem="vqk-7B-J0e" secondAttribute="top" constant="10" id="vDB-ax-oyl"/>
+                                    <constraint firstItem="p7e-MG-AKI" firstAttribute="leading" secondItem="YIy-sV-sJB" secondAttribute="trailing" constant="83" id="xKd-tJ-YU3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -285,13 +295,14 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="beN-f5-t1E">
                             <connections>
-                                <action selector="buttonPressed:" destination="9MK-Mf-nvI" id="f2N-4N-wuy"/>
+                                <action selector="buttonPressed:" destination="9MK-Mf-nvI" id="gAy-wR-keZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="email" destination="t5m-wo-LQ4" id="auZ-z4-D06"/>
                         <outlet property="loginLogoutButton" destination="m6M-YV-LlC" id="fCt-jI-JeG"/>
+                        <outlet property="pictureFromAlbum" destination="p7e-MG-AKI" id="iW6-6s-7Lc"/>
                         <outlet property="profilePicture" destination="YIy-sV-sJB" id="vjC-ad-Z0X"/>
                         <outlet property="userDescription" destination="M92-cx-by5" id="ItP-xB-1dy"/>
                         <outlet property="username" destination="Uvg-Oe-BxB" id="jut-jP-H8E"/>
@@ -388,13 +399,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oty-0M-cfW">
-                                <rect key="frame" x="137" y="429" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oty-0M-cfW">
+                                <rect key="frame" x="137" y="428" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ndw-Bv-lWI" kind="modal" id="Sz0-Xg-Fsa"/>
+                                    <action selector="buttonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="btR-Fc-uGt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -569,7 +580,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="ljo-RF-zl9"/>
-    </inferredMetricsTieBreakers>
 </document>

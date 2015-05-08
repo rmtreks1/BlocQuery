@@ -11,13 +11,14 @@
 #import "SignUpViewController.h"
 
 
-@interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) PFUser *currentUser;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginLogoutButton;
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *email;
 @property (strong, nonatomic) IBOutlet UITextView *userDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
+@property (strong, nonatomic) IBOutlet UIImageView *pictureFromAlbum;
 
 
 
@@ -62,6 +63,7 @@
     } else if (!self.currentUser) {
         self.loginLogoutButton.title = @"Login";
     }
+    
 }
 
 
@@ -153,21 +155,42 @@
 - (IBAction)buttonPressed:(UIBarButtonItem *)sender {
     NSLog(@"button pressed");
     
-    // save dummy image to parse for user
-
+//    // save dummy image to parse for user
+//    UIImage *image = [UIImage imageNamed:@"Batman.jpg"];
+//    NSData *imageData = UIImagePNGRepresentation(image);
+//    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+//    self.currentUser[@"profilePicture"] = imageFile;
+//    [self.currentUser saveInBackground];
     
-    UIImage *image = [UIImage imageNamed:@"Batman.jpg"];
-    NSData *imageData = UIImagePNGRepresentation(image);
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     
-
-    self.currentUser[@"profilePicture"] = imageFile;
-    [self.currentUser saveInBackground];
     
+    // implementing UIImagePickerController
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
    }
 
 
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.pictureFromAlbum.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
 
 
 @end
