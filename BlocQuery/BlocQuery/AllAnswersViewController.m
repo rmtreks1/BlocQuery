@@ -11,6 +11,7 @@
 #import "QuestionHeaderTableViewCell.h"
 #import "QuestionTableViewCell.h"
 
+
 //#import "Questions.h"
 
 @interface AllAnswersViewController ()
@@ -249,6 +250,29 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     QuestionHeaderTableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"QuestionHeaderCell"];
     headerView.questionLabel.text = self.question.questionText;
+    
+    
+    // set a default picture for the profile picture
+    headerView.profilePicture.image = [UIImage imageNamed:@"Joker.jpg"];
+    
+    
+    // find out the user of the question
+    PFUser *questionUser = [self.question objectForKey:@"createdBy"];
+    
+    [questionUser fetchIfNeededInBackgroundWithBlock:^(PFObject *post, NSError *error) {
+        NSLog(@"the user is %@", questionUser.username);
+        
+        PFFile *userImageFile = questionUser[@"profilePicture"];
+        if (userImageFile && [userImageFile isKindOfClass:[PFFile class]]) {
+            [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                if (!error) {
+                    headerView.profilePicture.image = [UIImage imageWithData:imageData];
+                }
+            }];
+        }
+    }];
+    
+    
     NSLog(@"question is: %@", self.question.questionText);
     return headerView;
 }

@@ -11,5 +11,6 @@
 @interface QuestionHeaderTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 
 @end
