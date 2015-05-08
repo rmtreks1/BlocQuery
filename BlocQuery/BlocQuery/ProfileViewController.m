@@ -256,4 +256,12 @@
 }
 
 
+
+- (IBAction)dismissButtonPressed:(UIButton *)sender {
+    NSLog(@"dismiss button pressed");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
 @end
