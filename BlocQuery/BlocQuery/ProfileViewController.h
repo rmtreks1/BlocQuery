@@ -13,4 +13,6 @@
 
 @interface ProfileViewController : UIViewController
 
+@property (nonatomic, strong) PFUser *seeUserProfile;
+
 @end

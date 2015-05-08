@@ -10,12 +10,15 @@
 #import "CreateAnswersViewController.h"
 #import "QuestionHeaderTableViewCell.h"
 #import "QuestionTableViewCell.h"
+#import "ProfileViewController.h"
+
 
 //#import "Questions.h"
 
 @interface AllAnswersViewController ()
 
 @property (nonatomic, strong) PFObject *questionToAnswer;
+@property (nonatomic, strong) PFUser *questionUser;
 
 @end
 
@@ -241,6 +244,9 @@
     if ([segue.identifier isEqualToString:@"replyWithAnswer"]) {
         CreateAnswersViewController *createAnswerViewController = [segue destinationViewController];
         createAnswerViewController.question = self.question;
+    } else if ([segue.identifier isEqualToString:@"seeUserProfile"]){
+        ProfileViewController *profileVC = [segue destinationViewController];
+        profileVC.seeUserProfile = self.questionUser;
     }
 }
 
@@ -249,6 +255,30 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     QuestionHeaderTableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"QuestionHeaderCell"];
     headerView.questionLabel.text = self.question.questionText;
+    headerView.profilePicButton.imageView.image = [UIImage imageNamed:@"raas.png"];
+    
+    
+    // set a default picture for the profile picture
+    [headerView.profilePicButton setImage:[UIImage imageNamed:@"Joker.jpg"] forState:UIControlStateNormal];
+    
+    
+    // find out the user of the question
+    self.questionUser = [self.question objectForKey:@"createdBy"];
+    
+    [self.questionUser fetchIfNeededInBackgroundWithBlock:^(PFObject *post, NSError *error) {
+        NSLog(@"the user is %@", self.questionUser.username);
+        
+        PFFile *userImageFile = self.questionUser[@"profilePicture"];
+        if (userImageFile && [userImageFile isKindOfClass:[PFFile class]]) {
+            [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                if (!error) {
+                    [headerView.profilePicButton setImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
+                }
+            }];
+        }
+    }];
+    
+    
     NSLog(@"question is: %@", self.question.questionText);
     return headerView;
 }

@@ -22,13 +22,15 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editDoneButton;
 @property (strong, nonatomic) IBOutlet UILabel *username;
 @property (strong, nonatomic) IBOutlet UIButton *changePictureButton;
-
-
-
+@property (strong, nonatomic) IBOutlet UIButton *dismissButton;
 
 @end
 
 @implementation ProfileViewController
+
+
+@synthesize seeUserProfile;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,11 +40,41 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self disableEdit];
+    
+    
+    if (self.seeUserProfile) {
+        NSLog(@"passing through another user");
+        self.currentUser = self.seeUserProfile;
+        self.dismissButton.hidden = NO;
+    } else {
+        NSLog(@"no user passed in");
+        self.dismissButton.hidden = YES;
+        self.currentUser = [PFUser currentUser];
+    };
+    
+    [self profileForUser];
     
     
     //check if there's a user
-    [self disableEdit];
-    self.currentUser = [PFUser currentUser];
+    
+    
+}
+
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
+#pragma mark - setting users
+
+- (void)profileForUser{
     if (self.currentUser) {
         self.loginLogoutButton.title = @"Logout";
         self.username.text = self.currentUser.username;
@@ -69,24 +101,10 @@
             self.userDescription.text = @"enter a cool description about yourself";
         }
         
-        
-        
-        
-        
     } else if (!self.currentUser) {
         self.loginLogoutButton.title = @"Login";
         [self loginUser];
     }
-    
-}
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -254,6 +272,15 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
+
+
+
+- (IBAction)dismissButtonPressed:(UIButton *)sender {
+    NSLog(@"dismiss button pressed");
+    self.seeUserProfile = nil;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 
 @end
