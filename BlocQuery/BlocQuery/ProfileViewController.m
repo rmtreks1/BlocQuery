@@ -23,12 +23,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *username;
 @property (strong, nonatomic) IBOutlet UIButton *changePictureButton;
 
-
-
-
 @end
 
 @implementation ProfileViewController
+
+
+@synthesize seeUserProfile;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +39,13 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    if (self.seeUserProfile) {
+        NSLog(@"passing through another user");
+    } else {
+        NSLog(@"no user passed in");
+    };
+    
     
     
     //check if there's a user
@@ -259,6 +267,7 @@
 
 - (IBAction)dismissButtonPressed:(UIButton *)sender {
     NSLog(@"dismiss button pressed");
+    self.seeUserProfile = nil;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
