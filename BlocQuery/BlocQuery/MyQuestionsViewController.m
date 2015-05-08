@@ -24,4 +24,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+- (IBAction)buttonPressed:(UIButton *)sender {
+    NSLog(@"button pressed");
+    
+    UIImage *image = [UIImage imageNamed:@"talia.jpg"];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"sampleImage_talia.jpg" data:imageData];
+    
+    PFObject *samplePhoto = [PFObject objectWithClassName:@"samplePhoto"];
+    samplePhoto[@"imageFile"] = imageFile;
+    [samplePhoto saveInBackground];
+    
+    
+    
+    
+    
+}
+
 @end

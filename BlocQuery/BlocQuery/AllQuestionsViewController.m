@@ -75,6 +75,38 @@ Instead set the values in 'user defined runtime attributes'
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+//    self.currentUser = [PFUser currentUser];
+//    
+//    if (!self.currentUser) {
+//        NSLog(@"Not logged in");
+//        
+//        // testing the login controller
+//        LoginViewController *loginController = [[LoginViewController alloc] init];
+//        loginController.delegate = self;
+//        
+//        // custom signup controller
+//        loginController.signUpController = [[SignUpViewController alloc] init];
+//        loginController.signUpController.delegate = self;
+//        
+//        [self presentViewController:loginController animated:YES completion:nil];
+//    } else if (self.currentUser) {
+//        NSLog(@"current user in allQuestions is: %@", self.currentUser.email);
+//    }
+    
+    
+    
+    
+    
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.currentUser = [PFUser currentUser];
     
     if (!self.currentUser) {
@@ -92,21 +124,6 @@ Instead set the values in 'user defined runtime attributes'
     } else if (self.currentUser) {
         NSLog(@"current user in allQuestions is: %@", self.currentUser.email);
     }
-    
-    
-    
-    
-    
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
