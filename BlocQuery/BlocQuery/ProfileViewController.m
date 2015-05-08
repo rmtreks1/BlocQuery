@@ -51,11 +51,16 @@
         
         
         PFFile *userImageFile = self.currentUser[@"profilePicture"];
-        [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-            if (!error) {
-                self.profilePicture.image = [UIImage imageWithData:imageData];
-            }
-        }];
+        if (userImageFile && [userImageFile isKindOfClass:[PFFile class]]) {
+            [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                if (!error) {
+                    self.profilePicture.image = [UIImage imageWithData:imageData];
+                }
+            }];
+        } else {
+            self.profilePicture.image = [UIImage imageNamed:@"Joker.jpg"];
+        };
+        
         
         
         if ([self.currentUser[@"description"] isEqualToString:@""]) {
