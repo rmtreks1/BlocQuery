@@ -147,7 +147,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="9MK-Mf-nvI" kind="modal" id="V5w-E2-Xz0"/>
+                                                <segue destination="9MK-Mf-nvI" kind="modal" identifier="seeUserProfile" id="V5w-E2-Xz0"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -336,6 +336,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="changePictureButton" destination="z8C-HJ-bPE" id="vbc-JM-yV2"/>
+                        <outlet property="dismissButton" destination="WYF-Bx-exQ" id="72m-uh-eDf"/>
                         <outlet property="editDoneButton" destination="Cag-da-hCP" id="M81-cQ-pnY"/>
                         <outlet property="email" destination="t5m-wo-LQ4" id="auZ-z4-D06"/>
                         <outlet property="loginLogoutButton" destination="m6M-YV-LlC" id="fCt-jI-JeG"/>
