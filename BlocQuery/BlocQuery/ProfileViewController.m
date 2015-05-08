@@ -170,13 +170,15 @@
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
+    
     [self presentViewController:picker animated:YES completion:NULL];
    }
 
 
 - (void)saveProfilePictureToParse:(UIImage *)profilePicture{
     UIImage *image = profilePicture;
-    NSData *imageData = UIImagePNGRepresentation(image);
+//    NSData *imageData = UIImagePNGRepresentation(image);
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.3);
     PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     self.currentUser[@"profilePicture"] = imageFile;
     [self.currentUser saveInBackground];
@@ -191,7 +193,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-//    self.pictureFromAlbum.image = chosenImage;
+    
     [self saveProfilePictureToParse:chosenImage];
     
     
