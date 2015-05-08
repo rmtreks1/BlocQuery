@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012C25A61AFC6C890014D195 /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C25A51AFC6C890014D195 /* UIImage+Resizing.m */; };
 		012D465D1AF6E5B200DCE8F6 /* AllQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */; };
 		0135CBCB1AF484A500B73677 /* Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0135CBCA1AF484A500B73677 /* Questions.m */; };
 		015ADED71AF983A8001A796E /* AllAnswersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015ADED61AF983A8001A796E /* AllAnswersViewController.m */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012C25A41AFC6C890014D195 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resizing.h"; path = "BlocQuery/UIImage+Resizing.h"; sourceTree = "<group>"; };
+		012C25A51AFC6C890014D195 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resizing.m"; path = "BlocQuery/UIImage+Resizing.m"; sourceTree = "<group>"; };
 		012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllQuestionsViewController.h; sourceTree = "<group>"; };
 		012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllQuestionsViewController.m; sourceTree = "<group>"; };
 		0135CBC91AF484A500B73677 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 		01640D111AF32E5B005567FE = {
 			isa = PBXGroup;
 			children = (
+				012C25A41AFC6C890014D195 /* UIImage+Resizing.h */,
+				012C25A51AFC6C890014D195 /* UIImage+Resizing.m */,
 				019DE7FF1AF9B67900D6EC82 /* QuestionHeaderTableViewCell.h */,
 				019DE8001AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m */,
 				01640D1C1AF32E5B005567FE /* BlocQuery */,
@@ -417,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012C25A61AFC6C890014D195 /* UIImage+Resizing.m in Sources */,
 				01E307011AF83A610066A678 /* Answers.m in Sources */,
 				01640D291AF32E5B005567FE /* MyQuestionsViewController.m in Sources */,
 				01E307041AF83E6B0066A678 /* CreateAnswersViewController.m in Sources */,

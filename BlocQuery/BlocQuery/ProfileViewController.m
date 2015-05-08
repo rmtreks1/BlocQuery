@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "UIImage+Resizing.h"
 
 
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -73,6 +74,7 @@
         
     } else if (!self.currentUser) {
         self.loginLogoutButton.title = @"Login";
+        [self loginUser];
     }
     
 }
@@ -117,11 +119,21 @@
         self.loginLogoutButton.title = @"Logout";
     } else if (!self.currentUser) {
         self.loginLogoutButton.title = @"Login";
+        self.userDescription.text = nil;
+        self.username.text = nil;
+        self.email.text = nil;
+        self.profilePicture.image = [UIImage imageNamed:@"Batman.jpg"];
+        [self loginUser];
     }
 
     
 }
 
+- (IBAction)dismissKeyboard:(UITapGestureRecognizer *)sender {
+    [self.username resignFirstResponder];
+    [self.email resignFirstResponder];
+    [self.userDescription resignFirstResponder];
+}
 
 
 - (IBAction)loginLogoutUser:(UIBarButtonItem *)sender {
@@ -173,9 +185,8 @@
 
 
 - (void)saveProfilePictureToParse:(UIImage *)profilePicture{
-    UIImage *image = profilePicture;
-//    NSData *imageData = UIImagePNGRepresentation(image);
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.3);
+    UIImage *image = [UIImage imageWithImage:profilePicture scaledToWidth:100.0];
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.7);
     PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     self.currentUser[@"profilePicture"] = imageFile;
     [self.currentUser saveInBackground];
