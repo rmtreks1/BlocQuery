@@ -11,7 +11,7 @@
 #import "SignUpViewController.h"
 
 
-@interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UIImagePickerControllerDelegate>
+@interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) PFUser *currentUser;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginLogoutButton;
 @property (strong, nonatomic) IBOutlet UITextField *username;
@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *userDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (strong, nonatomic) IBOutlet UIImageView *pictureFromAlbum;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *editDoneButton;
 
 
 
@@ -151,28 +152,14 @@
 
 
 #pragma mark - User Profile Picture
-
-- (IBAction)buttonPressed:(UIBarButtonItem *)sender {
-    NSLog(@"button pressed");
-    
-//    // save dummy image to parse for user
-//    UIImage *image = [UIImage imageNamed:@"Batman.jpg"];
-//    NSData *imageData = UIImagePNGRepresentation(image);
-//    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-//    self.currentUser[@"profilePicture"] = imageFile;
-//    [self.currentUser saveInBackground];
-    
-    
-    
-    // implementing UIImagePickerController
+- (IBAction)changeProfilePicture:(UIButton *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    
     [self presentViewController:picker animated:YES completion:NULL];
-   }
+}
+
 
 
 - (void)saveProfilePictureToParse:(UIImage *)profilePicture{
