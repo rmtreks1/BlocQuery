@@ -174,11 +174,26 @@
    }
 
 
+- (void)saveProfilePictureToParse:(UIImage *)profilePicture{
+    UIImage *image = profilePicture;
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    self.currentUser[@"profilePicture"] = imageFile;
+    [self.currentUser saveInBackground];
+}
+
+
+
+
+#pragma mark - imagePickerController
+
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.pictureFromAlbum.image = chosenImage;
+//    self.pictureFromAlbum.image = chosenImage;
+    [self saveProfilePictureToParse:chosenImage];
+    
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
