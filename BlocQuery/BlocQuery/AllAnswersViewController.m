@@ -255,10 +255,11 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     QuestionHeaderTableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"QuestionHeaderCell"];
     headerView.questionLabel.text = self.question.questionText;
+    headerView.profilePicButton.imageView.image = [UIImage imageNamed:@"raas.png"];
     
     
     // set a default picture for the profile picture
-    headerView.profilePicture.image = [UIImage imageNamed:@"Joker.jpg"];
+    [headerView.profilePicButton setImage:[UIImage imageNamed:@"Joker.jpg"] forState:UIControlStateNormal];
     
     
     // find out the user of the question
@@ -271,7 +272,7 @@
         if (userImageFile && [userImageFile isKindOfClass:[PFFile class]]) {
             [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
                 if (!error) {
-                    headerView.profilePicture.image = [UIImage imageWithData:imageData];
+                    [headerView.profilePicButton setImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
                 }
             }];
         }
