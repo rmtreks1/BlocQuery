@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSString *answerText;
 @property (nonatomic, strong) Questions *question;
+@property (nonatomic, assign) NSInteger voteCount;
 
 + (Answers *)makeNewAnswer:(NSString *)answer forQuestion:(Questions *)question;
 

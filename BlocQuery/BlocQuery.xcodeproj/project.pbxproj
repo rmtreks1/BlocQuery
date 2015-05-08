@@ -61,8 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		012C25A41AFC6C890014D195 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resizing.h"; path = "BlocQuery/UIImage+Resizing.h"; sourceTree = "<group>"; };
-		012C25A51AFC6C890014D195 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resizing.m"; path = "BlocQuery/UIImage+Resizing.m"; sourceTree = "<group>"; };
+		012C25A41AFC6C890014D195 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
+		012C25A51AFC6C890014D195 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizing.m"; sourceTree = "<group>"; };
 		012D465B1AF6E5B200DCE8F6 /* AllQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllQuestionsViewController.h; sourceTree = "<group>"; };
 		012D465C1AF6E5B200DCE8F6 /* AllQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllQuestionsViewController.m; sourceTree = "<group>"; };
 		0135CBC91AF484A500B73677 /* Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Questions.h; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 		0172F2661AFC2DEE00B56A78 /* bane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bane.jpg; sourceTree = "<group>"; };
 		0172F2671AFC2DEE00B56A78 /* raas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raas.png; sourceTree = "<group>"; };
 		0172F2681AFC2DEE00B56A78 /* talia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = talia.jpg; sourceTree = "<group>"; };
-		019DE7FF1AF9B67900D6EC82 /* QuestionHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionHeaderTableViewCell.h; path = BlocQuery/QuestionHeaderTableViewCell.h; sourceTree = "<group>"; };
-		019DE8001AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionHeaderTableViewCell.m; path = BlocQuery/QuestionHeaderTableViewCell.m; sourceTree = "<group>"; };
+		019DE7FF1AF9B67900D6EC82 /* QuestionHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionHeaderTableViewCell.h; sourceTree = "<group>"; };
+		019DE8001AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionHeaderTableViewCell.m; sourceTree = "<group>"; };
 		01AED9D51AF45A7600050797 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		01AED9D61AF45A7600050797 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		01AED9D81AF45AE800050797 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -162,10 +162,6 @@
 		01640D111AF32E5B005567FE = {
 			isa = PBXGroup;
 			children = (
-				012C25A41AFC6C890014D195 /* UIImage+Resizing.h */,
-				012C25A51AFC6C890014D195 /* UIImage+Resizing.m */,
-				019DE7FF1AF9B67900D6EC82 /* QuestionHeaderTableViewCell.h */,
-				019DE8001AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m */,
 				01640D1C1AF32E5B005567FE /* BlocQuery */,
 				01640D391AF32E5B005567FE /* BlocQueryTests */,
 				01AED9D41AF45A1500050797 /* Frameworks */,
@@ -217,8 +213,12 @@
 				01AED9DB1AF45EC400050797 /* SignUpViewController.m */,
 				0135CBC91AF484A500B73677 /* Questions.h */,
 				0135CBCA1AF484A500B73677 /* Questions.m */,
+				019DE7FF1AF9B67900D6EC82 /* QuestionHeaderTableViewCell.h */,
+				019DE8001AF9B67900D6EC82 /* QuestionHeaderTableViewCell.m */,
 				01BD4D521AF7030D00D72B33 /* QuestionTableViewCell.h */,
 				01BD4D531AF7030D00D72B33 /* QuestionTableViewCell.m */,
+				012C25A41AFC6C890014D195 /* UIImage+Resizing.h */,
+				012C25A51AFC6C890014D195 /* UIImage+Resizing.m */,
 			);
 			path = BlocQuery;
 			sourceTree = "<group>";

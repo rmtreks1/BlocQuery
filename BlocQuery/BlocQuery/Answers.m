@@ -13,6 +13,7 @@
 
 @dynamic answerText;
 @dynamic question;
+@dynamic voteCount;
 
 
 + (void)load {
