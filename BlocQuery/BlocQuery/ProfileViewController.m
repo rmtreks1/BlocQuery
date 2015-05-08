@@ -15,12 +15,13 @@
 @interface ProfileViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) PFUser *currentUser;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *loginLogoutButton;
-@property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *email;
 @property (strong, nonatomic) IBOutlet UITextView *userDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (strong, nonatomic) IBOutlet UIImageView *pictureFromAlbum;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editDoneButton;
+@property (strong, nonatomic) IBOutlet UILabel *username;
+@property (strong, nonatomic) IBOutlet UIButton *changePictureButton;
 
 
 
@@ -40,11 +41,11 @@
     
     
     //check if there's a user
+    [self disableEdit];
     self.currentUser = [PFUser currentUser];
     if (self.currentUser) {
         self.loginLogoutButton.title = @"Logout";
         self.username.text = self.currentUser.username;
-        self.username.userInteractionEnabled = NO;
         self.email.text = self.currentUser.email;
         self.userDescription.text = self.currentUser[@"description"];
         NSLog(@"current user: %@", self.currentUser.email);
@@ -130,7 +131,6 @@
 }
 
 - (IBAction)dismissKeyboard:(UITapGestureRecognizer *)sender {
-    [self.username resignFirstResponder];
     [self.email resignFirstResponder];
     [self.userDescription resignFirstResponder];
 }
@@ -142,6 +142,39 @@
     } else {
         [self loginUser];
     }
+}
+
+
+
+#pragma mark - Edit Mode
+
+- (IBAction)editDoneButtonPressed:(UIBarButtonItem *)sender {
+    if ([self.editDoneButton.title isEqualToString:@"edit"]) {
+        [self enableEdit];
+    } else {
+        [self disableEdit];
+    }
+}
+
+- (void)enableEdit{
+    self.changePictureButton.hidden = NO;
+    self.email.userInteractionEnabled = YES;
+    [self.email setBorderStyle:UITextBorderStyleRoundedRect];
+    self.userDescription.userInteractionEnabled = YES;
+    self.userDescription.layer.borderWidth = 1.0f;
+    self.userDescription.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.editDoneButton.title = @"done";
+}
+
+
+- (void)disableEdit{
+    self.changePictureButton.hidden = YES;
+    self.email.userInteractionEnabled = NO;
+    [self.email setBorderStyle:UITextBorderStyleNone];
+    self.userDescription.userInteractionEnabled = NO;
+    self.userDescription.layer.borderWidth = 0.0f;
+    self.editDoneButton.title = @"edit";
+
 }
 
 
