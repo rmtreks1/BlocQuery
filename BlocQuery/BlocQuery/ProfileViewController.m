@@ -174,10 +174,15 @@
     self.userDescription.userInteractionEnabled = NO;
     self.userDescription.layer.borderWidth = 0.0f;
     self.editDoneButton.title = @"edit";
-
+    [self saveParseUser];
 }
 
 
+- (void)saveParseUser{
+    self.currentUser.email = self.email.text;
+    self.currentUser[@"description"] = self.userDescription.text;
+    [self.currentUser saveInBackground];
+}
 
 
 
