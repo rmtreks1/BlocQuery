@@ -164,23 +164,34 @@
                                     <outlet property="questionLabel" destination="f7w-4v-Cbt" id="5k7-vh-xhi"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="107" id="uyj-uw-mbk" customClass="QuestionTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="153" id="uyj-uw-mbk" customClass="QuestionTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uyj-uw-mbk" id="fvD-rM-oNN">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="AE8-Fe-I3b">
-                                            <rect key="frame" x="10" y="10" width="300" height="86"/>
+                                            <rect key="frame" x="10" y="10" width="300" height="17"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-Jp-tan">
+                                            <rect key="frame" x="250" y="32" width="60" height="115"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Us6-ae-rkQ"/>
+                                            </constraints>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="AE8-Fe-I3b" firstAttribute="leading" secondItem="fvD-rM-oNN" secondAttribute="leading" constant="10" id="Bkb-CS-wSv"/>
+                                        <constraint firstAttribute="bottom" secondItem="Uib-Jp-tan" secondAttribute="bottom" constant="5" id="Pbp-Gd-Rlx"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uib-Jp-tan" secondAttribute="trailing" constant="10" id="Y57-pR-pe1"/>
                                         <constraint firstItem="AE8-Fe-I3b" firstAttribute="top" secondItem="fvD-rM-oNN" secondAttribute="top" constant="10" id="crM-76-hK5"/>
-                                        <constraint firstAttribute="bottom" secondItem="AE8-Fe-I3b" secondAttribute="bottom" constant="10" id="qew-iJ-vCP"/>
                                         <constraint firstAttribute="trailing" secondItem="AE8-Fe-I3b" secondAttribute="trailing" constant="10" id="uHa-vx-rfe"/>
+                                        <constraint firstItem="Uib-Jp-tan" firstAttribute="top" secondItem="AE8-Fe-I3b" secondAttribute="bottom" constant="5" id="yZT-Wc-lZH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
