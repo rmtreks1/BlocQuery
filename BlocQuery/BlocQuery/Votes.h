@@ -19,6 +19,6 @@
 @property (nonatomic, assign) BOOL vote;
 
 
-+ (Votes *)vote: (BOOL)vote forAnswer:(NSString *)answer toQuestion: (NSString *)question byUser:(NSString *)user;
++ (Votes *)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question byUser:(NSString *)user;
 
 @end
