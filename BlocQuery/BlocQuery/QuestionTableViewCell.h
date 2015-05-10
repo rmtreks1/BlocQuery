@@ -9,7 +9,9 @@
 #import <ParseUI/ParseUI.h>
 #import <UIKit/UIKit.h>
 
+
 @class QuestionTableViewCell;
+@class Answers;
 
 @protocol questionTableViewCelldelegate <NSObject>
 
@@ -22,5 +24,6 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (nonatomic, weak) id<questionTableViewCelldelegate> delegate;
+@property (nonatomic, strong) Answers *answerID;
 
 @end

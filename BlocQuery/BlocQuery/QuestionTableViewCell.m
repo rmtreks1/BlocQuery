@@ -9,9 +9,10 @@
 #import "QuestionTableViewCell.h"
 
 @implementation QuestionTableViewCell
+@synthesize answerID;
 
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier forAnswer:(Answers *)answer{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     

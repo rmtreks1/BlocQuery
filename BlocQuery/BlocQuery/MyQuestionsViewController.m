@@ -34,7 +34,7 @@
 //    NSString *user = @"";
     BOOL votes = true;
     
-    [Votes voteforAnswer:answer toQuestion:question];
+    [Votes voteforAnswer:answer];
 }
 
 

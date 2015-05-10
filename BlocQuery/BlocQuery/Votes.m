@@ -7,6 +7,8 @@
 //
 
 #import "Votes.h"
+#import "Answers.h"
+#import "Questions.h"
 
 
 
@@ -32,14 +34,13 @@
 
 
 
-+ (void)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question{
++ (void)voteforAnswer:(Answers *)answer{
 
     PFUser *user = [PFUser currentUser];
     
 
     PFQuery *query = [PFQuery queryWithClassName:@"Votes"];
-    [query whereKey:@"answerID" equalTo:[PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer]];
-    [query whereKey:@"questionID" equalTo:[PFObject objectWithoutDataWithClassName:@"Questions" objectId:question]];
+    [query whereKey:@"answerID" equalTo:answer];
     [query whereKey:@"userID" equalTo:user];
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *results, NSError *error) {
@@ -49,8 +50,8 @@
             Votes *newVote = [Votes object];
             
             newVote.votedState = VotedYes;
-            newVote.questionID = [PFObject objectWithoutDataWithClassName:@"Questions" objectId:question];
-            newVote.answerID = [PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer];
+//            newVote.questionID = [PFObject objectWithoutDataWithClassName:@"Questions" objectId:question];
+            newVote.answerID = answer;
             newVote.userID = user;
             
             [newVote saveInBackground];
@@ -65,9 +66,9 @@
             
             NSInteger resultsVotedState = [results[0][@"votedState"]intValue];
             savedVote.votedState = (resultsVotedState == 1)? VotedNo : VotedYes;
-            savedVote.questionID = [PFObject objectWithoutDataWithClassName:@"Questions" objectId:question];
-            savedVote.answerID = [PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer];
-            savedVote.userID = user;
+//            savedVote.questionID = [PFObject objectWithoutDataWithClassName:@"Questions" objectId:question];
+//            savedVote.answerID = [PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer];
+//            savedVote.userID = user;
             
             [savedVote saveInBackground];
             

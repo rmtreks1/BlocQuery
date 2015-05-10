@@ -7,6 +7,8 @@
 //
 
 #import <Parse/Parse.h>
+#import "Answers.h"
+#import "Questions.h"
 
 
 @interface Votes : PFObject <PFSubclassing>
@@ -25,6 +27,6 @@ typedef enum {
 @property (nonatomic, assign) voteState votedState;
 
 
-+ (void)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question;
++ (void)voteforAnswer:(Answers *)answer;
 
 @end

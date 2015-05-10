@@ -11,6 +11,8 @@
 #import "QuestionHeaderTableViewCell.h"
 #import "QuestionTableViewCell.h"
 #import "ProfileViewController.h"
+#import "Votes.h"
+#import "Answers.h"
 
 
 //#import "Questions.h"
@@ -163,6 +165,7 @@
     
     // Configure the cell
     cell.questionLabel.text = [object objectForKey:self.textKey];
+    cell.answerID = object;
     // cell.imageView.file = [object objectForKey:self.imageKey];
     
     cell.delegate = self;
@@ -314,6 +317,11 @@
 - (void) votingPressed:(QuestionTableViewCell *)cell{
     NSLog(@"delegate control received");
     NSLog(@"cell title is: %@", cell.questionLabel.text);
+    
+    Answers *answerForCell = cell.answerID;
+    Questions *questionForCell = cell.answerID.question;
+    
+    [Votes voteforAnswer:answerForCell];
 }
 
 
