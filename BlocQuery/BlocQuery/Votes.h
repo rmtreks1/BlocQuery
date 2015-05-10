@@ -25,6 +25,6 @@ typedef enum {
 @property (nonatomic, assign) voteState votedState;
 
 
-+ (Votes *)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question;
++ (void)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question;
 
 @end
