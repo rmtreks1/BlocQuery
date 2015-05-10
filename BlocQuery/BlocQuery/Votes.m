@@ -46,11 +46,8 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *results, NSError *error) {
 
         if (results.count == 0) {
-//            NSLog(@"no votes found");
             Votes *newVote = [Votes object];
-            
             newVote.votedState = VotedYes;
-//            newVote.questionID = [PFObject objectWithoutDataWithClassName:@"Questions" objectId:question];
             newVote.answerID = answer;
             newVote.userID = user;
             
@@ -58,17 +55,9 @@
             
             
         } else if (results.count == 1) {
-//            NSLog(@"vote found");
-            
             Votes *savedVote = results[0];
-            
-//            NSLog(@"saved vote id: %@", savedVote.objectId);
-            
             NSInteger resultsVotedState = [results[0][@"votedState"]intValue];
             savedVote.votedState = (resultsVotedState == 1)? VotedNo : VotedYes;
-//            savedVote.questionID = [PFObject objectWithoutDataWithClassName:@"Questions" objectId:question];
-//            savedVote.answerID = [PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer];
-//            savedVote.userID = user;
             
             [savedVote saveInBackground];
             

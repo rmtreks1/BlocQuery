@@ -318,10 +318,7 @@
     NSLog(@"delegate control received");
     NSLog(@"cell title is: %@", cell.questionLabel.text);
     
-    Answers *answerForCell = cell.answerID;
-    Questions *questionForCell = cell.answerID.question;
-    
-    [Votes voteforAnswer:answerForCell];
+    [Votes voteforAnswer:cell.answerID];
 }
 
 
