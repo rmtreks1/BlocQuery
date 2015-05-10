@@ -28,6 +28,10 @@
 }
 
 
+- (IBAction)voteButtonPressed:(UIButton *)sender {
+    NSLog(@"voted button pressed on tableview cell");
+    [self.delegate votingPressed:self];
+}
 
 
 @end

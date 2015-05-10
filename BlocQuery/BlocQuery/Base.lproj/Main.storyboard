@@ -183,6 +183,9 @@
                                             <state key="normal" title="Button">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="voteButtonPressed:" destination="uyj-uw-mbk" eventType="touchUpInside" id="Vr0-KH-eOT"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

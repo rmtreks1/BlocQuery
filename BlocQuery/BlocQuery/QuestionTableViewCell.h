@@ -9,7 +9,18 @@
 #import <ParseUI/ParseUI.h>
 #import <UIKit/UIKit.h>
 
+@class QuestionTableViewCell;
+
+@protocol questionTableViewCelldelegate <NSObject>
+
+@optional
+- (void) votingPressed: (QuestionTableViewCell *)cell;
+
+@end
+
 @interface QuestionTableViewCell : PFTableViewCell
+
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
+@property (nonatomic, weak) id<questionTableViewCelldelegate> delegate;
 
 @end

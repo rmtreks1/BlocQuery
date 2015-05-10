@@ -15,7 +15,7 @@
 
 //#import "Questions.h"
 
-@interface AllAnswersViewController ()
+@interface AllAnswersViewController () <questionTableViewCelldelegate>
 
 @property (nonatomic, strong) PFObject *questionToAnswer;
 @property (nonatomic, strong) PFUser *questionUser;
@@ -153,20 +153,22 @@
  // Override to customize the look of a cell representing an object. The default is to display
  // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
  // and the imageView being the imageKey in the object.
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
- static NSString *CellIdentifier = @"Cell";
- 
- QuestionTableViewCell *cell = (QuestionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
- if (cell == nil) {
- cell = [[QuestionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
- }
- 
- // Configure the cell
- cell.questionLabel.text = [object objectForKey:self.textKey];
-// cell.imageView.file = [object objectForKey:self.imageKey];
- 
- return cell;
- }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *CellIdentifier = @"Cell";
+    
+    QuestionTableViewCell *cell = (QuestionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[QuestionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell
+    cell.questionLabel.text = [object objectForKey:self.textKey];
+    // cell.imageView.file = [object objectForKey:self.imageKey];
+    
+    cell.delegate = self;
+    
+    return cell;
+}
 
 
 /*
@@ -301,6 +303,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return UITableViewAutomaticDimension;
+}
+
+
+
+
+
+#pragma mark - QuestionTableViewCell delegate
+
+- (void) votingPressed:(QuestionTableViewCell *)cell{
+    NSLog(@"delegate control received");
+    NSLog(@"cell title is: %@", cell.questionLabel.text);
 }
 
 
