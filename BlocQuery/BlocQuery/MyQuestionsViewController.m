@@ -36,11 +36,6 @@
     PFObject *samplePhoto = [PFObject objectWithClassName:@"samplePhoto"];
     samplePhoto[@"imageFile"] = imageFile;
     [samplePhoto saveInBackground];
-    
-    
-    
-    
-    
 }
 
 @end
