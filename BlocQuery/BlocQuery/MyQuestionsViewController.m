@@ -31,9 +31,10 @@
     NSString *answer = @"0W8ukxp9yW";
     NSString *question = @"TXz0ai8Y4J";
     NSString *user = @"TRVNT3z4DC";
+//    NSString *user = @"";
     BOOL votes = true;
     
-    [Votes voteforAnswer:answer toQuestion:question byUser:user];
+    [Votes voteforAnswer:answer toQuestion:question];
 }
 
 

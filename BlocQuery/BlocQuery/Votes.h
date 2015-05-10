@@ -11,14 +11,20 @@
 
 @interface Votes : PFObject <PFSubclassing>
 
+typedef enum {
+    VotedNo,
+    VotedYes
+}voteState;
+
 + (NSString *)parseClassName;
 
-@property (nonatomic, strong) NSString *answerID;
-@property (nonatomic, strong) NSString *qestionID;
-@property (nonatomic, strong) NSString *userID;
-@property (nonatomic, assign) BOOL vote;
+@property (nonatomic, strong) PFObject *answerID;
+@property (nonatomic, strong) PFObject *questionID;
+@property (nonatomic, strong) PFUser *userID;
+//@property (nonatomic, assign) BOOL state;
+@property (nonatomic, assign) voteState votedState;
 
 
-+ (Votes *)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question byUser:(NSString *)user;
++ (Votes *)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question;
 
 @end

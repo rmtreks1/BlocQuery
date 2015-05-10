@@ -12,10 +12,11 @@
 
 @implementation Votes : PFObject
 
-@dynamic vote;
+
 @dynamic answerID;
-@dynamic qestionID;
+@dynamic questionID;
 @dynamic userID;
+@dynamic votedState;
 
 
 + (void)load {
@@ -31,40 +32,47 @@
 
 
 
-+ (Votes *)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question byUser:(NSString *)user{
++ (Votes *)voteforAnswer:(NSString *)answer toQuestion: (NSString *)question{
+    
     Votes *newVote = [Votes object];
-    
-    PFQuery *findAnswer = [PFQuery queryWithClassName:@"Votes"];
-//    [findAnswer whereKey:@"answerID" equalTo:answer];
-    [findAnswer whereKey:@"answerID" equalTo:[PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer]];
-    
-    PFQuery *findQuestion = [PFQuery queryWithClassName:@"Votes"];
-//    [findQuestion whereKey:@"questionID" equalTo:question];
-    [findQuestion whereKey:@"questionID" equalTo:[PFObject objectWithoutDataWithClassName:@"Questions" objectId:question]];
+
+    PFUser *user = [PFUser currentUser];
     
 
-    PFQuery *findUser = [PFQuery queryWithClassName:@"Votes"];
-//    [findUser whereKey:@"userID" equalTo:user];
-    [findUser whereKey:@"userID" equalTo:[PFObject objectWithoutDataWithClassName:@"User" objectId:user]];
-
-    PFQuery *query = [PFQuery orQueryWithSubqueries:@[findAnswer, findQuestion, findUser]];
+    PFQuery *query = [PFQuery queryWithClassName:@"Votes"];
+    [query whereKey:@"answerID" equalTo:[PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer]];
+    [query whereKey:@"questionID" equalTo:[PFObject objectWithoutDataWithClassName:@"Questions" objectId:question]];
+    [query whereKey:@"userID" equalTo:user];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *results, NSError *error) {
-        // results contains players with lots of wins or only a few wins.
-        NSLog(@"result returned is: %lu", (unsigned long)results.count);
         
-        PFObject *resultsObject = results[0];
-        
-        NSLog(@"what's returnd is: %@", resultsObject[@"vote"]);
-        
+        if (results.count == 0) {
+            NSLog(@"no votes found");
+        } else if (results.count == 1) {
+            NSLog(@"vote found");
+            NSLog(@"user id is: %@", user.objectId);
+//            [newVote voteYes:newVote];
+            
+        } else {
+            NSLog(@"investigate could be an error with votes");
+        }
         
     }];
     
-    
-    
-    
+    newVote.questionID = [PFObject objectWithoutDataWithClassName:@"Questions" objectId:question];
+    newVote.answerID = [PFObject objectWithoutDataWithClassName:@"Answers" objectId:answer];
+    newVote.userID = user;
+
     
     return newVote;
     
+}
+
+
+-(void)voteYes: (Votes *)vote{
+    
+    vote.votedState = VotedYes;
+    [vote saveInBackground];
 }
 
 
