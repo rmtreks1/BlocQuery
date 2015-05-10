@@ -7,6 +7,7 @@
 //
 
 #import "MyQuestionsViewController.h"
+#import "Votes.h"
 
 @interface MyQuestionsViewController ()
 
@@ -23,6 +24,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+- (IBAction)testingVotesButton:(UIButton *)sender {
+    NSString *answer = @"0W8ukxp9yW";
+    NSString *question = @"TXz0ai8Y4J";
+    NSString *user = @"TRVNT3z4DC";
+    BOOL votes = true;
+    
+    
+    [Votes vote:votes forAnswer:answer toQuestion:question byUser:user];
+}
+
+
 
 
 

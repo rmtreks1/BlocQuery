@@ -9,9 +9,9 @@
 #import <Parse/Parse.h>
 
 
-@interface Votes : PFObject
+@interface Votes : PFObject <PFSubclassing>
 
-
++ (NSString *)parseClassName;
 
 @property (nonatomic, strong) NSString *answerID;
 @property (nonatomic, strong) NSString *qestionID;
