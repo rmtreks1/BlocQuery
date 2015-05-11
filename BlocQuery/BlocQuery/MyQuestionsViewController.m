@@ -28,15 +28,7 @@
 
 
 - (IBAction)testingVotesButton:(UIButton *)sender {
-    NSString *answer = @"0W8ukxp9yW";
-    NSString *question = @"TXz0ai8Y4J";
-    NSString *user = @"TRVNT3z4DC";
-//    NSString *user = @"";
-    BOOL votes = true;
     
-    Votes *newVote = [[Votes alloc]init];
-    [newVote voteforAnswer:answer];
-//    [Votes voteforAnswer:answer];
 }
 
 

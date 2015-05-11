@@ -83,21 +83,4 @@
     }];
 }
 
-
-- (BOOL)hasVotedForAnswer:(Answers *)answer{
-    
-    PFUser *user = [PFUser currentUser];
-    
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Votes"];
-    [query whereKey:@"answerID" equalTo:answer];
-    [query whereKey:@"userID" equalTo:user];
-    [query whereKey:@"votedState" equalTo:@"1"];
-    
-    NSInteger resultCount = [query countObjects];
-    
-    return resultCount == 1;
-}
-
-
 @end
