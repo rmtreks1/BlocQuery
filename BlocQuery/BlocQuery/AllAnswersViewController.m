@@ -183,12 +183,14 @@
     [voteStatusQuery whereKey:@"answerID" equalTo:object];
     [voteStatusQuery whereKey:@"userID" equalTo:user];
     
-    [voteStatusQuery countObjectsInBackgroundWithBlock:^(int count, NSError *error) {
+    [voteStatusQuery getFirstObjectInBackgroundWithBlock:^(PFObject *result, NSError *error) {
         
-        if (count >= 1) {
-            cell.voteButton.imageView.image = [UIImage imageNamed:@"heart-full"];
-//            NSLog(@"vote found");
-            
+        if (result) {
+            NSLog(@"result is %@", result[@"votedState"]);
+            int resultInt = [result[@"votedState"]intValue];
+            if (resultInt == 1) {
+                cell.voteButton.imageView.image = [UIImage imageNamed:@"heart-full"];
+            }            
         }
         
     }];
