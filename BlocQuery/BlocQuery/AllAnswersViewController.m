@@ -166,6 +166,9 @@
     // Configure the cell
     cell.questionLabel.text = [object objectForKey:self.textKey];
     cell.answerID = object;
+    NSString *votesLabelText = [NSString stringWithFormat:@"%ld votes", (long)cell.answerID.voteCount];
+    
+    cell.voteCountLabel.text = votesLabelText;
     // cell.imageView.file = [object objectForKey:self.imageKey];
     
     cell.delegate = self;
@@ -319,6 +322,7 @@
     NSLog(@"cell title is: %@", cell.questionLabel.text);
     
     [Votes voteforAnswer:cell.answerID];
+    
 }
 
 

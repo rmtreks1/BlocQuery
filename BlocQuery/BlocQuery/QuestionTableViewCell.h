@@ -25,5 +25,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (nonatomic, weak) id<questionTableViewCelldelegate> delegate;
 @property (nonatomic, strong) Answers *answerID;
+@property (strong, nonatomic) IBOutlet UILabel *voteCountLabel;
+
+
+
+
 
 @end

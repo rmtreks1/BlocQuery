@@ -191,11 +191,23 @@
                                                         <action selector="voteButtonPressed:" destination="uyj-uw-mbk" eventType="touchUpInside" id="Vr0-KH-eOT"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zp-Gy-wo4">
+                                                    <rect key="frame" x="102" y="0.0" width="128" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="128" id="fPL-E0-rXw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="7Zp-Gy-wo4" firstAttribute="top" secondItem="Uwp-gQ-WFn" secondAttribute="top" id="5zj-lb-awd"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Zp-Gy-wo4" secondAttribute="bottom" id="7GN-MF-Ysd"/>
                                                 <constraint firstAttribute="trailing" secondItem="Uib-Jp-tan" secondAttribute="trailing" constant="10" id="CZk-Ln-HMZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="Uib-Jp-tan" secondAttribute="bottom" id="JCI-c4-HHI"/>
+                                                <constraint firstItem="Uib-Jp-tan" firstAttribute="leading" secondItem="7Zp-Gy-wo4" secondAttribute="trailing" constant="20" id="ehG-o1-eBK"/>
                                                 <constraint firstAttribute="height" constant="44" id="sMg-Qi-Qi8"/>
                                             </constraints>
                                         </view>
@@ -212,6 +224,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="questionLabel" destination="AE8-Fe-I3b" id="aqH-xw-Xve"/>
+                                    <outlet property="voteCountLabel" destination="7Zp-Gy-wo4" id="4PI-Pw-Cni"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
