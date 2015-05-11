@@ -170,31 +170,44 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="AE8-Fe-I3b">
-                                            <rect key="frame" x="10" y="10" width="300" height="17"/>
+                                            <rect key="frame" x="10" y="10" width="300" height="88"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-Jp-tan">
-                                            <rect key="frame" x="250" y="32" width="60" height="115"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwp-gQ-WFn">
+                                            <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-Jp-tan">
+                                                    <rect key="frame" x="250" y="0.0" width="60" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="8ke-29-Gfj"/>
+                                                        <constraint firstAttribute="width" constant="60" id="Us6-ae-rkQ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="voteButtonPressed:" destination="uyj-uw-mbk" eventType="touchUpInside" id="Vr0-KH-eOT"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="Us6-ae-rkQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uib-Jp-tan" secondAttribute="trailing" constant="10" id="CZk-Ln-HMZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uib-Jp-tan" secondAttribute="bottom" id="JCI-c4-HHI"/>
+                                                <constraint firstAttribute="height" constant="44" id="sMg-Qi-Qi8"/>
                                             </constraints>
-                                            <state key="normal" title="Button">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="voteButtonPressed:" destination="uyj-uw-mbk" eventType="touchUpInside" id="Vr0-KH-eOT"/>
-                                            </connections>
-                                        </button>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="AE8-Fe-I3b" firstAttribute="leading" secondItem="fvD-rM-oNN" secondAttribute="leading" constant="10" id="Bkb-CS-wSv"/>
-                                        <constraint firstAttribute="bottom" secondItem="Uib-Jp-tan" secondAttribute="bottom" constant="5" id="Pbp-Gd-Rlx"/>
-                                        <constraint firstAttribute="trailing" secondItem="Uib-Jp-tan" secondAttribute="trailing" constant="10" id="Y57-pR-pe1"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uwp-gQ-WFn" secondAttribute="trailing" id="Qri-nA-xAa"/>
+                                        <constraint firstItem="Uwp-gQ-WFn" firstAttribute="top" secondItem="AE8-Fe-I3b" secondAttribute="bottom" constant="10" id="VDp-nj-EbU"/>
+                                        <constraint firstItem="Uwp-gQ-WFn" firstAttribute="leading" secondItem="fvD-rM-oNN" secondAttribute="leading" id="W8v-s1-Ocb"/>
                                         <constraint firstItem="AE8-Fe-I3b" firstAttribute="top" secondItem="fvD-rM-oNN" secondAttribute="top" constant="10" id="crM-76-hK5"/>
+                                        <constraint firstItem="Uwp-gQ-WFn" firstAttribute="bottom" secondItem="fvD-rM-oNN" secondAttribute="bottom" id="iBf-r2-sC2"/>
                                         <constraint firstAttribute="trailing" secondItem="AE8-Fe-I3b" secondAttribute="trailing" constant="10" id="uHa-vx-rfe"/>
-                                        <constraint firstItem="Uib-Jp-tan" firstAttribute="top" secondItem="AE8-Fe-I3b" secondAttribute="bottom" constant="5" id="yZT-Wc-lZH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
