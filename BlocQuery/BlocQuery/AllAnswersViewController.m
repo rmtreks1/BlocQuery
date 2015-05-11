@@ -146,7 +146,8 @@
     
     
     
-    [query orderByDescending:@"createdAt"];
+    [query orderByDescending:@"voteCount"];
+    [query addDescendingOrder:@"createdAt"];
     
     return query;
 }
@@ -186,7 +187,7 @@
         
         if (count >= 1) {
             cell.voteButton.imageView.image = [UIImage imageNamed:@"heart-full"];
-            NSLog(@"vote found");
+//            NSLog(@"vote found");
             
         }
         
@@ -352,7 +353,10 @@
     [newVote voteforAnswer:cell.answerID];
 //    [Votes voteforAnswer:cell.answerID];
     
+    
 }
+
+
 
 
 @end
