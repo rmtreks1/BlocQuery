@@ -178,13 +178,13 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwp-gQ-WFn">
                                             <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-Jp-tan">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-Jp-tan">
                                                     <rect key="frame" x="250" y="0.0" width="60" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="8ke-29-Gfj"/>
                                                         <constraint firstAttribute="width" constant="60" id="Us6-ae-rkQ"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button">
+                                                    <state key="normal" image="heart-empty">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -658,6 +658,7 @@
     <resources>
         <image name="Bloc-logo-rectangle-grey" width="700" height="268"/>
         <image name="bane.jpg" width="1278" height="1920"/>
+        <image name="heart-empty" width="28" height="27"/>
         <image name="myQuestions" width="16" height="16"/>
         <image name="profile" width="16" height="16"/>
         <image name="questions" width="16" height="16"/>
