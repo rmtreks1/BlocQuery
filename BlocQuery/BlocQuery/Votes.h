@@ -27,6 +27,6 @@ typedef enum {
 @property (nonatomic, assign) voteState votedState;
 
 
-+ (void)voteforAnswer:(Answers *)answer;
+- (void)voteforAnswer:(Answers *)answer;
 
 @end

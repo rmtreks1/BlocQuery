@@ -34,7 +34,7 @@
 
 
 
-+ (void)voteforAnswer:(Answers *)answer{
+- (void)voteforAnswer:(Answers *)answer{
 
     PFUser *user = [PFUser currentUser];
     
