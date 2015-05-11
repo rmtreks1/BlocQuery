@@ -53,6 +53,10 @@
             
             [newVote saveInBackground];
             
+            // increment the vote count for the answer
+            answer.voteCount += 1;
+            [answer saveInBackground];
+            
             
         } else if (results.count == 1) {
             Votes *savedVote = results[0];
