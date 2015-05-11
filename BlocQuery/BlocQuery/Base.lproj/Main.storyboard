@@ -224,6 +224,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="questionLabel" destination="AE8-Fe-I3b" id="aqH-xw-Xve"/>
+                                    <outlet property="voteButton" destination="Uib-Jp-tan" id="0aK-f8-u6B"/>
                                     <outlet property="voteCountLabel" destination="7Zp-Gy-wo4" id="4PI-Pw-Cni"/>
                                 </connections>
                             </tableViewCell>

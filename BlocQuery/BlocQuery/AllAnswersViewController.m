@@ -171,6 +171,8 @@
     cell.voteCountLabel.text = votesLabelText;
     // cell.imageView.file = [object objectForKey:self.imageKey];
     
+    cell.voteButton.imageView.image = [UIImage imageNamed:@"heart-full"];
+    
     cell.delegate = self;
     
     return cell;
