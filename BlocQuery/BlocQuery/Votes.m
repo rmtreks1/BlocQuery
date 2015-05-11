@@ -60,15 +60,24 @@
             
         } else if (results.count == 1) {
             Votes *savedVote = results[0];
-            NSInteger resultsVotedState = [results[0][@"votedState"]intValue];
-            savedVote.votedState = (resultsVotedState == 1)? VotedNo : VotedYes;
+            NSInteger resultsVotedState = [savedVote[@"votedState"]intValue];
+            
+            if (resultsVotedState == 1) {
+                savedVote.votedState = VotedNo;
+                answer.voteCount -= 1;
+            } else {
+                savedVote.votedState = VotedYes;
+                answer.voteCount += 1;
+            }
+            
+            
             
             [savedVote saveInBackground];
-            
+            [answer saveInBackground];
             
             
         } else {
-            NSLog(@"investigate could be an error with votes");
+            NSLog(@"investigate could be an error with votes, multiple votes for same user and answer combo");
         }
         
     }];
