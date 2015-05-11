@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) PFObject *questionToAnswer;
 @property (nonatomic, strong) PFUser *questionUser;
+@property (nonatomic, strong) Votes *vote;
 
 @end
 
@@ -171,9 +172,33 @@
     cell.voteCountLabel.text = votesLabelText;
     // cell.imageView.file = [object objectForKey:self.imageKey];
     
-    cell.voteButton.imageView.image = [UIImage imageNamed:@"heart-full"];
     
     cell.delegate = self;
+    
+    
+    // set the vote status
+    PFUser *user = [PFUser currentUser];
+    PFQuery *voteStatusQuery = [PFQuery queryWithClassName:@"Votes"];
+    [voteStatusQuery whereKey:@"answerID" equalTo:object];
+    [voteStatusQuery whereKey:@"userID" equalTo:user];
+    
+    [voteStatusQuery countObjectsInBackgroundWithBlock:^(int count, NSError *error) {
+        
+        if (count >= 1) {
+            cell.voteButton.imageView.image = [UIImage imageNamed:@"heart-full"];
+            NSLog(@"vote found");
+            
+        }
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
     
     return cell;
 }
