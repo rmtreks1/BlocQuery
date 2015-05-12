@@ -351,8 +351,18 @@
     NSLog(@"delegate control received");
     NSLog(@"cell title is: %@", cell.questionLabel.text);
     
+    NSInteger index = [self.objects indexOfObject:cell.answerID];
+    
     Votes *newVote = [[Votes alloc]init];
-    [newVote voteforAnswer:cell.answerID];
+    [newVote voteforAnswer:cell.answerID withBlock:^(BOOL succeeded, NSError *error){
+        if ([PFUser currentUser]) {
+            [self loadObjects];
+        }        
+//        [self.tableView reloadData];
+        NSInteger indexAfter = [self.objects indexOfObject:cell.answerID];
+        
+        [self.tableView moveRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] toIndexPath:[NSIndexPath indexPathForRow:indexAfter inSection:0]];
+    }];
 //    [Votes voteforAnswer:cell.answerID];
     
     

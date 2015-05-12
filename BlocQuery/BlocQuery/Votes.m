@@ -34,7 +34,7 @@
 
 
 
-- (void)voteforAnswer:(Answers *)answer{
+- (void)voteforAnswer:(Answers *)answer withBlock:(PF_NULLABLE PFBooleanResultBlock)block{
 
     PFUser *user = [PFUser currentUser];
     
@@ -55,7 +55,7 @@
             
             // increment the vote count for the answer
             answer.voteCount += 1;
-            [answer saveInBackground];
+            [answer saveInBackgroundWithBlock:block];
             
             
         } else if (results.count == 1) {
@@ -73,7 +73,7 @@
             
             
             [savedVote saveInBackground];
-            [answer saveInBackground];
+            [answer saveInBackgroundWithBlock:block];
             
             
         } else {
