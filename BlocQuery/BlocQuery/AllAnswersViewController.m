@@ -167,7 +167,7 @@
     
     // Configure the cell
     cell.questionLabel.text = [object objectForKey:self.textKey];
-    cell.answerID = object;
+    cell.answerID = (Answers *)object;
     NSString *votesLabelText = [NSString stringWithFormat:@"%ld votes", (long)cell.answerID.voteCount];
     
     cell.voteCountLabel.text = votesLabelText;

@@ -18,15 +18,15 @@ typedef enum {
     VotedYes
 }voteState;
 
-+ (NSString *)parseClassName;
++ ( NSString * __nonnull )parseClassName;
 
-@property (nonatomic, strong) PFObject *answerID;
-@property (nonatomic, strong) PFObject *questionID;
-@property (nonatomic, strong) PFUser *userID;
+@property (nonatomic, strong) PFObject *__nonnull answerID;
+@property (nonatomic, strong) PFObject *__nonnull questionID;
+@property (nonatomic, strong) PFUser *__nonnull userID;
 //@property (nonatomic, assign) BOOL state;
 @property (nonatomic, assign) voteState votedState;
 
 
-- (void)voteforAnswer:(Answers *)answer withBlock:(PF_NULLABLE PFBooleanResultBlock)block;
+- (void)voteforAnswer:(Answers * __nonnull )answer withBlock:(PF_NULLABLE PFBooleanResultBlock)block;
 
 @end

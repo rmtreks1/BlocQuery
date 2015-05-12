@@ -128,14 +128,14 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wIt-3i-aWC" id="Xvz-ep-Xkl">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="f7w-4v-Cbt">
-                                            <rect key="frame" x="120" y="10" width="182" height="119"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="f7w-4v-Cbt">
+                                            <rect key="frame" x="120" y="13" width="182" height="116"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bah-aB-xrD">
-                                            <rect key="frame" x="10" y="5" width="100" height="132"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bah-aB-xrD">
+                                            <rect key="frame" x="10" y="21" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="pRw-9z-Im3"/>
                                                 <constraint firstAttribute="height" constant="100" id="qOx-au-AWz"/>
@@ -149,12 +149,11 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Bah-aB-xrD" firstAttribute="top" secondItem="Xvz-ep-Xkl" secondAttribute="top" constant="5" id="0De-Pf-wFL"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="f7w-4v-Cbt" secondAttribute="bottom" constant="5" id="7Q0-5F-wuN"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="f7w-4v-Cbt" secondAttribute="trailing" constant="10" id="BtU-7f-feD"/>
                                         <constraint firstItem="f7w-4v-Cbt" firstAttribute="leading" secondItem="Bah-aB-xrD" secondAttribute="trailing" constant="10" id="HDG-4c-Ft0"/>
-                                        <constraint firstAttribute="bottom" secondItem="Bah-aB-xrD" secondAttribute="bottom" constant="5" id="UCr-2O-IIE"/>
                                         <constraint firstItem="Bah-aB-xrD" firstAttribute="leading" secondItem="Xvz-ep-Xkl" secondAttribute="leading" constant="10" id="pRq-yO-Ht0"/>
+                                        <constraint firstAttribute="centerY" secondItem="Bah-aB-xrD" secondAttribute="centerY" id="rLv-8h-hPQ"/>
                                         <constraint firstItem="f7w-4v-Cbt" firstAttribute="top" secondItem="Xvz-ep-Xkl" secondAttribute="topMargin" constant="5" id="sLG-Zz-RZ7"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -315,7 +314,6 @@
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna a</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtl-3u-shW">
                                 <rect key="frame" x="126" y="74" width="184" height="21"/>
@@ -484,8 +482,8 @@
                                     <action selector="buttonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="btR-Fc-uGt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLG-s0-Vdn">
-                                <rect key="frame" x="44" y="20" width="233" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLG-s0-Vdn">
+                                <rect key="frame" x="44" y="20" width="128" height="30"/>
                                 <state key="normal" title="ButtonToTestVotes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
